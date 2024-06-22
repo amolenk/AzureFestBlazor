@@ -1,0 +1,55 @@
+@page "/{Edition}/speaker/{SpeakerId}"
+@using AzureFest.Web.Services
+@inject EventDetailsProvider EventDetailsProvider
+
+@if (_speaker is not null)
+{
+    <PageTitle>@_speaker.FullName | Bitbash</PageTitle>
+
+    <HeaderSpacer />
+
+    <Section HeaderText="@_speaker.FullName" SubText="@_speaker.TagLine" ExtraClass="rocket-4">
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 g-0 speaker-photo">
+                    <img src="@_speaker.ProfilePictureUrl" alt="Photo of speaker @_speaker.FullName">
+                </div>
+
+                <div class="col-md-6">
+
+                    <p>@((MarkupString)(_speaker.Bio ?? string.Empty).Replace("\r\n", "<br/>"))</p>
+                </div>
+            </div>
+        </div>
+
+    </Section>
+
+    <Section HeaderText="Sessions" ExtraClass="rocket-5">
+
+        <div class="row d-flex justify-content-center">
+        @foreach (var session in _speaker.Sessions)
+        {
+            <SessionCard Edition="@Edition" Session="session" />
+        }
+        </div>
+
+    </Section>
+}
+
+@code
+{
+    [Parameter]
+    public string Edition { get; set; } = string.Empty;
+
+    [Parameter]
+    public string SpeakerId { get; set; } = string.Empty;
+
+    private Speaker? _speaker;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _speaker = await EventDetailsProvider.GetSpeakerAsync(Edition, SpeakerId);
+    }
+}

@@ -1,0 +1,30 @@
+@inject WebsiteSettings Settings
+
+<Section Id="sponsors" HeaderText="Gold sponsors" Background="true" FadeUp="true">
+
+    @for (var i = 0; i < _randomOrderSponsors.Count; i++)
+    {
+        if (i % 3 == 0)
+        {
+            @:<div class="row mb-0 no-gutters sponsor-wrap clearfix" data-aos="zoom-in" data-aos-delay="100">
+        }
+
+        <SponsorCard Name="@_randomOrderSponsors[i].Name" ImageUrl="@_randomOrderSponsors[i].ImageUrl" Url="@_randomOrderSponsors[i].WebsiteUrl" />
+
+        if (i % 3 == 2 || i == _randomOrderSponsors.Count - 1)
+        {
+            @:</div>
+        }
+    }
+    
+</Section>
+
+@code {
+
+    private List<Sponsor> _randomOrderSponsors = default!;
+
+    protected override void OnInitialized()
+    {
+        _randomOrderSponsors = Settings.Sponsors.OrderBy(_ => Guid.NewGuid()).ToList();
+    }
+}

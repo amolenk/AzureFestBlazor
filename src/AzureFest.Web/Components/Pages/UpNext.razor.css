@@ -1,0 +1,24 @@
+#logo img {
+    height: 128px;
+}
+
+h2 {
+    display: inline;
+    position: relative;
+    font-size: 64px;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 1px 1px 2px black;
+}
+
+h2::before {
+    content: "";
+    position: absolute;
+    top: calc(100% + 7px);
+    width: calc(100% + 20px);
+    left: -10px;
+    height: 5px;
+    background: linear-gradient(111.3deg, #269BB9 10%, #C248D6 90%);
+    text-align: center;
+    justify-content: center;
+}

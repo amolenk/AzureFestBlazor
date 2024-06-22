@@ -1,0 +1,62 @@
+<style>
+    /* Use inline non-isolated styles for the HubSpot embed */
+
+    #hubspot-form ul.hs-error-msgs {
+        font-size: 20px;
+        color: #F924A1;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    #hubspot-form div.hs-fieldtype-text .hs-input {
+        width: 100%;
+    }
+
+    #hubspot-form div.field {
+        margin-bottom: 8px;
+    }
+
+    #hubspot-form div.hs_free_on_site_childcare ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    #hubspot-form div.hs_free_on_site_childcare li label span {
+        padding-left: 12px;
+    }
+
+    #hubspot-form input.hs-button {
+        background: #269BB9;
+        border: 0;
+        color: white;
+    }
+
+</style>
+
+<!-- HubSpot form container -->
+<div id="hubspot-container">
+    <div id="hubspot-form"></div>
+</div>
+
+<!-- HubSpot form embed code -->
+<script charset="utf-8" type="text/javascript" src="//js-@(Region).hsforms.net/forms/embed/v2.js"></script>
+<script>
+    hbspt.forms.create({
+        region: "@Region",
+        portalId: "@PortalId",
+        formId: "@FormId",
+        target: '#hubspot-form',
+    });
+</script>
+
+@code {
+    
+    [Parameter]
+    public string? Region { get; set; }
+    
+    [Parameter]
+    public string? PortalId { get; set; }
+    
+    [Parameter]
+    public string? FormId { get; set; }
+}

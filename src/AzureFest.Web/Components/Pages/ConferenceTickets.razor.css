@@ -1,0 +1,73 @@
+#tickets p {
+    margin: auto;
+    margin-bottom: 20px;
+    max-width: 1000px;
+    text-shadow: 1px 1px 1px black;
+}
+
+#tickets p:last-child {
+    padding-bottom: 30px;
+}
+
+#tickets .card {
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 10px 25px 0 rgba(249, 36, 161, 0.5);
+    background-color: white;
+}
+
+#tickets .card:hover {
+    box-shadow: 0 0 40px 0 rgba(249, 36, 161, 1);
+}
+
+#tickets .card hr {
+    margin: 25px 0;
+    color: #1b6a7d;
+}
+
+#tickets .card .card-title {
+    margin: 10px 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+#tickets .card .card-price {
+    font-size: 48px;
+    margin: 0;
+    color: #1b6a7d;
+}
+
+#tickets .card p {
+    font-size: 20px;
+    margin: 0;
+    color: #0e1b4d;
+    text-shadow: 0 0 0;
+}
+
+#tickets .card .btn {
+    font-size: 24px;
+    border-radius: 50px;
+    padding: 10px 40px;
+    transition: all 0.2s;
+    background-color: #E459BB;
+    border: 0;
+    color: #fff;
+}
+
+#tickets .card .btn:hover {
+    background-color: rgb(249, 36, 161);
+}
+
+/* HubSpot embedded forms */
+
+#hubspot-container {
+    display: flex;
+    justify-content: center;
+}
+
+#hubspot-form {
+    min-width: 400px;
+    margin-bottom: 24px;
+}

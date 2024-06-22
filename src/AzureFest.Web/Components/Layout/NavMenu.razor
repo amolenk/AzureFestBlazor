@@ -1,0 +1,26 @@
+﻿@using AzureFest.Web.Configuration
+@inject WebsiteSettings Settings
+
+<PageScript Src="./Components/Layout/NavMenu.razor.js" />
+
+<header id="header" class="d-flex align-items-center ">
+    <div class="container-fluid container-xxl d-flex align-items-center">
+
+        <div id="logo" class="me-auto">
+            <a href="/" class="scrollto"><img src="img/logo.svg" alt="" title=""></a>
+        </div>
+
+        <nav id="navbar" class="navbar order-last order-lg-0">
+            <ul>
+                <li><a class="nav-link" href="/">Home</a></li>
+                <li><a class="nav-link" href="/agenda">Agenda</a></li>
+                <li><a class="nav-link" href="/speakers">Speakers</a></li>
+                <li><a class="nav-link" href="/past/2023">2023</a></li>
+                <li><a class="nav-link" href="/past/2022">2022</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+        <a class="buy-tickets" href="/tickets">Get Tickets</a>
+
+    </div>
+</header>

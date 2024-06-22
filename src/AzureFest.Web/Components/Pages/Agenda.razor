@@ -1,0 +1,95 @@
+﻿@page "/agenda/{Date:datetime?}"
+@using AzureFest.Models
+@using AzureFest.Web.Configuration
+@using AzureFest.Web.Services
+@inject EventDetailsProvider EventDetailsProvider
+@inject WebsiteSettings Settings
+
+<PageTitle>Agenda | Bitbash</PageTitle>
+
+<HeaderSpacer />
+
+<Section HeaderText="Agenda" ExtraClass="rocket-2">
+
+    @if (Settings.AgendaAnnounced)
+    {
+        @if (_eventDates is not null)
+        {
+            <ul class="tabs">
+                @foreach (var date in _eventDates)
+                {
+                    <li class="tabs-item @(date == _selectedDate ? "tabs-item--active" : "")">
+                        <a class="tabs-link" href="/agenda/@date.ToString("O")">@date.ToString("dddd d MMMM")</a>
+                    </li>
+                }
+            </ul>
+        }
+
+        <div class="container">
+
+            @if (_schedule is not null)
+            {
+                foreach (var slot in _schedule)
+                {
+                    <div class="row text-center">
+                        <h2>@slot.Key.ToString("HH:mm") - @slot.First().EndsAt!.Value.ToString("HH:mm")</h2>
+                    </div>
+
+                    <div class="row justify-content-center p-2">
+
+                        @if (slot.Any())
+                        {
+                            foreach (var session in slot)
+                            {
+                                <SessionCard Session="@session"/>
+                            }
+                        }
+
+                    </div>
+                }
+            }
+
+        </div>
+    }
+    else
+    {
+        <div class="text-center">
+            <p>We are currently working diligently to finalize the agenda for the event.</p>
+            <p>Please check back soon for the full agenda, which will be published as soon as it is confirmed.</p>
+        </div>
+    }
+
+</Section>
+
+@code
+{
+    [Parameter]
+    public DateTime? Date { get; set; }
+
+    private List<DateOnly>? _eventDates;
+    
+    private DateOnly? _selectedDate;
+    
+    private IEnumerable<IGrouping<DateTime, Session>>? _schedule;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (!Settings.AgendaAnnounced) return;
+
+        _eventDates = (await EventDetailsProvider.GetEventDatesAsync(Settings.CurrentEdition)).ToList();
+        _selectedDate = GetSelectedDate(_eventDates);
+        _schedule = await EventDetailsProvider.GetScheduleAsync(Settings.CurrentEdition, _selectedDate.Value);
+    }
+    
+    private DateOnly GetSelectedDate(ICollection<DateOnly> eventDates)
+    {
+        var date = DateOnly.FromDateTime(Date ?? DateTime.Today);
+        
+        if (date < eventDates.First())
+        {
+            return eventDates.First();
+        }
+        
+        return date > eventDates.Last() ? eventDates.Last() : date;
+    }
+}

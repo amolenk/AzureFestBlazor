@@ -1,0 +1,58 @@
+﻿@page "/past/{Edition}"
+@using AzureFest.Web.Services
+@inject EventDetailsProvider EventDetailsProvider
+
+<PageTitle>@Title | Bitbash</PageTitle>
+
+<PageScript Src="./Components/Pages/PastEdition.razor.js" InitState="@Edition" />
+
+<HeaderSpacer />
+
+<Section HeaderText="@Title" ExtraClass="rocket-3">
+
+    <div class="container">
+
+        <div class="row justify-content-center p-2">
+
+            <div class="galleria"></div>
+
+        </div>
+
+    </div>
+
+</Section>
+
+<Section HeaderText="@($"{Title} Speakers")" ExtraClass="rocket-3">
+
+    <div class="container">
+
+        @if (_speakers is not null)
+        {
+            <div class="row justify-content-center p-2">
+
+                @foreach (var speaker in _speakers)
+                {
+                    <SpeakerCard Speaker="@speaker" Edition="@Edition"/>
+                }
+
+            </div>
+        }
+
+    </div>
+
+</Section>
+
+@code
+{
+    [Parameter]
+    public string Edition { get; set; } = string.Empty;
+
+    private string Title => $"{Edition.ToUpperInvariant()[0]}{Edition[1..].Replace('-', ' ')}";
+
+    private IEnumerable<Speaker>? _speakers;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _speakers = await EventDetailsProvider.GetSpeakersAsync(Edition);
+    }
+}

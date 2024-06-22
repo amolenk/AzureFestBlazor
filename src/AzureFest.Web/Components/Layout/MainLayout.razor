@@ -1,0 +1,15 @@
+﻿@inherits LayoutComponentBase
+
+<PageScript Src="./Components/Layout/MainLayout.razor.js" />
+
+<NavMenu />
+
+<main id="main" class="d-flex flex-column min-vh-100">
+
+    @Body
+
+    <Footer />
+
+</main>
+
+<BackToTop />

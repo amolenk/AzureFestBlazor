@@ -1,0 +1,19 @@
+<div class="col-lg-4 col-md-4 col-xs-6">
+    <div class="sponsor-logo">
+        <a href="@Url" target="_blank">
+            <img src="@ImageUrl" class="img-fluid" alt="@Name">
+        </a>
+    </div>
+</div>
+
+@code
+{
+    [Parameter]
+    public string? Name { get; set; }
+
+    [Parameter]
+    public string? Url { get; set; }
+
+    [Parameter]
+    public string? ImageUrl { get; set; }
+}

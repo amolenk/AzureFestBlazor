@@ -1,0 +1,31 @@
+@using AzureFest.Web.Configuration
+@inject WebsiteSettings Settings
+
+@if (Speaker is not null)
+{
+    <div class="card speaker m-2 cursor-pointer bg-transparent border-0" onclick="window.location.href='@GetUrl(Speaker)'">
+        <div class="text-center">
+            <div class="speaker-photo">
+                <img loading="lazy" src="@Speaker.ProfilePictureUrl" alt="Photo of @Speaker.FullName">
+            </div>
+            <h5 class="speaker-name">@Speaker.FullName</h5>
+            <h4 class="speaker-tagline">@Speaker.TagLine</h4>
+        </div>
+    </div>
+}
+
+@code
+{
+    [Parameter]
+    public Speaker? Speaker { get; set; }
+    
+    [Parameter]
+    public string? Edition { get; set; }
+
+    private string GetUrl(Speaker speaker)
+    {
+        var edition = Edition ?? Settings.CurrentEdition;
+
+        return $"{edition}/speaker/{speaker.Id}";
+    }
+}

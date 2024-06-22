@@ -1,0 +1,41 @@
+
+.card {
+    transition: all 0.3s ease-in-out;
+    width: 18rem; 
+}
+
+.card.service-session {
+    background-color: #e9ecef;
+}
+
+.card:hover.cursor-pointer {
+    box-shadow: 0 0 40px 0 #E459BB;
+    transform: scale(1.1);
+}
+
+.card-title {
+    color: black;
+}
+
+.card-body h5 {
+    font-size: 1.5rem;
+}
+
+.card-body h6 {
+    font-size: 1rem;
+}
+
+.card-footer .session-format {
+    background-color: #269BB9;
+}
+
+.card-footer .session-level {
+    background-color: #E459BB;
+}
+
+.speaker-photo {
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    border-radius: 50%;
+}

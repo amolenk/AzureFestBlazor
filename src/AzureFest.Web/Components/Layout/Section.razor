@@ -1,0 +1,42 @@
+<section id="@Id" class="@(Background ? "section-with-bg" : null)" data-aos="@(FadeUp ? "fade-up" : null)">
+    <div class="container">
+
+        @if (!string.IsNullOrWhiteSpace(HeaderText))
+        {
+            <div class="section-header">
+                <h2>@HeaderText</h2>
+                @if (!string.IsNullOrEmpty(SubText))
+                {
+                    <h4>@SubText</h4>
+                }
+            </div>
+        }
+        else
+        {
+            <p></p>
+        }
+        
+        @ChildContent
+    </div>
+</section>
+
+@code
+{
+    [Parameter]
+    public string? Id { get; set; }
+
+    [Parameter]
+	public string? HeaderText { get; set; }
+
+    [Parameter]
+	public string? SubText { get; set; }
+
+    [Parameter]
+	public bool Background { get; set; }
+
+    [Parameter]
+	public bool FadeUp { get; set; }
+
+    [Parameter]
+	public RenderFragment? ChildContent { get; set; }
+}

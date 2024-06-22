@@ -1,0 +1,9 @@
+#hubspot-container {
+    display: flex;
+    justify-content: center;
+}
+
+#hubspot-form {
+    min-width: 400px;
+    margin-bottom: 24px;
+}

@@ -1,0 +1,45 @@
+
+.card {
+    transition: all 0.3s ease-in-out;
+    width: 18rem; 
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.speaker-photo {
+    width: 128px;
+    height: 128px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+    border: 4px solid rgba(238, 238, 238, 0.1);
+    border-radius: 50%
+}
+
+.card:hover.speaker .speaker-photo {
+    box-shadow: 0 0 40px 0 #269BB9;
+
+}
+
+.speaker-photo img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.speaker-name {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    line-height: 1.25;
+    font-weight: bold;
+}
+
+.speaker-tagline {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: normal;
+    color: rgba(238, 238, 238, 0.6)
+}

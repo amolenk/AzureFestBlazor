@@ -1,0 +1,28 @@
+.card-body {
+    color: black;
+}
+
+.card-footer {
+    background-color: #1e275e;
+}
+
+h2 {
+    color: black;
+}
+
+.speaker-photo {
+    width: 256px;
+    height: 256px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+    border: 4px solid rgba(238, 238, 238, 0.2);
+    border-radius: 50%;
+}
+
+.speaker-photo img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 50%
+}

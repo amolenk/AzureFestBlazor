@@ -1,0 +1,36 @@
+
+.card {
+    width: 30%;
+}
+
+.card-title {
+    color: black;
+}
+
+.card-body h5 {
+    font-size: 2.5rem;
+}
+
+.card-body h6 {
+    font-size: 1.5rem;
+}
+
+.card-footer .session-format {
+    background-color: #269BB9;
+}
+
+.card-body .session-level {
+    background-color: #E459BB;
+    font-size: 1rem;
+}
+
+.card-footer h6 {
+    font-size: 1.5rem;
+}
+
+.speaker-photo {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto;
+    border-radius: 50%;
+}

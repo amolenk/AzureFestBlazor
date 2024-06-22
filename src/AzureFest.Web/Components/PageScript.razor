@@ -1,0 +1,10 @@
+<page-script src="@Src" init-state="@InitState"></page-script>
+
+@code {
+    [Parameter]
+    [EditorRequired]
+    public string Src { get; set; } = default!;
+
+    [Parameter]
+    public string InitState { get; set; } = string.Empty;
+}

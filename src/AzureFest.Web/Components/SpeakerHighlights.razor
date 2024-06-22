@@ -1,0 +1,65 @@
+@using AzureFest.Web.Configuration
+@using AzureFest.Web.Services
+@inject EventDetailsProvider EventDetailsProvider
+@inject WebsiteSettings Settings
+
+<Section Id="speakers" HeaderText="Speakers" ExtraClass="rocket-3" FadeUp="true">
+
+    @if (_speakers is not null)
+    {
+        <div class="row">
+            @foreach (var speaker in _speakers.Take(3))
+            {
+                <div class="col-md-4 d-flex justify-content-center">
+                    <SpeakerCard Speaker="@speaker" />
+                </div>
+            }
+        </div>
+
+        <div class="row">
+            @foreach (var speaker in _speakers.Skip(3).Take(3))
+            {
+                <div class="col-md-4 d-flex justify-content-center">
+                    <SpeakerCard Speaker="@speaker" />
+                </div>
+            }
+        </div>
+
+        <div class="row">
+            <div class="col d-flex justify-content-center">
+                <a href="/speakers" class="btn btn-primary">See all @_speakers.Count speakers</a>
+            </div>
+        </div>
+    }
+
+</Section>
+
+@code
+{
+    private List<Speaker>? _speakers;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var allSpeakers = (await EventDetailsProvider.GetSpeakersAsync(Settings.CurrentEdition))
+            .ToList();
+        
+        Console.WriteLine(allSpeakers.Count);
+
+        Shuffle(allSpeakers);
+
+        _speakers = allSpeakers;
+    }
+
+    private static void Shuffle<T>(IList<T> list)  
+    {  
+        var random = new Random();  
+
+        int n = list.Count;  
+        while (n > 1)
+        {  
+            n--;  
+            var k = random.Next(n + 1);  
+            (list[k], list[n]) = (list[n], list[k]);
+        }  
+    }
+}
