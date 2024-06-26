@@ -20,9 +20,3 @@
 #footer .links a:hover {
     cursor: pointer;
 }
-
-#footer .credits {
-    text-align: center;
-    font-size: 13px;
-    color: #ddd;
-}
