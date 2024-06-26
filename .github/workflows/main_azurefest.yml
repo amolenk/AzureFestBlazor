@@ -61,5 +61,5 @@ jobs:
         with:
           app-name: 'azurefest'
           slot-name: 'Production'
-          package: ${{github.workspace}}/myapp
+          package: ${{github.workspace}}/AzureFestBlazor/myapp
           
