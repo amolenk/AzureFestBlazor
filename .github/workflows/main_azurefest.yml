@@ -28,7 +28,7 @@ jobs:
         run: dotnet publish src/AzureFest.Web/AzureFest.Web.csproj -c Release -o ${{github.workspace}}/myapp
 
       - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: .net-app
           path: ${{github.workspace}}/myapp
