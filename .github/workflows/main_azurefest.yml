@@ -22,10 +22,10 @@ jobs:
           dotnet-version: '8.x'
 
       - name: Build with dotnet
-        run: dotnet build src/AzureFest.Web/AzureFest.Web.prj --configuration Release
+        run: dotnet build src/AzureFest.Web/AzureFest.Web.csproj --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish src/AzureFest.Web/AzureFest.Web.prj -c Release -o ${{env.DOTNET_ROOT}}/myapp
+        run: dotnet publish src/AzureFest.Web/AzureFest.Web.csproj -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
