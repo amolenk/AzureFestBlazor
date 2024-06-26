@@ -1,0 +1,342 @@
+{
+  "Speakers": [
+    {
+      "Id": "aidan-finn",
+      "FullName": "Aidan Finn",
+      "Bio": "Aidan Finn (@joe_elway), Azure MVP, is a Principal Consultant with Innofactor Norway working on Azure infrastructure projects and managed services. He is also the MD and trainer at Cloud Mechanix (http://www.cloudmechanix.com), a company delivering custom-written Azure training in Europe.\r\n\r\nAidan writes about Azure and on-premises server technologies on his own site, http://www.aidanfinn.com and for http://www.petri.com.",
+      "TagLine": "Azure MVP, Innofactor Norway, Cloud Mechanix",
+      "IsTopSpeaker": false,
+      "ProfilePictureUrl": "img/2024/speakers/aidan-finn.jpg",
+      "sessions": [
+        "azure-virtual-network-manager"
+      ]
+    },
+    {
+      "Id": "barbara-forbes",
+      "FullName": "Barbara Forbes",
+      "Bio": "Barbara works as the Azure technical lead for OGD in the Netherlands. She is a Microsoft MVP Azure, MCT and GitHub Star. Her focus is on Azure and automation. Think Serverless, Azure DevOps, PowerShell, GitHub and Infrastructure as Code. She loves teaching in an approachable way. She regularly writes posts for her blog https://4bes.nl and speaks at conferences and user groups. She helps grow the community as co-owner of the Dutch DevOps \u0026 GitHub community (DDOG), as well as co-hosting the Dutch PowerShell User Group (DUPSUG). ",
+      "TagLine": "Azure technical lead @ OGD | Azure MVP | GitHub Star",
+      "IsTopSpeaker": false,
+      "ProfilePictureUrl": "img/2024/speakers/barbara-forbes.jpg",
+      "sessions": [
+        "secure-access-to-your-azure-environment-lets-count-the-ways"
+      ]
+    },
+    {
+      "Id": "daan-de-schepper",
+      "FullName": "Daan de Schepper",
+      "Bio": "I\u0027ve been working with Azure for the last 10 years, both in developer and architect roles. Most recently as a Cloud Solutions Architect for the customers of Cloud Republic. I love working on cloud native solutions, helping businesses to get the most out of their Azure environments.",
+      "TagLine": "Cloud Solutions Architect at Cloud Republic",
+      "IsTopSpeaker": false,
+      "ProfilePictureUrl": "img/2024/speakers/daan-de-schepper.png",
+      "sessions": [
+        "azure-and-linked-data-at-the-rijksmuseum"
+      ]
+    },
+    {
+      "Id": "eduard-keilholz",
+      "FullName": "Eduard Keilholz",
+      "Bio": "Eduard is a Cloud Solution Architect at 4DotNet (The Netherlands). He likes to help customers with implementing and experiencing cloud technologies. He likes to create highly performant software and help team members reach a higher skill level of software development. He focusses is on the Microsoft development stack, mainly C# and the Microsoft Azure Cloud, and has a strong affinity with Angular. He enjoys speaking at (inter)national conferences and contributing to community events. In 2020, Microsoft has recognized these community activities with the Microsoft MVP Award for Azure.",
+      "TagLine": "Team Lead \u0026 Solution Architect at 4DotNet | Azure MVP",
+      "IsTopSpeaker": false,
+      "ProfilePictureUrl": "img/2024/speakers/eduard-keilholz.jpg",
+      "sessions": [
+        "microservices-orchestration-with-azure-container-apps"
+      ]
+    },
+    {
+      "Id": "estelle-auberix",
+      "FullName": "Estelle Auberix",
+      "Bio": "With over two decades in IT and business, Estelle\u2019s expertise spans cloud, AI, IoT, and cybersecurity, coupled with design thinking and agile methodologies. She uses these skills to create innovative digital solutions that are inspired by people\u2019s needs and aspirations. \r\nAs a Microsoft Regional Director and MVP, she maintains a robust connection with Microsoft, leveraging their technologies to empower organizations and individuals across various sectors and regions. Additionally, she serves as a Microsoft Learning Partner, providing tailored trainings on the latest topics and trends in the tech industry. \r\nIn addition, she is passionate about sharing her knowledge and vision with diverse audiences, as a speaker, writer, and trainer, and she is a co-founder of several communities that promote parity, diversity, and collaboration in the tech industry.",
+      "TagLine": "CEO @IOKELA, Co-founder @Cloudhersity, Microsoft Regional Director/MVP/Certified Trainer (MCT)",
+      "IsTopSpeaker": false,
+      "ProfilePictureUrl": "img/2024/speakers/estelle-auberix.jpg",
+      "sessions": [
+        "securing-microservices-strategies-and-best-practices"
+      ]
+    },
+    {
+      "Id": "jelle-fremery",
+      "FullName": "Jelle Fremery",
+      "Bio": "Before finding his true calling, Jelle studied developmental psychology and worked as a behavourial and linguistical scientist. He made a career shift and started anew in the field of software development. This semi-unorthodox career start has given him a unique handicap slash superpower.\r\n\r\nFor the last ten years, Jelle has worked as a consultant at many different customers, in many different roles: full-stack developer, scrum master, cloud engineer, tester, and architect. This has given him a broad perspective on software. His biggest software passions are cloud, quality, AI, and DevOps/Agile. \r\n\r\nJelle currently lives in Amersfoort with his wife and two young children. He plays the drums, likes reading and the theater, and really wishes he\u0027d make more time for mountain biking.",
+      "TagLine": "Principal AI \u0026 Cloud Architect at Betabit",
+      "IsTopSpeaker": false,
+      "ProfilePictureUrl": "img/2024/speakers/jelle-fremery.jpg",
+      "sessions": [
+        "achieving-continuous-monitoring-by-integrating-azure-and-azure-devops"
+      ]
+    },
+    {
+      "Id": "massimo-crippa",
+      "FullName": "Massimo Crippa",
+      "Bio": "Massimo Crippa is a cloud enthusiast with 20 years of experience with Microsoft enterprise products and technologies. He started his career in the Italian ICT sector as a web developer and later focused on middleware and messaging projects. In 2011 he moved to Belgium where he is working as Azure Domain Lead for Codit.\r\nIn this role, he\u0027s responsible for the Azure domain where his tasks range from envision the Cloud journey, to demonstrate different Azure PaaS capabilities, and to implement those with customers.",
+      "TagLine": "Lead Architect @ Codit | Azure Cloud-Native MVP",
+      "IsTopSpeaker": false,
+      "ProfilePictureUrl": "img/2024/speakers/massimo-crippa.png",
+      "sessions": [
+        "better-api-governance-with-azure-api-center"
+      ]
+    },
+    {
+      "Id": "michiel-van-oudheusden",
+      "FullName": "Michiel van Oudheusden",
+      "Bio": "Michiel is a Microsoft .NET consultant, developer, and architect. With a focus on ALM and DevOps, APIs and containers, but also on products like AzureDevOps,  Azure, Containers and everything around it, he has a broad interest and experience. From traditional Windows applications to web development, managing teams and data centers and building highly available distributed systems,  he worked with multiple enterprise organizations. \r\nIn his spare time, he likes to work on open-source software and home automation.",
+      "TagLine": "Lead Consultant at Xebia",
+      "IsTopSpeaker": false,
+      "ProfilePictureUrl": "img/2024/speakers/michiel-van-oudheusden.jpg",
+      "sessions": [
+        "empowering-developers-with-finops-mastering-cost-efficiency-in-the-cloud"
+      ]
+    },
+    {
+      "Id": "roelant-dieben",
+      "FullName": "Roelant Dieben",
+      "Bio": "With over 20 years of experience developing software on the Microsoft stack, Roelant Dieben has a lot to share about stuff that has been obsolete for years. With XPRTZ.cloud he is helping companies with their Azure cloud challenges, he is a Microsoft Azure MVP, and has a passion for machine learning \u0026 AI and application lifecycle management.",
+      "TagLine": "Owner @ XPRTZ.cloud",
+      "IsTopSpeaker": false,
+      "ProfilePictureUrl": "img/2024/speakers/roelant-dieben.jpg",
+      "sessions": [
+        "rag-and-vector-databases-explained-how-to-hand-llm-your-data"
+      ]
+    },
+    {
+      "Id": "sami-laiho",
+      "FullName": "Sami Laiho",
+      "Bio": "Sami Laiho is one of the world\u0027s leading professionals in the Windows OS and Security. Sami has been working with and teaching OS troubleshooting, management, and security since 2001. Sami\u0027s session was evaluated as the best session in TechEd North America, Europe and Australia in 2014, and Nordic Infrastructure Conference in 2016, 2017, 2019, 2020, 2022 and 2023. \r\n\r\nAt Ignite 2018 Sami\u0027s sessions were ranked as #1 and #2 out of 1708 sessions!! This was the first time in the history of the conference that anyone has been able to do this!\r\n\r\nSami is also an author at PluralSight and the conference chair of the TechMentor and \u0022Cyber Security and Ransomware Live!\u0022 conferences.\r\n\r\nMore info at: https://samilaiho.com/",
+      "TagLine": "Senior Technical Fellow, MVP",
+      "IsTopSpeaker": false,
+      "ProfilePictureUrl": "img/2024/speakers/sami-laiho.jpg",
+      "sessions": [
+        "forward-to-the-past-and-back-to-the-future-cybercrime-in-20232024"
+      ]
+    },
+    {
+      "Id": "wesley-noordam",
+      "FullName": "Wesley Noordam",
+      "Bio": "Currently I am working 6 years in the industry as Azure Development Consultant starting as .NET developer and slowly becoming Azure specialist. Throughout the years I have been able see different organizations and architectures. These experiences helped me a lot with becoming very familiar with Azure.",
+      "TagLine": "Azure developer, Consultant at XPRTZ.cloud",
+      "IsTopSpeaker": false,
+      "ProfilePictureUrl": "img/2024/speakers/wesley-noordam.jpg",
+      "sessions": [
+        "creating-preconfigured-clusters-with-azure-kubernetes-service-automatic"
+      ]
+    },
+    {
+      "Id": "willem-meints",
+      "FullName": "Willem Meints",
+      "Bio": "Willem Meints is Chief AI Architect for Info Support and Microsoft AI MVP responsible many machine-learning and AI projects at Info Support and Aigency. ",
+      "TagLine": "Chief AI Architect/Microsoft AI MVP",
+      "IsTopSpeaker": false,
+      "ProfilePictureUrl": "img/2024/speakers/willem-meints.jpg",
+      "sessions": [
+        "building-secure-llm-applications-on-azure-heres-what-you-should-know"
+      ]
+    }
+  ],
+  "Sessions": [
+    {
+      "Id": "forward-to-the-past-and-back-to-the-future-cybercrime-in-20232024",
+      "Title": "Forward to the Past and Back to the Future - Cybercrime in 2023/2024",
+      "Description": "Join Sami Laiho, Chief Research Officer of Truesec, for a look back in to what 2023 changed in the Security Threat Landscape and to hear his predictions on what will the future have in store for us. Is the Cloud more secure than on-prem? Is Apple more secure than Microsoft? Will AI transform security landscape as much as we think? Come and hear what Sami has to say on these topics, among others.",
+      "StartsAt": "2024-09-11T13:45:00",
+      "EndsAt": "2024-09-11T15:00:00",
+      "IsServiceSession": false,
+      "speakers": [
+        "sami-laiho"
+      ],
+      "SessionFormat": null,
+      "Level": null,
+      "Room": "Room 1"
+    },
+    {
+      "Id": "achieving-continuous-monitoring-by-integrating-azure-and-azure-devops",
+      "Title": "Achieving Continuous Monitoring by Integrating Azure and Azure DevOps",
+      "Description": "In this session, I will demonstrate how to generate and store monitoring and analytics data for your containerized application in Azure, turn that data into actionable information, and act on that information by setting up a durable integration with Azure DevOps to inform your planning and optimize the value of new development.\r\n\r\nBy now, the DevOps lifecycle is a well-known and reasonably understood theoretical framework. Your team should strive to achieve the \u00227Cs\u0022 whenever feasible. The DevOps mindset has been applied to other fields, resulting in DevSecOps, DataOps, AIOps, and MLOps, collectively known as XOps.\r\n\r\nSo, the theory is sound. But to actually accomplish this in practice, with an actual application, is another challenge altogether. Based on a real DevOps implementation journey, I will share how I implemented the \u0022C\u0022 of the 7Cs that is often lacking even in mature DevOps cycles: Continuous Monitoring. I will also disclose where I went wrong and how to further improve upon what I delivered in the end.\r\n\r\nWhat can you expect? As you are probably aware, Azure has plenty of services that can help us set up and professionalize the monitoring process. As an obedient DevOps disciple, I started with a containerized application using Azure Container Apps. I will show how to gather data using Azure Monitor and Azure Sentinel, set effective alerts based on pre-determined, smart triggers to turn that data into actionable information, and use Action Groups and Functions to create and update items on an Azure DevOps board (or other ALM tooling). Adding more customization using KQL for custom queries of the telemetry and creating dashboards in Azure DevOps that connect back to all that monitoring using Power BI will also be on the program. And finally, the cherry on top: integrating with Microsoft Outlook and Microsoft Teams to fully automate the jump from monitoring and operations to planning.\r\n\r\nAfter this session, you will have plenty of inspiration and examples of using monitoring, analytics, and telemetry to build higher-quality and more secure cloud applications. If you want to ensure you can keep building quality software, make sure you join me and learn how to automate as much of the monitoring process as possible!\r\n",
+      "StartsAt": "2024-09-11T15:15:00",
+      "EndsAt": "2024-09-11T16:05:00",
+      "IsServiceSession": false,
+      "speakers": [
+        "jelle-fremery"
+      ],
+      "SessionFormat": null,
+      "Level": null,
+      "Room": "Room 1"
+    },
+    {
+      "Id": "azure-and-linked-data-at-the-rijksmuseum",
+      "Title": "Azure and Linked Data at the Rijksmuseum",
+      "Description": "The Rijksmuseum is of course famous for a select number of high profile art works, but did you know that next to the few thousand art works in the museum, there\u0027s about 1.000.000 art works and other objects in the depot, about 500.000 books in the museum library and an extensive archive, documenting the history of the works and the museum itself?\r\n\r\nBringing together and merging that data, that is incredibly rich, but very much siloed, is what we do with the Integration Layer Team at the museum. The team comprises developers, data engineers and DevOps engineers. We leverage AKS, Storage, VMs running Graph databases, SQL and more, to create an incredibly rich model, based on international cultural heritage standards, that can be used by researchers, enthusiasts, governments and other musea.\r\n\r\nI\u0027d like to give you a peek behind the curtain of what is happening around Azure in The Netherlands most important museum.",
+      "StartsAt": "2024-09-11T15:15:00",
+      "EndsAt": "2024-09-11T16:05:00",
+      "IsServiceSession": false,
+      "speakers": [
+        "daan-de-schepper"
+      ],
+      "SessionFormat": null,
+      "Level": null,
+      "Room": "Room 2"
+    },
+    {
+      "Id": "azure-virtual-network-manager",
+      "Title": "Azure Virtual Network Manager",
+      "Description": "Have you ever wondered how you can manage your Azure virtual networks at scale? Did you want to build a hub-and-spoke architecture using a policy? Have you ever needed to deploy Network Security Group rules across all of your subnets to enable a new feature or to block a threat? Or have you deployed a new firewall and need to configure every subnet to use it? If the answer is yes to any of those questions then you need to learn about Azure Virtual Network Manager (AVNM), the tool that brings management with just a few clicks or lines of code.",
+      "StartsAt": "2024-09-11T15:15:00",
+      "EndsAt": "2024-09-11T16:05:00",
+      "IsServiceSession": false,
+      "speakers": [
+        "aidan-finn"
+      ],
+      "SessionFormat": null,
+      "Level": null,
+      "Room": "Room 3"
+    },
+    {
+      "Id": "fa623d0a-da62-484c-b8e9-554aa224fcb1",
+      "Title": "Break",
+      "Description": null,
+      "StartsAt": "2024-09-11T16:05:00",
+      "EndsAt": "2024-09-11T16:35:00",
+      "IsServiceSession": true,
+      "speakers": [],
+      "SessionFormat": null,
+      "Level": null,
+      "Room": "Room 1"
+    },
+    {
+      "Id": "better-api-governance-with-azure-api-center",
+      "Title": "Better API Governance with Azure API Center",
+      "Description": "Having an API catalog is a critical tool for every enterprise that wants to be successful with their API program. An API catalog brings together the different roles involved in an API program and, by promoting the collaboration between them, it fosters API reuse, ensured compliance and better developer productivity. \r\nIn this session we will explore what is Azure API Center and how to integrate it in your API design workflow using Azure DevOps.",
+      "StartsAt": "2024-09-11T16:35:00",
+      "EndsAt": "2024-09-11T17:25:00",
+      "IsServiceSession": false,
+      "speakers": [
+        "massimo-crippa"
+      ],
+      "SessionFormat": null,
+      "Level": null,
+      "Room": "Room 1"
+    },
+    {
+      "Id": "building-secure-llm-applications-on-azure-heres-what-you-should-know",
+      "Title": "Building secure LLM applications on Azure: Here\u0027s what you should know",
+      "Description": "Building an intelligent chat application with GPT-4 is quite fun. However, it\u2019s also dangerous because large language models have a unique attack surface that you must deal with. Hackers can quite easily steal information from you or abuse the language model.\r\n\r\nIn this session, you\u2019ll learn how to deploy and protect an application on Azure that uses Azure OpenAI. You\u2019ll learn how to set up a good process, tools to discover and mitigate risks, and how to implement countermeasures in Azure to protect against hackers who want to abuse your LLM application.",
+      "StartsAt": "2024-09-11T16:35:00",
+      "EndsAt": "2024-09-11T17:25:00",
+      "IsServiceSession": false,
+      "speakers": [
+        "willem-meints"
+      ],
+      "SessionFormat": null,
+      "Level": null,
+      "Room": "Room 2"
+    },
+    {
+      "Id": "creating-preconfigured-clusters-with-azure-kubernetes-service-automatic",
+      "Title": "Creating preconfigured clusters with Azure Kubernetes Service Automatic",
+      "Description": "Kubernetes is great for running containerized applications in a automated scalable environment. The addition of AKS makes is even easier to running that same cluster in Azure. Running those AKS clusters became even more powerful with features like Kubernetes Event-driven Autoscaling (KEDA), Workload Identity and integrations with Azure services like Azure Key Vault and Azure Policy. The past year also added azure managed resources for Prometheus and Grafana.\r\n\r\nThese additions are great, but there is still lots of configuration to do before the cluster is production ready. What if all this configuration is done for you? Microsoft felt the same and thus created Azure Kubernetes Service Automatic. With AKS Automatic you are able to create clusters quick and complete with features you want. Do you want a cluster with monitoring and scaling prebuild? AKS Automatic will do that for you.\r\n\r\nIn this session we will have a look at the features AKS Automatic has to offer and if it is something you could use.",
+      "StartsAt": "2024-09-11T16:35:00",
+      "EndsAt": "2024-09-11T17:25:00",
+      "IsServiceSession": false,
+      "speakers": [
+        "wesley-noordam"
+      ],
+      "SessionFormat": null,
+      "Level": null,
+      "Room": "Room 3"
+    },
+    {
+      "Id": "empowering-developers-with-finops-mastering-cost-efficiency-in-the-cloud",
+      "Title": "Empowering Developers with FinOps: Mastering Cost Efficiency in the Cloud",
+      "Description": "In this session, we\u0027ll dive into the fascinating intersection of development and financial operations (FinOps). Designed for developers, this talk will unveil why FinOps is crucial for you and how it directly impacts your work.\r\n\r\nWe\u0027ll explore practical strategies to ensure cost-effective development, highlighting actionable steps you can take to optimize spending on platforms like Azure. Learn about the critical choices in architecture and tools that influence cost control, and gain insights into proactive versus reactive cloud cost management.\r\n\r\nDiscover the concept of \u0022shift left\u0022 in cost management and understand its importance in the development lifecycle. We\u2019ll also cover various tools and tricks to incorporate cost efficiency into your workflow from the start.\r\n\r\nBy the end of this session, you\u2019ll have a clear understanding of how you, as a developer, can significantly influence cloud costs and drive efficiency, making you an invaluable asset to your team and organization.",
+      "StartsAt": "2024-09-11T17:40:00",
+      "EndsAt": "2024-09-11T18:30:00",
+      "IsServiceSession": false,
+      "speakers": [
+        "michiel-van-oudheusden"
+      ],
+      "SessionFormat": null,
+      "Level": null,
+      "Room": "Room 1"
+    },
+    {
+      "Id": "microservices-orchestration-with-azure-container-apps",
+      "Title": "Microservices Orchestration with Azure Container Apps",
+      "Description": "Explore the transformative potential of microservices architecture on Azure Container Apps in this engaging session. Join us as we delve into the intricacies of designing, deploying, and managing microservices-based applications, leveraging the power of Azure\u0027s containerization solutions.\r\n\r\nDuring this session, I will guide you through the key principles of microservices and demonstrate how Azure Container Apps streamlines the development and deployment process. Learn best practices for breaking down monolithic applications into smaller, manageable services and witness the benefits of increased scalability, improved fault isolation, and enhanced agility.\r\n\r\nDiscover the robust features of Azure Container Apps, such as seamless integration with Azure Kubernetes Service (AKS) and Azure Container Registry. Gain insights into monitoring, scaling, and troubleshooting microservices in a containerized environment, ensuring optimal performance and reliability.",
+      "StartsAt": "2024-09-11T17:40:00",
+      "EndsAt": "2024-09-11T18:30:00",
+      "IsServiceSession": false,
+      "speakers": [
+        "eduard-keilholz"
+      ],
+      "SessionFormat": null,
+      "Level": null,
+      "Room": "Room 2"
+    },
+    {
+      "Id": "rag-and-vector-databases-explained-how-to-hand-llm-your-data",
+      "Title": "RAG and Vector Databases Explained: How to hand LLM your Data",
+      "Description": "Adding your own data to large language models really makes them shine. \r\n\r\nJoin us for this demo-heavy session where we will explore several ways of handing these models your data, how vector databases are the new cool thing, and how services in Azure, like Azure AI search, help us make these models look even smarter. \r\n\r\nThis session will immediately get you up to speed with (the power of) RAG and will jump-start your LLM development journey",
+      "StartsAt": "2024-09-11T17:40:00",
+      "EndsAt": "2024-09-11T18:30:00",
+      "IsServiceSession": false,
+      "speakers": [
+        "roelant-dieben"
+      ],
+      "SessionFormat": null,
+      "Level": null,
+      "Room": "Room 3"
+    },
+    {
+      "Id": "20f45fe0-dc4d-4fce-8c99-b19308c0583a",
+      "Title": "Dinner",
+      "Description": null,
+      "StartsAt": "2024-09-11T18:30:00",
+      "EndsAt": "2024-09-11T19:35:00",
+      "IsServiceSession": true,
+      "speakers": [],
+      "SessionFormat": null,
+      "Level": null,
+      "Room": "Room 1"
+    },
+    {
+      "Id": "secure-access-to-your-azure-environment-lets-count-the-ways",
+      "Title": "Secure access to your Azure environment: Let\u0027s count the ways",
+      "Description": "Azure\u0027s web-based access is incredibly convenient, allowing you to enter the portal from any device, anywhere. But this convenience isn\u0027t exclusive to you; it\u0027s also a potential gateway for those with malicious intent, trying to exploit your resources, data and budget. The consequences from a security breach can be huge.\r\n\r\nIn an era where digital protection is needed more than ever, navigating the security tools can be overwhelming. Some tools might slow down your processes. Is the added security worth the potential decrease in speed? Is it necessary?\r\n\r\nThis session is your guide through the security options available to cloud engineers. We\u0027ll explore MFA, PIM, JIT, VPN, PAW, and other three-letter abbreviations that stand between your Azure environment intruders. Discover modern tools that not only secure your Azure space but could also be used for on-premises access through Azure.\r\n\r\nBy the end of our journey, you\u0027ll have a blueprint for creating the most secure environment. You\u0027ll leave equipped to make informed decisions about which security measures are right for your setup. Let\u0027s secure your Azure landscape together.",
+      "StartsAt": "2024-09-11T19:30:00",
+      "EndsAt": "2024-09-11T20:20:00",
+      "IsServiceSession": false,
+      "speakers": [
+        "barbara-forbes"
+      ],
+      "SessionFormat": null,
+      "Level": null,
+      "Room": "Room 1"
+    },
+    {
+      "Id": "securing-microservices-strategies-and-best-practices",
+      "Title": "Securing Microservices: Strategies and Best Practices",
+      "Description": "This advanced session targets experienced developers and security engineers, focusing on securing microservices on Microsoft Azure. \r\n\r\nKey topics include implementing Azure AD for authentication and authorization, using Azure Key Vault for secrets management, and securing service-to-service communication with Azure Application Gateway and API Management. \r\n\r\nParticipants will explore best practices for API security, Azure Monitor for logging and incident response, and ensuring compliance with Azure Policy. Real-world Azure case studies will provide practical insights. \r\n\r\nBy the end, attendees will be equipped to enhance their microservices\u0027 security on Azure and ensure resilience against cyber threats.",
+      "StartsAt": "2024-09-11T19:30:00",
+      "EndsAt": "2024-09-11T20:20:00",
+      "IsServiceSession": false,
+      "speakers": [
+        "estelle-auberix"
+      ],
+      "SessionFormat": null,
+      "Level": null,
+      "Room": "Room 2"
+    },
+    {
+      "Id": "d5d9039c-e6c1-4aed-bd4c-2a4d0f552f3f",
+      "Title": "Drinks",
+      "Description": "Including LEGO raffle!",
+      "StartsAt": "2024-09-11T20:20:00",
+      "EndsAt": "2024-09-11T21:00:00",
+      "IsServiceSession": true,
+      "speakers": [],
+      "SessionFormat": null,
+      "Level": null,
+      "Room": "Room 1"
+    }
+  ]
+}
