@@ -44,7 +44,7 @@ jobs:
 
     steps:
       - name: Download artifact from build job
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: .net-app
       
@@ -61,5 +61,5 @@ jobs:
         with:
           app-name: 'azurefest'
           slot-name: 'Production'
-          package: ${{github.workspace}}/AzureFestBlazor/myapp
+          package: ${{github.workspace}}/myapp
           
