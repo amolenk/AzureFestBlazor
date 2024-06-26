@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Bitbash.Models\Bitbash.Models.csproj" />
+    <ProjectReference Include="..\AzureFest.Models\AzureFest.Models.csproj" />
   </ItemGroup>
 
 </Project>

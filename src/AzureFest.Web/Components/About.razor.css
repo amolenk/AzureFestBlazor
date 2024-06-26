@@ -1,42 +1,17 @@
-#about {
-    overflow: hidden;
-    position: relative;
-    padding: 60px 0 40px 0;
-}
 
-@media (min-width: 1024px) {
-    #about {
-        background-attachment: fixed;
-    }
-}
-
-#about:before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-}
 
 #about h2 {
     font-size: 36px;
     font-weight: bold;
-    margin-bottom: 10px;
-    /* color: #fff; */
 }
 
 #about h3 {
     font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
-    margin-bottom: 10px;
-    /* color: #fff; */
 }
 
 #about p {
     font-size: 16px;
-    margin-bottom: 20px;
-    /* color: #fff; */
     color: black;
 }

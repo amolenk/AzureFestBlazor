@@ -1,11 +1,11 @@
 using System.Net.Http.Json;
 using System.Text.Json;
 using System.Text.RegularExpressions;
-using Bitbash.Models;
+using AzureFest.Models;
 using Bitbash.SessionizeImport.Models;
 using Unidecode.NET;
 
-namespace Bitbash.SessionizeImport;
+namespace AzureFest.SessionizeImport;
 
 public class SessionizeImporter(HttpClient httpClient)
 {
@@ -155,7 +155,7 @@ public class SessionizeImporter(HttpClient httpClient)
 
         var json = JsonSerializer.Serialize(value, jsonOptions);
 
-        var outputPath = Path.Combine(websitePath, $"wwwroot/data/{name}.json");
+        var outputPath = Path.Combine(websitePath, $"Data/{name}/event-details.json");
         File.WriteAllText(outputPath, json);
     }
 }

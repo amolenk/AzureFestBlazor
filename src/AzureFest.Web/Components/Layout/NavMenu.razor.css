@@ -44,12 +44,6 @@
     height: 70px;
 }
 
-@media (max-width: 992px) {
-    #header #logo img {
-        max-height: 30px;
-    }
-}
-
 /**
 * Desktop Navigation 
 */
@@ -314,6 +308,7 @@
     line-height: 1;
     font-size: 13px;
     white-space: nowrap;
+    cursor: pointer;
 }
 
 .buy-tickets:hover {

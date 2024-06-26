@@ -1,73 +1,7 @@
 ﻿@page "/tickets"
-@using AzureFest.Web.Configuration
-@inject WebsiteSettings Settings
 
-<PageTitle>Tickets | Bitbash</PageTitle>
+<PageTitle>Tickets | Azure Fest</PageTitle>
 
 <HeaderSpacer />
 
-<Section Id="tickets" HeaderText="Tickets" ExtraClass="rocket-4">
-
-    @if (TicketsOnSale)
-    {
-        <div class="row">
-            <p>Bitbash is a two day conference with half- and fullday workshops on @Settings.PreConWorkshopsDate.ToString("dddd MMMM d") and 50 minute talks on @Settings.ConferenceDate.ToString("dddd MMMM d"). Have a look at our <a href="/agenda">agenda</a> for the full details.</p>
-            <p>Please note that you need separate tickets for @Settings.PreConWorkshopsDate.ToString("dddd") and @Settings.ConferenceDate.ToString("dddd"). All tickets are <em>100% free</em>.</p>
-        </div>
-        
-        <div class="row">
-            <div class="col-lg-3">
-            </div>
-            <div class="col-lg-3">
-                <div class="card mb-5 mb-lg-0">
-                    <div class="card-header text-center">
-                        <h4>Workshops</h4>
-                        <h6>@Settings.PreConWorkshopsDate.ToLongDateString()</h6>
-                    </div>
-                    <div class="card-body text-center">
-                        @if (Settings.WorkshopTicketSaleOpened)
-                        {
-                            <a href="/tickets/workshops" class="btn btn-primary">Register for workshop(s)</a>
-                        }
-                        else
-                        {
-                            <p>Workshop tickets are not available yet.</p>
-                        }
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="card mb-5 mb-lg-0">
-                    <div class="card-header text-center">
-                        <h4>Conference</h4>
-                        <h6>@Settings.ConferenceDate.ToLongDateString()</h6>
-                    </div>
-                    <div class="card-body text-center">
-                        @if (Settings.ConferenceTicketSaleOpened)
-                        {
-                            <a href="/tickets/conference" class="btn btn-primary">Register for conference</a>
-                        }
-                        else
-                        {
-                            <p>Conference tickets are not available yet.</p>
-                        }
-                    </div>
-                </div>
-            </div>
-        </div>
-    }
-    else
-    {
-        <div class="text-center">
-            <h2>Tickets for Bitbash are 100% free!</h2>
-            <p>While tickets are not available just yet, we are working hard to make them available soon.</p>
-            <p>Please stay tuned for updates on our website and social media channels.</p>
-        </div>
-    }
-
-</Section>
-
-@code
-{
-    private bool TicketsOnSale => Settings.ConferenceTicketSaleOpened || Settings.WorkshopTicketSaleOpened;
-}
+<TicketsAd />

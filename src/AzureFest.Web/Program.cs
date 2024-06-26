@@ -8,11 +8,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
-builder.Services.AddSingleton<EventDetailsProvider>();
-
-var settings = new WebsiteSettings();
-builder.Configuration.GetSection("AzureFest").Bind(settings);
+var settings = builder.Configuration.GetRequiredSection("AzureFest").Get<WebsiteSettings>()!;
 builder.Services.AddSingleton(settings);
+
+builder.Services.AddSingleton<EventDetailsProvider>();
 
 var app = builder.Build();
 

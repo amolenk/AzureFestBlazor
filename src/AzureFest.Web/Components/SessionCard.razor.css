@@ -1,16 +1,21 @@
 
 .card {
     transition: all 0.3s ease-in-out;
-    width: 18rem; 
+    width: 288px;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.1);
 }
 
 .card.service-session {
     background-color: #e9ecef;
+    cursor: default;
 }
 
-.card:hover.cursor-pointer {
-    box-shadow: 0 0 40px 0 #E459BB;
-    transform: scale(1.1);
+.card.service-session:hover {
+    transform: scale(1);
 }
 
 .card-title {
@@ -18,19 +23,15 @@
 }
 
 .card-body h5 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .card-body h6 {
     font-size: 1rem;
 }
 
-.card-footer .session-format {
-    background-color: #269BB9;
-}
-
 .card-footer .session-level {
-    background-color: #E459BB;
+    background-color: #E74C3C;
 }
 
 .speaker-photo {

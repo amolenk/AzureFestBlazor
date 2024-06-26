@@ -44,6 +44,9 @@ h6 {
     color: #0e1b4d;
 }
 
-.main-page {
-    margin-top: 70px;
+a.anchor {
+    display: block;
+    position: relative;
+    top: -70px;
+    visibility: hidden;
 }

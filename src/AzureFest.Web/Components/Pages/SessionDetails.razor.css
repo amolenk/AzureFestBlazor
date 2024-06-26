@@ -10,10 +10,6 @@ h2 {
     color: black;
 }
 
-.session-format {
-    background-color: #269BB9;
-}
-
-.session-level {
-    background-color: #E459BB;
+.room {
+    background-color: #E74C3C;
 }

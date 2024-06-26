@@ -1,4 +1,5 @@
-﻿using Bitbash.SessionizeImport;
+﻿using AzureFest.SessionizeImport;
+using Bitbash.SessionizeImport;
 
 if (args.Length == 3)
 {
@@ -7,5 +8,5 @@ if (args.Length == 3)
 }
 else
 {
-    Console.WriteLine("Usage: Bitbash.SessionizeImport <sessionizeApiId> <edition> <websitePath>");
+    Console.WriteLine("Usage: AzureFest.SessionizeImport <sessionizeApiId> <edition> <websitePath>");
 }

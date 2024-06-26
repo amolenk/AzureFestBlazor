@@ -1,48 +1,14 @@
-<Section Id="organizers" HeaderText="Organizers" FadeUp="true" ExtraClass="justify-content-center text-center">
+@inject WebsiteSettings Settings
 
-    <div class="row">
-        <div class="col organizer-item text-center">
-            <p>
-                <span class="organizer">
-                    <img src="img/organizers/thomas.jpg" alt="Thomas de Klerk">
-                </span>
-                Thomas de Klerk
-            </p>
-        </div>
-        <div class="col organizer-item text-center">
-            <p>
-                <span class="organizer">
-                    <img src="img/organizers/sander.jpg" alt="Sander Molenkamp">
-                </span>
-                Sander Molenkamp
-            </p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col organizer-item text-center">
-            <p>
-                <span class="organizer">
-                    <img src="img/organizers/tom.jpg" alt="Tom van den Berg">
-                </span>
-                Tom van den Berg
-            </p>
-        </div>
-        <div class="col organizer-item text-center">
-            <p>
-                <span class="organizer">
-                    <img src="img/organizers/edwin.jpg" alt="Edwin van Wijk">
-                </span>
-                Edwin van Wijk
-            </p>
-        </div>
-        <div class="col organizer-item text-center">
-            <p>
-                <span class="organizer">
-                    <img src="img/organizers/sigrid.jpg" alt="Sigrid van Tuil-Oosting">
-                </span>
-                Sigrid van Tuil-Oosting
-            </p>
-        </div>
+<Section Id="organizers" HeaderText="Organizers">
+    
+    <div class="row justify-content-center g-3">
+        @foreach (var organizer in @Settings.Organizers)
+        {
+            <div class="col-6 col-md-4">
+                <Organizer Name="@organizer.Name" Company="@organizer.Company" ImageUrl="@organizer.ImageUrl" />
+            </div>
+        }
     </div>
 
 </Section>

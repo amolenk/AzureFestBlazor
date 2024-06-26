@@ -1,4 +1,4 @@
-<section id="@Id" class="@(Background ? "section-with-bg" : null)" data-aos="@(FadeUp ? "fade-up" : null)">
+<section id="@Id" class="@(Background ? "section-with-bg" : null) py-4" data-aos="@(FadeUp ? "fade-up" : null)">
     <div class="container">
 
         @if (!string.IsNullOrWhiteSpace(HeaderText))
@@ -7,13 +7,9 @@
                 <h2>@HeaderText</h2>
                 @if (!string.IsNullOrEmpty(SubText))
                 {
-                    <h4>@SubText</h4>
+                    <h4 class="text-center">@SubText</h4>
                 }
             </div>
-        }
-        else
-        {
-            <p></p>
         }
         
         @ChildContent

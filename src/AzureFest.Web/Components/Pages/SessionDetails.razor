@@ -1,10 +1,12 @@
 @page "/{Edition}/session/{SessionId}"
+@using System.ComponentModel
 @using AzureFest.Web.Services
 @inject EventDetailsProvider EventDetailsProvider
+@inject WebsiteSettings Settings
 
 @if (_session is not null)
 {
-    <PageTitle>@_session.Title | Bitbash</PageTitle>
+    <PageTitle>@_session.Title | Azure Fest</PageTitle>
 
     <HeaderSpacer />
 
@@ -20,10 +22,12 @@
                 }
                 <div class="card-body">
                     <p>@((MarkupString)(_session.Description ?? string.Empty).Replace("\r\n", "<br/>"))</p>
-                    <h6>
-                        <span class="badge rounded-pill session-format">@_session.SessionFormat</span>
-                        <span class="badge rounded-pill session-level">@_session.Level</span>
-                    </h6>
+                    @if (Settings.ScheduleAnnounced)
+                    {
+                        <h6>
+                            <span class="badge rounded-pill room">@_session.Room</span>
+                        </h6>
+                    }
                 </div>
                 <div class="card-footer d-flex justify-content-center">
                     @foreach (var speaker in _session.Speakers)
@@ -54,16 +58,9 @@
 
     private string FormatTimeLocation(Session session)
     {
-        if (session.StartsAt is not null && session.EndsAt is not null)
+        if (Settings.ScheduleAnnounced && session.StartsAt is not null && session.EndsAt is not null)
         {
-            var result = $"{session.StartsAt.Value:dddd dd MMM HH:mm} - {session.EndsAt.Value:HH:mm}";
-
-            if (session.Room is not null)
-            {
-                result += $" - {session.Room}";
-            }
-
-            return result;
+            return $"{session.StartsAt.Value:dddd dd MMM HH:mm} - {session.EndsAt.Value:HH:mm}";
         }
 
         return string.Empty;

@@ -1,6 +1,9 @@
-export function onLoad() {
+export function onLoad(initState) {
     
-    initializeHeaderScrollEffect();
+    if (initState === 'header-scroll') {
+        initializeHeaderScrollEffect();
+    }
+    
     updateActiveLink();
     
     window.navMenu = {

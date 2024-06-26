@@ -36,12 +36,11 @@ public class EventDetailsProvider
             .OrderBy(d => d);
     }
 
-    public async Task<IEnumerable<IGrouping<DateTime, Session>>> GetScheduleAsync(string edition, DateOnly date)
+    public async Task<IEnumerable<IGrouping<DateTime, Session>>> GetScheduleAsync(string edition)
     {
         var eventDetails = await GetEventDetailsAsync(edition);
 
         return eventDetails.Sessions
-            .Where(s => s.StartsAt is not null && DateOnly.FromDateTime(s.StartsAt!.Value) == date)
             .GroupBy(s => s.StartsAt!.Value)
             .OrderBy(g => g.Key);
     }

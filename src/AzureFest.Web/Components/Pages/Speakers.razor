@@ -1,32 +1,29 @@
 ﻿@page "/speakers"
-@using AzureFest.Web.Configuration
 @using AzureFest.Web.Services
 @inject EventDetailsProvider EventDetailsProvider
 @inject WebsiteSettings Settings
 
-<PageTitle>Speakers | Bitbash</PageTitle>
+<PageTitle>Speakers | Azure Fest</PageTitle>
 
 <HeaderSpacer />
 
-<Section HeaderText="Speakers" ExtraClass="rocket-3">
+<Section HeaderText="Speakers">
 
     @if (Settings.SpeakersAnnounced)
     {
-        <div class="container">
+        @if (_speakers is not null)
+        {
+            <div class="row justify-content-center g-3">
 
-            @if (_speakers is not null)
-            {
-                <div class="row justify-content-center p-2">
-
-                    @foreach (var speaker in _speakers)
-                    {
+                @foreach (var speaker in _speakers)
+                {
+                    <div class="col-6 col-md-4 d-flex justify-content-center">
                         <SpeakerCard Speaker="@speaker"/>
-                    }
+                    </div>
+                }
 
-                </div>
-            }
-
-        </div>
+            </div>
+        }
     }
     else
     {

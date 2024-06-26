@@ -1,0 +1,19 @@
+<div class="organizer-item">
+    <div class="organizer-photo">
+        <img src="@ImageUrl" alt="@Name">
+    </div>
+    <h4>@Name</h4>
+    <p>@Company</p>
+</div>
+
+@code
+{
+    [Parameter]
+    public string? Name { get; set; }
+
+    [Parameter]
+    public string? Company { get; set; }
+
+    [Parameter]
+    public string? ImageUrl { get; set; }
+}

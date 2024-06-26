@@ -1,4 +1,4 @@
-@using AzureFest.Web.Configuration
+@using System.ComponentModel
 @inject WebsiteSettings Settings
 
 @if (Session is not null)
@@ -16,20 +16,19 @@
     {
         <div class="card m-3 cursor-pointer" onclick="window.location.href='@GetUrl(Session)'">
             <div class="card-body">
-                <h6 class="mb-2 text-muted">@Session.Room</h6>
-                <h5 class="card-title">@Session.Title</h5>
-                @foreach (var speaker in Session.Speakers)
+                @if (Settings.ScheduleAnnounced)
                 {
-                    <h6 class="mb-2 text-muted">
-                        <img loading="lazy" src="@speaker.ProfilePictureUrl" class="speaker-photo" alt="Photo of @speaker.FullName"> @speaker.FullName
-                    </h6>
+                    <h6 class="mb-2 text-muted">@Session.Room</h6>
                 }
+                <h5 class="card-title">@Session.Title</h5>
             </div>
             <div class="card-footer bg-transparent border-0">
-                <h6>
-                    <span class="badge rounded-pill session-format mt-2">@Session.SessionFormat</span>
-                    <span class="badge rounded-pill session-level mt-2">@Session.Level</span>
+                @foreach (var speaker in Session.Speakers)
+                {
+                <h6 class="mb-2 text-muted">
+                    <img loading="lazy" src="@speaker.ProfilePictureUrl" class="speaker-photo" alt="Photo of @speaker.FullName"> @speaker.FullName
                 </h6>
+                }
             </div>
         </div>
     }

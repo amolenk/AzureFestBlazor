@@ -31,6 +31,7 @@ function unregisterPageScriptElement(src) {
 }
 
 async function initializePageScriptModule(src, initState, pageScriptInfo) {
+    
     if (src.startsWith("./")) {
         src = new URL(src.substr(2), document.baseURI).toString();
     }
@@ -79,4 +80,38 @@ export function afterWebStarted(blazor) {
     });
 
     blazor.addEventListener('enhancedload', onEnhancedLoad);
+    
+    window.utils = {
+        scrollToElement: scrollToElement
+    };
+}
+
+/**
+ * Scrolls to an element with header offset
+ */
+function scrollToElement(el) {
+    let header = select('#header')
+    let offset = header.offsetHeight
+
+    if (!header.classList.contains('header-scrolled')) {
+        offset -= 20
+    }
+
+    let elementPos = select(el).offsetTop
+    window.scrollTo({
+        top: elementPos - offset,
+        behavior: 'smooth'
+    })
+}
+
+/**
+ * Easy selector helper function
+ */
+const select = (el, all = false) => {
+    el = el.trim()
+    if (all) {
+        return [...document.querySelectorAll(el)]
+    } else {
+        return document.querySelector(el)
+    }
 }

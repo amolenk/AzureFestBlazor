@@ -9,12 +9,29 @@
 
     <ItemGroup>
       <ProjectReference Include="..\AzureFest.Models\AzureFest.Models.csproj" />
+      <ProjectReference Include="..\AzureFest.SessionizeImport\AzureFest.SessionizeImport.csproj" />
     </ItemGroup>
 
     <ItemGroup>
       <Content Update="wwwroot\img\winter-2024\event-photos.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Data\2024\" />
+      <Folder Include="wwwroot\img\2024\speakers\" />
+      <Folder Include="wwwroot\img\sponsors\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="Components\Hero.razor.js">
+        <DependentUpon>Hero.razor</DependentUpon>
+      </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Data\winter-2025\event-details.json" />
     </ItemGroup>
 
 </Project>

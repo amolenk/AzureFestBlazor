@@ -1,16 +1,15 @@
 ﻿@page "/"
-@using AzureFest.Web.Configuration
 @inject WebsiteSettings Settings
 
 <PageTitle>Azure Fest</PageTitle>
 
 <Hero />
 <About />
-@* @if (Settings.SpeakersAnnounced) *@
-@* { *@
-@*     <SpeakerHighlights /> *@
-@* } *@
+@if (Settings.SpeakersAnnounced)
+{
+    <SpeakerHighlights />
+}
 <Venue />
 <Sponsors />
-@* <Communities /> *@
-@* <Organizers /> *@
+<TicketsAd />
+<Organizers />

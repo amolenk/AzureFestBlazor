@@ -4,29 +4,26 @@
 
 @if (_speaker is not null)
 {
-    <PageTitle>@_speaker.FullName | Bitbash</PageTitle>
+    <PageTitle>@_speaker.FullName | Azure Fest</PageTitle>
 
     <HeaderSpacer />
 
-    <Section HeaderText="@_speaker.FullName" SubText="@_speaker.TagLine" ExtraClass="rocket-4">
+    <Section HeaderText="@_speaker.FullName" SubText="@_speaker.TagLine">
 
-        <div class="container">
-            <div class="row">
+        <div class="row">
 
-                <div class="col-md-6 g-0 speaker-photo">
-                    <img src="@_speaker.ProfilePictureUrl" alt="Photo of speaker @_speaker.FullName">
-                </div>
+            <div class="col-md-6 g-0 speaker-photo">
+                <img src="@_speaker.ProfilePictureUrl" alt="Photo of speaker @_speaker.FullName">
+            </div>
 
-                <div class="col-md-6">
-
-                    <p>@((MarkupString)(_speaker.Bio ?? string.Empty).Replace("\r\n", "<br/>"))</p>
-                </div>
+            <div class="col-md-6">
+                <p>@((MarkupString)(_speaker.Bio ?? string.Empty).Replace("\r\n", "<br/>"))</p>
             </div>
         </div>
 
     </Section>
 
-    <Section HeaderText="Sessions" ExtraClass="rocket-5">
+    <Section HeaderText="Sessions" Background="true">
 
         <div class="row d-flex justify-content-center">
         @foreach (var session in _speaker.Sessions)
