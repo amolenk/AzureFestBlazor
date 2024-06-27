@@ -2,15 +2,11 @@
 
 @if (Speaker is not null)
 {
-    <div class="speaker card m-2 cursor-pointer bg-transparent border-0" onclick="window.location.href='@GetUrl(Speaker)'">
-        <img src="@Speaker.ProfilePictureUrl" alt="@Speaker.FullName" class="img-fluid">
-        <div class="details">
-            <h3>@Speaker.FullName</h3>
-            @* <div class="social"> *@
-            @*     <a href="https://x.com/samilaiho"><i class="bi bi-twitter"></i></a> *@
-            @*     <a href="https://fi.linkedin.com/in/samilaiho"><i class="bi bi-linkedin"></i></a> *@
-            @* </div> *@
-        </div>
+    <div class="card bg-transparent text-white my-2" onclick="window.location.href='@GetUrl(Speaker)'">
+        <img src="@Speaker.ProfilePictureUrl" class="card-img" alt="Photo of @Speaker.FullName">
+        <div class="speaker-img-overlay p-0 card-img-overlay d-flex flex-column align-items-start">
+            <span class="speaker-name mt-auto w-100 p-2 text-center">@Speaker.FullName</span>
+        </div>  
     </div>
 }
 

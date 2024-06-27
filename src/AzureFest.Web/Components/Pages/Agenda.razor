@@ -48,7 +48,7 @@
                                   .Where(session => !session.IsServiceSession ?? false)
                                   .OrderBy(session => session.Title))
                     {
-                        <div class="col-6 col-md-4 d-flex justify-content-center">
+                        <div class="col-12 col-md-4 d-flex justify-content-center">
                             <SessionCard Session="@session"/>
                         </div>
                     }
