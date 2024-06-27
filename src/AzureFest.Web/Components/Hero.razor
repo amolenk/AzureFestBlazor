@@ -1,9 +1,16 @@
-﻿<PageScript Src="./Components/Hero.razor.js" />
+﻿@inject WebsiteSettings Settings
+
+<PageScript Src="./Components/Hero.razor.js" />
 
 <section id="hero">
     <div class="hero-container">
         <img class="logo pb-10" src="img/2024/hero.svg" data-aos="zoom-in" data-aos-delay="100" />
-        <a class="about-btn" onclick="utils.scrollToElement('#about')">About Azure Fest</a>
-        @* <a href="#about-anchor" class="about-btn scrollto">About Azure Fest</a> *@
+        <span>
+        <a class="link-btn" onclick="utils.scrollToElement('#about')">About Azure Fest</a>
+        @if (Settings.SessionsAnnounced)
+        {
+            <a class="link-btn" onclick="window.location.href='/agenda'">Agenda</a>
+        }
+        </span>
     </div>
 </section>

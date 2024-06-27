@@ -88,7 +88,7 @@
     margin-top: -200px;
 }
 
-#hero .about-btn {
+#hero .link-btn {
     font-family: "Raleway", sans-serif;
     font-weight: 500;
     font-size: 14px;
@@ -107,7 +107,7 @@
     cursor: pointer;
 }
 
-#hero .about-btn:hover {
+#hero .link-btn:hover {
     background: #2980B9;
     color: #fff;
 }
