@@ -101,9 +101,7 @@ public class SessionizeImporter(HttpClient httpClient)
     }
 
     private async Task ImportProfilePictureAsync(string speakerId, string url, string edition, string websitePath)
-    {        
-        Console.WriteLine($"Importing profile picture for '{speakerId}'...");
-
+    {
         var httpResult = await httpClient.GetAsync(url);
         using var resultStream = await httpResult.Content.ReadAsStreamAsync();
 
@@ -119,7 +117,12 @@ public class SessionizeImporter(HttpClient httpClient)
         var outputPath = Path.Combine(
             outputFolder,
             speakerId + Path.GetExtension(url));
+
+        if (File.Exists(outputPath)) return;
         
+        Console.WriteLine($"Importing profile picture for '{speakerId}'...");
+
+
         using var fileStream = File.Create(outputPath);
         resultStream.CopyTo(fileStream);
     }
