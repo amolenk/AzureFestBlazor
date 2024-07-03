@@ -78,6 +78,17 @@
       ]
     },
     {
+      "Id": "michiel-hamers",
+      "FullName": "Michiel Hamers",
+      "Bio": "Hello, I\u0027m Michiel Hamers, a Solution Lead in Azure Cloud \u0026 Application Lifecycle Management, currently working at Ordina, a Sopra Steria company. I\u0027m an IT-nerd, trainer, Microsoft Azure MVP, and passionate speaker with a relentless focus on cloud technologies.\r\n\r\n\uD83D\uDCBC Professionally, I specialize in Azure, and I\u0027m dedicated to simplifying complex cloud applications. Born to learn and share knowledge, I have spent over 20 years in the IT industry, starting as a Microsoft Certified Professional in 2002 and becoming a Microsoft Certified Trainer (MCT) in 2021. In 2023, I was honored with the prestigious title of Microsoft Most Valuable Professional (MVP).\r\n\r\n\uD83C\uDFA4 As an avid speaker, you can find me at various international events, including Dutch Cloud Meetup, Developer Week, DevConf APG, FutureTech, Codesmith Unite, DevNetNoord, PowerShell \u002B DevOps Global Summit, Azconf - Chennai India, Global Azure Munich 2023, Codesmith Unite,  Chats for Change, AzureFest, Diversity \u0026 Inclusion Day, and Azure Thursday. I\u0027ve been sharing insights and expertise across these diverse platforms, contributing to the vibrant tech community. I\u0027m particularly excited about the upcoming opportunities to connect, learn, and innovate together!\r\n\r\n\uD83D\uDE80 My mission is to empower others with Azure expertise and cost management strategies, helping businesses thrive while being financially savvy. Whether I\u0027m teaching kids the basics of code at CoderDojo or presenting at major tech conferences, my enthusiasm for the cloud and learning knows no bounds.\r\n\r\n\uD83C\uDFC3 Outside of tech, you\u0027ll find me enjoying a 5K run and spending time with my family.\r\n\r\nLet\u0027s connect, learn, and innovate together!",
+      "TagLine": "Microsoft (Azure) Cloud solution Lead \u0026 Codesmith @ Sopra Steria (Ordina) | Trainer | MCT | MVP | Speaker",
+      "IsTopSpeaker": false,
+      "ProfilePictureUrl": "img/2024/speakers/michiel-hamers.jpg",
+      "sessions": [
+        "streamlining-back-office-operations-with-azure-and-openaipowered-net-smart-components"
+      ]
+    },
+    {
       "Id": "michiel-van-oudheusden",
       "FullName": "Michiel van Oudheusden",
       "Bio": "Michiel is a Microsoft .NET consultant, developer, and architect. With a focus on ALM and DevOps, APIs and containers, but also on products like AzureDevOps,  Azure, Containers and everything around it, he has a broad interest and experience. From traditional Windows applications to web development, managing teams and data centers and building highly available distributed systems,  he worked with multiple enterprise organizations. \r\nIn his spare time, he likes to work on open-source software and home automation.",
@@ -191,7 +202,7 @@
       "Room": "Room 3"
     },
     {
-      "Id": "1e8dc6e5-cef1-490d-8bc2-8d4c0b28eb02",
+      "Id": "255ddd8b-c2ec-4550-b069-3d81b757c2ee",
       "Title": "Break",
       "Description": null,
       "StartsAt": "2024-09-11T16:05:00",
@@ -287,7 +298,7 @@
       "Room": "Room 3"
     },
     {
-      "Id": "c1e2e027-c586-4318-8676-e27eb64d4c01",
+      "Id": "54a34371-4c60-4128-91b6-b0fa051b2a79",
       "Title": "Dinner",
       "Description": null,
       "StartsAt": "2024-09-11T18:30:00",
@@ -327,7 +338,21 @@
       "Room": "Room 2"
     },
     {
-      "Id": "ea94c92d-30b3-4cbc-a725-0353170330ee",
+      "Id": "streamlining-back-office-operations-with-azure-and-openaipowered-net-smart-components",
+      "Title": "Streamlining Back Office Operations with Azure and OpenAI-Powered .NET Smart Components",
+      "Description": "Join us for a deep dive into how Azure and OpenAI-powered .NET Smart Components can revolutionise back office workflows. We will explore a real-life example where a traditionally slow and tedious process for back office employees is transformed using the Smart Paste functionality. We will check which Azure components you should have lined up. Discover how these Azure AI-powered UI controls enhance productivity, reduce errors, and improve user satisfaction. Witness a live coding demo showcasing the seamless integration and tangible benefits of Smart Components in action. This session is tailored for experienced developers looking to modernize their internal applications. ",
+      "StartsAt": "2024-09-11T19:30:00",
+      "EndsAt": "2024-09-11T20:20:00",
+      "IsServiceSession": false,
+      "speakers": [
+        "michiel-hamers"
+      ],
+      "SessionFormat": null,
+      "Level": null,
+      "Room": "Room 3"
+    },
+    {
+      "Id": "0cc4b865-0be6-4c96-9232-7cfd35d47d4b",
       "Title": "Drinks",
       "Description": "Including LEGO raffle!",
       "StartsAt": "2024-09-11T20:20:00",
