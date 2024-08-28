@@ -157,7 +157,7 @@
       ],
       "SessionFormat": null,
       "Level": null,
-      "Room": "Room 1"
+      "Room": "Plaza"
     },
     {
       "Id": "achieving-continuous-monitoring-by-integrating-azure-and-azure-devops",
@@ -171,38 +171,38 @@
       ],
       "SessionFormat": null,
       "Level": null,
-      "Room": "Room 1"
+      "Room": "Plaza"
     },
     {
-      "Id": "azure-and-linked-data-at-the-rijksmuseum",
-      "Title": "Azure and Linked Data at the Rijksmuseum",
-      "Description": "The Rijksmuseum is of course famous for a select number of high profile art works, but did you know that next to the few thousand art works in the museum, there\u0027s about 1.000.000 art works and other objects in the depot, about 500.000 books in the museum library and an extensive archive, documenting the history of the works and the museum itself?\r\n\r\nBringing together and merging that data, that is incredibly rich, but very much siloed, is what we do with the Integration Layer Team at the museum. The team comprises developers, data engineers and DevOps engineers. We leverage AKS, Storage, VMs running Graph databases, SQL and more, to create an incredibly rich model, based on international cultural heritage standards, that can be used by researchers, enthusiasts, governments and other musea.\r\n\r\nI\u0027d like to give you a peek behind the curtain of what is happening around Azure in The Netherlands most important museum.",
+      "Id": "better-api-governance-with-azure-api-center",
+      "Title": "Better API Governance with Azure API Center",
+      "Description": "Having an API catalog is a critical tool for every enterprise that wants to be successful with their API program. An API catalog brings together the different roles involved in an API program and, by promoting the collaboration between them, it fosters API reuse, ensured compliance and better developer productivity. \r\nIn this session we will explore what is Azure API Center and how to integrate it in your API design workflow using Azure DevOps.",
       "StartsAt": "2024-09-11T15:15:00",
       "EndsAt": "2024-09-11T16:05:00",
       "IsServiceSession": false,
       "speakers": [
-        "daan-de-schepper"
+        "massimo-crippa"
       ],
       "SessionFormat": null,
       "Level": null,
-      "Room": "Room 2"
+      "Room": "Penthouse"
     },
     {
-      "Id": "azure-virtual-network-manager",
-      "Title": "Azure Virtual Network Manager",
-      "Description": "Have you ever wondered how you can manage your Azure virtual networks at scale? Did you want to build a hub-and-spoke architecture using a policy? Have you ever needed to deploy Network Security Group rules across all of your subnets to enable a new feature or to block a threat? Or have you deployed a new firewall and need to configure every subnet to use it? If the answer is yes to any of those questions then you need to learn about Azure Virtual Network Manager (AVNM), the tool that brings management with just a few clicks or lines of code.",
+      "Id": "creating-preconfigured-clusters-with-azure-kubernetes-service-automatic",
+      "Title": "Creating preconfigured clusters with Azure Kubernetes Service Automatic",
+      "Description": "Kubernetes is great for running containerized applications in a automated scalable environment. The addition of AKS makes is even easier to running that same cluster in Azure. Running those AKS clusters became even more powerful with features like Kubernetes Event-driven Autoscaling (KEDA), Workload Identity and integrations with Azure services like Azure Key Vault and Azure Policy. The past year also added azure managed resources for Prometheus and Grafana.\r\n\r\nThese additions are great, but there is still lots of configuration to do before the cluster is production ready. What if all this configuration is done for you? Microsoft felt the same and thus created Azure Kubernetes Service Automatic. With AKS Automatic you are able to create clusters quick and complete with features you want. Do you want a cluster with monitoring and scaling prebuild? AKS Automatic will do that for you.\r\n\r\nIn this session we will have a look at the features AKS Automatic has to offer and if it is something you could use.",
       "StartsAt": "2024-09-11T15:15:00",
       "EndsAt": "2024-09-11T16:05:00",
       "IsServiceSession": false,
       "speakers": [
-        "aidan-finn"
+        "wesley-noordam"
       ],
       "SessionFormat": null,
       "Level": null,
-      "Room": "Room 3"
+      "Room": "The Garden"
     },
     {
-      "Id": "255ddd8b-c2ec-4550-b069-3d81b757c2ee",
+      "Id": "ec9506e1-f7f6-4e11-a5dd-3f72c7a0fb9f",
       "Title": "Break",
       "Description": null,
       "StartsAt": "2024-09-11T16:05:00",
@@ -211,49 +211,49 @@
       "speakers": [],
       "SessionFormat": null,
       "Level": null,
-      "Room": "Room 1"
+      "Room": "Plaza"
     },
     {
-      "Id": "better-api-governance-with-azure-api-center",
-      "Title": "Better API Governance with Azure API Center",
-      "Description": "Having an API catalog is a critical tool for every enterprise that wants to be successful with their API program. An API catalog brings together the different roles involved in an API program and, by promoting the collaboration between them, it fosters API reuse, ensured compliance and better developer productivity. \r\nIn this session we will explore what is Azure API Center and how to integrate it in your API design workflow using Azure DevOps.",
+      "Id": "secure-access-to-your-azure-environment-lets-count-the-ways",
+      "Title": "Secure access to your Azure environment: Let\u0027s count the ways",
+      "Description": "Azure\u0027s web-based access is incredibly convenient, allowing you to enter the portal from any device, anywhere. But this convenience isn\u0027t exclusive to you; it\u0027s also a potential gateway for those with malicious intent, trying to exploit your resources, data and budget. The consequences from a security breach can be huge.\r\n\r\nIn an era where digital protection is needed more than ever, navigating the security tools can be overwhelming. Some tools might slow down your processes. Is the added security worth the potential decrease in speed? Is it necessary?\r\n\r\nThis session is your guide through the security options available to cloud engineers. We\u0027ll explore MFA, PIM, JIT, VPN, PAW, and other three-letter abbreviations that stand between your Azure environment intruders. Discover modern tools that not only secure your Azure space but could also be used for on-premises access through Azure.\r\n\r\nBy the end of our journey, you\u0027ll have a blueprint for creating the most secure environment. You\u0027ll leave equipped to make informed decisions about which security measures are right for your setup. Let\u0027s secure your Azure landscape together.",
       "StartsAt": "2024-09-11T16:35:00",
       "EndsAt": "2024-09-11T17:25:00",
       "IsServiceSession": false,
       "speakers": [
-        "massimo-crippa"
+        "barbara-forbes"
       ],
       "SessionFormat": null,
       "Level": null,
-      "Room": "Room 1"
+      "Room": "Plaza"
     },
     {
-      "Id": "building-secure-llm-applications-on-azure-heres-what-you-should-know",
-      "Title": "Building secure LLM applications on Azure: Here\u0027s what you should know",
-      "Description": "Building an intelligent chat application with GPT-4 is quite fun. However, it\u2019s also dangerous because large language models have a unique attack surface that you must deal with. Hackers can quite easily steal information from you or abuse the language model.\r\n\r\nIn this session, you\u2019ll learn how to deploy and protect an application on Azure that uses Azure OpenAI. You\u2019ll learn how to set up a good process, tools to discover and mitigate risks, and how to implement countermeasures in Azure to protect against hackers who want to abuse your LLM application.",
+      "Id": "azure-and-linked-data-at-the-rijksmuseum",
+      "Title": "Azure and Linked Data at the Rijksmuseum",
+      "Description": "The Rijksmuseum is of course famous for a select number of high profile art works, but did you know that next to the few thousand art works in the museum, there\u0027s about 1.000.000 art works and other objects in the depot, about 500.000 books in the museum library and an extensive archive, documenting the history of the works and the museum itself?\r\n\r\nBringing together and merging that data, that is incredibly rich, but very much siloed, is what we do with the Integration Layer Team at the museum. The team comprises developers, data engineers and DevOps engineers. We leverage AKS, Storage, VMs running Graph databases, SQL and more, to create an incredibly rich model, based on international cultural heritage standards, that can be used by researchers, enthusiasts, governments and other musea.\r\n\r\nI\u0027d like to give you a peek behind the curtain of what is happening around Azure in The Netherlands most important museum.",
       "StartsAt": "2024-09-11T16:35:00",
       "EndsAt": "2024-09-11T17:25:00",
       "IsServiceSession": false,
       "speakers": [
-        "willem-meints"
+        "daan-de-schepper"
       ],
       "SessionFormat": null,
       "Level": null,
-      "Room": "Room 2"
+      "Room": "Penthouse"
     },
     {
-      "Id": "creating-preconfigured-clusters-with-azure-kubernetes-service-automatic",
-      "Title": "Creating preconfigured clusters with Azure Kubernetes Service Automatic",
-      "Description": "Kubernetes is great for running containerized applications in a automated scalable environment. The addition of AKS makes is even easier to running that same cluster in Azure. Running those AKS clusters became even more powerful with features like Kubernetes Event-driven Autoscaling (KEDA), Workload Identity and integrations with Azure services like Azure Key Vault and Azure Policy. The past year also added azure managed resources for Prometheus and Grafana.\r\n\r\nThese additions are great, but there is still lots of configuration to do before the cluster is production ready. What if all this configuration is done for you? Microsoft felt the same and thus created Azure Kubernetes Service Automatic. With AKS Automatic you are able to create clusters quick and complete with features you want. Do you want a cluster with monitoring and scaling prebuild? AKS Automatic will do that for you.\r\n\r\nIn this session we will have a look at the features AKS Automatic has to offer and if it is something you could use.",
+      "Id": "rag-and-vector-databases-explained-how-to-hand-llm-your-data",
+      "Title": "RAG and Vector Databases Explained: How to hand LLM your Data",
+      "Description": "Adding your own data to large language models really makes them shine. \r\n\r\nJoin us for this demo-heavy session where we will explore several ways of handing these models your data, how vector databases are the new cool thing, and how services in Azure, like Azure AI search, help us make these models look even smarter. \r\n\r\nThis session will immediately get you up to speed with (the power of) RAG and will jump-start your LLM development journey",
       "StartsAt": "2024-09-11T16:35:00",
       "EndsAt": "2024-09-11T17:25:00",
       "IsServiceSession": false,
       "speakers": [
-        "wesley-noordam"
+        "roelant-dieben"
       ],
       "SessionFormat": null,
       "Level": null,
-      "Room": "Room 3"
+      "Room": "The Garden"
     },
     {
       "Id": "empowering-developers-with-finops-mastering-cost-efficiency-in-the-cloud",
@@ -267,92 +267,92 @@
       ],
       "SessionFormat": null,
       "Level": null,
-      "Room": "Room 1"
-    },
-    {
-      "Id": "microservices-orchestration-with-azure-container-apps",
-      "Title": "Microservices Orchestration with Azure Container Apps",
-      "Description": "Explore the transformative potential of microservices architecture on Azure Container Apps in this engaging session. Join us as we delve into the intricacies of designing, deploying, and managing microservices-based applications, leveraging the power of Azure\u0027s containerization solutions.\r\n\r\nDuring this session, I will guide you through the key principles of microservices and demonstrate how Azure Container Apps streamlines the development and deployment process. Learn best practices for breaking down monolithic applications into smaller, manageable services and witness the benefits of increased scalability, improved fault isolation, and enhanced agility.\r\n\r\nDiscover the robust features of Azure Container Apps, such as seamless integration with Azure Kubernetes Service (AKS) and Azure Container Registry. Gain insights into monitoring, scaling, and troubleshooting microservices in a containerized environment, ensuring optimal performance and reliability.",
-      "StartsAt": "2024-09-11T17:40:00",
-      "EndsAt": "2024-09-11T18:30:00",
-      "IsServiceSession": false,
-      "speakers": [
-        "eduard-keilholz"
-      ],
-      "SessionFormat": null,
-      "Level": null,
-      "Room": "Room 2"
-    },
-    {
-      "Id": "rag-and-vector-databases-explained-how-to-hand-llm-your-data",
-      "Title": "RAG and Vector Databases Explained: How to hand LLM your Data",
-      "Description": "Adding your own data to large language models really makes them shine. \r\n\r\nJoin us for this demo-heavy session where we will explore several ways of handing these models your data, how vector databases are the new cool thing, and how services in Azure, like Azure AI search, help us make these models look even smarter. \r\n\r\nThis session will immediately get you up to speed with (the power of) RAG and will jump-start your LLM development journey",
-      "StartsAt": "2024-09-11T17:40:00",
-      "EndsAt": "2024-09-11T18:30:00",
-      "IsServiceSession": false,
-      "speakers": [
-        "roelant-dieben"
-      ],
-      "SessionFormat": null,
-      "Level": null,
-      "Room": "Room 3"
-    },
-    {
-      "Id": "54a34371-4c60-4128-91b6-b0fa051b2a79",
-      "Title": "Dinner",
-      "Description": null,
-      "StartsAt": "2024-09-11T18:30:00",
-      "EndsAt": "2024-09-11T19:35:00",
-      "IsServiceSession": true,
-      "speakers": [],
-      "SessionFormat": null,
-      "Level": null,
-      "Room": "Room 1"
-    },
-    {
-      "Id": "secure-access-to-your-azure-environment-lets-count-the-ways",
-      "Title": "Secure access to your Azure environment: Let\u0027s count the ways",
-      "Description": "Azure\u0027s web-based access is incredibly convenient, allowing you to enter the portal from any device, anywhere. But this convenience isn\u0027t exclusive to you; it\u0027s also a potential gateway for those with malicious intent, trying to exploit your resources, data and budget. The consequences from a security breach can be huge.\r\n\r\nIn an era where digital protection is needed more than ever, navigating the security tools can be overwhelming. Some tools might slow down your processes. Is the added security worth the potential decrease in speed? Is it necessary?\r\n\r\nThis session is your guide through the security options available to cloud engineers. We\u0027ll explore MFA, PIM, JIT, VPN, PAW, and other three-letter abbreviations that stand between your Azure environment intruders. Discover modern tools that not only secure your Azure space but could also be used for on-premises access through Azure.\r\n\r\nBy the end of our journey, you\u0027ll have a blueprint for creating the most secure environment. You\u0027ll leave equipped to make informed decisions about which security measures are right for your setup. Let\u0027s secure your Azure landscape together.",
-      "StartsAt": "2024-09-11T19:30:00",
-      "EndsAt": "2024-09-11T20:20:00",
-      "IsServiceSession": false,
-      "speakers": [
-        "barbara-forbes"
-      ],
-      "SessionFormat": null,
-      "Level": null,
-      "Room": "Room 1"
+      "Room": "Plaza"
     },
     {
       "Id": "securing-microservices-strategies-and-best-practices",
       "Title": "Securing Microservices: Strategies and Best Practices",
       "Description": "This advanced session targets experienced developers and security engineers, focusing on securing microservices on Microsoft Azure. \r\n\r\nKey topics include implementing Azure AD for authentication and authorization, using Azure Key Vault for secrets management, and securing service-to-service communication with Azure Application Gateway and API Management. \r\n\r\nParticipants will explore best practices for API security, Azure Monitor for logging and incident response, and ensuring compliance with Azure Policy. Real-world Azure case studies will provide practical insights. \r\n\r\nBy the end, attendees will be equipped to enhance their microservices\u0027 security on Azure and ensure resilience against cyber threats.",
-      "StartsAt": "2024-09-11T19:30:00",
-      "EndsAt": "2024-09-11T20:20:00",
+      "StartsAt": "2024-09-11T17:40:00",
+      "EndsAt": "2024-09-11T18:30:00",
       "IsServiceSession": false,
       "speakers": [
         "estelle-auberix"
       ],
       "SessionFormat": null,
       "Level": null,
-      "Room": "Room 2"
+      "Room": "Penthouse"
     },
     {
       "Id": "streamlining-back-office-operations-with-azure-and-openaipowered-net-smart-components",
       "Title": "Streamlining Back Office Operations with Azure and OpenAI-Powered .NET Smart Components",
       "Description": "Join us for a deep dive into how Azure and OpenAI-powered .NET Smart Components can revolutionise back office workflows. We will explore a real-life example where a traditionally slow and tedious process for back office employees is transformed using the Smart Paste functionality. We will check which Azure components you should have lined up. Discover how these Azure AI-powered UI controls enhance productivity, reduce errors, and improve user satisfaction. Witness a live coding demo showcasing the seamless integration and tangible benefits of Smart Components in action. This session is tailored for experienced developers looking to modernize their internal applications. ",
-      "StartsAt": "2024-09-11T19:30:00",
-      "EndsAt": "2024-09-11T20:20:00",
+      "StartsAt": "2024-09-11T17:40:00",
+      "EndsAt": "2024-09-11T18:30:00",
       "IsServiceSession": false,
       "speakers": [
         "michiel-hamers"
       ],
       "SessionFormat": null,
       "Level": null,
-      "Room": "Room 3"
+      "Room": "The Garden"
     },
     {
-      "Id": "0cc4b865-0be6-4c96-9232-7cfd35d47d4b",
+      "Id": "58486480-153b-4801-b5f9-d2592bea6288",
+      "Title": "Dinner",
+      "Description": null,
+      "StartsAt": "2024-09-11T18:30:00",
+      "EndsAt": "2024-09-11T19:30:00",
+      "IsServiceSession": true,
+      "speakers": [],
+      "SessionFormat": null,
+      "Level": null,
+      "Room": "Plaza"
+    },
+    {
+      "Id": "microservices-orchestration-with-azure-container-apps",
+      "Title": "Microservices Orchestration with Azure Container Apps",
+      "Description": "Explore the transformative potential of microservices architecture on Azure Container Apps in this engaging session. Join us as we delve into the intricacies of designing, deploying, and managing microservices-based applications, leveraging the power of Azure\u0027s containerization solutions.\r\n\r\nDuring this session, I will guide you through the key principles of microservices and demonstrate how Azure Container Apps streamlines the development and deployment process. Learn best practices for breaking down monolithic applications into smaller, manageable services and witness the benefits of increased scalability, improved fault isolation, and enhanced agility.\r\n\r\nDiscover the robust features of Azure Container Apps, such as seamless integration with Azure Kubernetes Service (AKS) and Azure Container Registry. Gain insights into monitoring, scaling, and troubleshooting microservices in a containerized environment, ensuring optimal performance and reliability.",
+      "StartsAt": "2024-09-11T19:30:00",
+      "EndsAt": "2024-09-11T20:20:00",
+      "IsServiceSession": false,
+      "speakers": [
+        "eduard-keilholz"
+      ],
+      "SessionFormat": null,
+      "Level": null,
+      "Room": "Plaza"
+    },
+    {
+      "Id": "building-secure-llm-applications-on-azure-heres-what-you-should-know",
+      "Title": "Building secure LLM applications on Azure: Here\u0027s what you should know",
+      "Description": "Building an intelligent chat application with GPT-4 is quite fun. However, it\u2019s also dangerous because large language models have a unique attack surface that you must deal with. Hackers can quite easily steal information from you or abuse the language model.\r\n\r\nIn this session, you\u2019ll learn how to deploy and protect an application on Azure that uses Azure OpenAI. You\u2019ll learn how to set up a good process, tools to discover and mitigate risks, and how to implement countermeasures in Azure to protect against hackers who want to abuse your LLM application.",
+      "StartsAt": "2024-09-11T19:30:00",
+      "EndsAt": "2024-09-11T20:20:00",
+      "IsServiceSession": false,
+      "speakers": [
+        "willem-meints"
+      ],
+      "SessionFormat": null,
+      "Level": null,
+      "Room": "Penthouse"
+    },
+    {
+      "Id": "azure-virtual-network-manager",
+      "Title": "Azure Virtual Network Manager",
+      "Description": "Have you ever wondered how you can manage your Azure virtual networks at scale? Did you want to build a hub-and-spoke architecture using a policy? Have you ever needed to deploy Network Security Group rules across all of your subnets to enable a new feature or to block a threat? Or have you deployed a new firewall and need to configure every subnet to use it? If the answer is yes to any of those questions then you need to learn about Azure Virtual Network Manager (AVNM), the tool that brings management with just a few clicks or lines of code.",
+      "StartsAt": "2024-09-11T19:30:00",
+      "EndsAt": "2024-09-11T20:20:00",
+      "IsServiceSession": false,
+      "speakers": [
+        "aidan-finn"
+      ],
+      "SessionFormat": null,
+      "Level": null,
+      "Room": "The Garden"
+    },
+    {
+      "Id": "4439f94d-cf87-4ac1-bdb7-5e69feb8299c",
       "Title": "Drinks",
       "Description": "Including LEGO raffle!",
       "StartsAt": "2024-09-11T20:20:00",
@@ -361,7 +361,7 @@
       "speakers": [],
       "SessionFormat": null,
       "Level": null,
-      "Room": "Room 1"
+      "Room": "Plaza"
     }
   ]
 }
