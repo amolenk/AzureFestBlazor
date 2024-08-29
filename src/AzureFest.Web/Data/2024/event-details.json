@@ -146,6 +146,18 @@
   ],
   "Sessions": [
     {
+      "Id": "2f80d21f-3277-4277-9378-d90f5c181d59",
+      "Title": "Registration",
+      "Description": null,
+      "StartsAt": "2024-09-11T13:00:00",
+      "EndsAt": "2024-09-11T13:45:00",
+      "IsServiceSession": true,
+      "speakers": [],
+      "SessionFormat": null,
+      "Level": null,
+      "Room": "Plaza"
+    },
+    {
       "Id": "forward-to-the-past-and-back-to-the-future-cybercrime-in-20232024",
       "Title": "Forward to the Past and Back to the Future - Cybercrime in 2023/2024",
       "Description": "Join Sami Laiho, Senior Technical Fellow at Adminize, for a look back in to what 2023 changed in the Security Threat Landscape and to hear his predictions on what will the future have in store for us. Is the Cloud more secure than on-prem? Is Apple more secure than Microsoft? Will AI transform security landscape as much as we think? Come and hear what Sami has to say on these topics, among others.",
@@ -202,7 +214,7 @@
       "Room": "The Garden"
     },
     {
-      "Id": "fb07fbea-452c-41d5-b665-b77849549d4d",
+      "Id": "e977f17c-ad5f-4180-9343-2c10b7a1f403",
       "Title": "Break",
       "Description": null,
       "StartsAt": "2024-09-11T16:05:00",
@@ -298,7 +310,7 @@
       "Room": "The Garden"
     },
     {
-      "Id": "f872b586-2f88-4996-8166-1560d5840851",
+      "Id": "c8fa8613-5edc-4941-9249-0aabb1a6f3c6",
       "Title": "Dinner",
       "Description": null,
       "StartsAt": "2024-09-11T18:30:00",
@@ -352,7 +364,7 @@
       "Room": "The Garden"
     },
     {
-      "Id": "9f7824a5-215f-4b5e-858f-cd9e0a30ea67",
+      "Id": "2258f891-f7d4-4790-a2d0-466c123718c2",
       "Title": "Drinks",
       "Description": "Including LEGO raffle!",
       "StartsAt": "2024-09-11T20:20:00",
