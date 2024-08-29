@@ -146,7 +146,7 @@
   ],
   "Sessions": [
     {
-      "Id": "2f80d21f-3277-4277-9378-d90f5c181d59",
+      "Id": "d22e40bd-39ad-448c-9691-2945078eba77",
       "Title": "Registration",
       "Description": null,
       "StartsAt": "2024-09-11T13:00:00",
@@ -155,7 +155,7 @@
       "speakers": [],
       "SessionFormat": null,
       "Level": null,
-      "Room": "Plaza"
+      "Room": "Atrium"
     },
     {
       "Id": "forward-to-the-past-and-back-to-the-future-cybercrime-in-20232024",
@@ -214,7 +214,7 @@
       "Room": "The Garden"
     },
     {
-      "Id": "e977f17c-ad5f-4180-9343-2c10b7a1f403",
+      "Id": "41ceb02e-b276-43be-a06e-9e0b7ded7be1",
       "Title": "Break",
       "Description": null,
       "StartsAt": "2024-09-11T16:05:00",
@@ -223,7 +223,7 @@
       "speakers": [],
       "SessionFormat": null,
       "Level": null,
-      "Room": "Plaza"
+      "Room": "Atrium"
     },
     {
       "Id": "secure-access-to-your-azure-environment-lets-count-the-ways",
@@ -310,7 +310,7 @@
       "Room": "The Garden"
     },
     {
-      "Id": "c8fa8613-5edc-4941-9249-0aabb1a6f3c6",
+      "Id": "23fba814-50e0-4918-a1eb-72f7d0aa771d",
       "Title": "Dinner",
       "Description": null,
       "StartsAt": "2024-09-11T18:30:00",
@@ -319,7 +319,7 @@
       "speakers": [],
       "SessionFormat": null,
       "Level": null,
-      "Room": "Plaza"
+      "Room": "Atrium"
     },
     {
       "Id": "microservices-orchestration-with-azure-container-apps",
@@ -364,7 +364,7 @@
       "Room": "The Garden"
     },
     {
-      "Id": "2258f891-f7d4-4790-a2d0-466c123718c2",
+      "Id": "29342ee2-6d0d-4880-b789-fc915f8cd4f1",
       "Title": "Drinks",
       "Description": "Including LEGO raffle!",
       "StartsAt": "2024-09-11T20:20:00",
@@ -373,7 +373,7 @@
       "speakers": [],
       "SessionFormat": null,
       "Level": null,
-      "Room": "Plaza"
+      "Room": "Atrium"
     }
   ]
 }
