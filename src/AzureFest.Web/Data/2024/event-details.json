@@ -188,21 +188,21 @@
       "Room": "Penthouse"
     },
     {
-      "Id": "creating-preconfigured-clusters-with-azure-kubernetes-service-automatic",
-      "Title": "Creating preconfigured clusters with Azure Kubernetes Service Automatic",
-      "Description": "Kubernetes is great for running containerized applications in a automated scalable environment. The addition of AKS makes is even easier to running that same cluster in Azure. Running those AKS clusters became even more powerful with features like Kubernetes Event-driven Autoscaling (KEDA), Workload Identity and integrations with Azure services like Azure Key Vault and Azure Policy. The past year also added azure managed resources for Prometheus and Grafana.\r\n\r\nThese additions are great, but there is still lots of configuration to do before the cluster is production ready. What if all this configuration is done for you? Microsoft felt the same and thus created Azure Kubernetes Service Automatic. With AKS Automatic you are able to create clusters quick and complete with features you want. Do you want a cluster with monitoring and scaling prebuild? AKS Automatic will do that for you.\r\n\r\nIn this session we will have a look at the features AKS Automatic has to offer and if it is something you could use.",
+      "Id": "azure-virtual-network-manager",
+      "Title": "Azure Virtual Network Manager",
+      "Description": "Have you ever wondered how you can manage your Azure virtual networks at scale? Did you want to build a hub-and-spoke architecture using a policy? Have you ever needed to deploy Network Security Group rules across all of your subnets to enable a new feature or to block a threat? Or have you deployed a new firewall and need to configure every subnet to use it? If the answer is yes to any of those questions then you need to learn about Azure Virtual Network Manager (AVNM), the tool that brings management with just a few clicks or lines of code.",
       "StartsAt": "2024-09-11T15:15:00",
       "EndsAt": "2024-09-11T16:05:00",
       "IsServiceSession": false,
       "speakers": [
-        "wesley-noordam"
+        "aidan-finn"
       ],
       "SessionFormat": null,
       "Level": null,
       "Room": "The Garden"
     },
     {
-      "Id": "9bba5504-22f5-40c1-bb80-383bc9fab355",
+      "Id": "fb07fbea-452c-41d5-b665-b77849549d4d",
       "Title": "Break",
       "Description": null,
       "StartsAt": "2024-09-11T16:05:00",
@@ -298,7 +298,7 @@
       "Room": "The Garden"
     },
     {
-      "Id": "72f09010-7f55-4c40-9f51-553d15bbd9c9",
+      "Id": "f872b586-2f88-4996-8166-1560d5840851",
       "Title": "Dinner",
       "Description": null,
       "StartsAt": "2024-09-11T18:30:00",
@@ -338,21 +338,21 @@
       "Room": "Penthouse"
     },
     {
-      "Id": "azure-virtual-network-manager",
-      "Title": "Azure Virtual Network Manager",
-      "Description": "Have you ever wondered how you can manage your Azure virtual networks at scale? Did you want to build a hub-and-spoke architecture using a policy? Have you ever needed to deploy Network Security Group rules across all of your subnets to enable a new feature or to block a threat? Or have you deployed a new firewall and need to configure every subnet to use it? If the answer is yes to any of those questions then you need to learn about Azure Virtual Network Manager (AVNM), the tool that brings management with just a few clicks or lines of code.",
+      "Id": "creating-preconfigured-clusters-with-azure-kubernetes-service-automatic",
+      "Title": "Creating preconfigured clusters with Azure Kubernetes Service Automatic",
+      "Description": "Kubernetes is great for running containerized applications in a automated scalable environment. The addition of AKS makes is even easier to running that same cluster in Azure. Running those AKS clusters became even more powerful with features like Kubernetes Event-driven Autoscaling (KEDA), Workload Identity and integrations with Azure services like Azure Key Vault and Azure Policy. The past year also added azure managed resources for Prometheus and Grafana.\r\n\r\nThese additions are great, but there is still lots of configuration to do before the cluster is production ready. What if all this configuration is done for you? Microsoft felt the same and thus created Azure Kubernetes Service Automatic. With AKS Automatic you are able to create clusters quick and complete with features you want. Do you want a cluster with monitoring and scaling prebuild? AKS Automatic will do that for you.\r\n\r\nIn this session we will have a look at the features AKS Automatic has to offer and if it is something you could use.",
       "StartsAt": "2024-09-11T19:30:00",
       "EndsAt": "2024-09-11T20:20:00",
       "IsServiceSession": false,
       "speakers": [
-        "aidan-finn"
+        "wesley-noordam"
       ],
       "SessionFormat": null,
       "Level": null,
       "Room": "The Garden"
     },
     {
-      "Id": "c0bd6d16-56f4-4f2e-8597-426235295ad4",
+      "Id": "9f7824a5-215f-4b5e-858f-cd9e0a30ea67",
       "Title": "Drinks",
       "Description": "Including LEGO raffle!",
       "StartsAt": "2024-09-11T20:20:00",
