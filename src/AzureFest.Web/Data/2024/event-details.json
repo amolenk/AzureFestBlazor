@@ -146,7 +146,7 @@
   ],
   "Sessions": [
     {
-      "Id": "d22e40bd-39ad-448c-9691-2945078eba77",
+      "Id": "13c5e956-2776-4a29-a757-7b16042c2100",
       "Title": "Registration",
       "Description": null,
       "StartsAt": "2024-09-11T13:00:00",
@@ -186,20 +186,6 @@
       "Room": "Plaza"
     },
     {
-      "Id": "better-api-governance-with-azure-api-center",
-      "Title": "Better API Governance with Azure API Center",
-      "Description": "Having an API catalog is a critical tool for every enterprise that wants to be successful with their API program. An API catalog brings together the different roles involved in an API program and, by promoting the collaboration between them, it fosters API reuse, ensured compliance and better developer productivity. \r\nIn this session we will explore what is Azure API Center and how to integrate it in your API design workflow using Azure DevOps.",
-      "StartsAt": "2024-09-11T15:15:00",
-      "EndsAt": "2024-09-11T16:05:00",
-      "IsServiceSession": false,
-      "speakers": [
-        "massimo-crippa"
-      ],
-      "SessionFormat": null,
-      "Level": null,
-      "Room": "Penthouse"
-    },
-    {
       "Id": "azure-virtual-network-manager",
       "Title": "Azure Virtual Network Manager",
       "Description": "Have you ever wondered how you can manage your Azure virtual networks at scale? Did you want to build a hub-and-spoke architecture using a policy? Have you ever needed to deploy Network Security Group rules across all of your subnets to enable a new feature or to block a threat? Or have you deployed a new firewall and need to configure every subnet to use it? If the answer is yes to any of those questions then you need to learn about Azure Virtual Network Manager (AVNM), the tool that brings management with just a few clicks or lines of code.",
@@ -211,10 +197,24 @@
       ],
       "SessionFormat": null,
       "Level": null,
+      "Room": "Penthouse"
+    },
+    {
+      "Id": "creating-preconfigured-clusters-with-azure-kubernetes-service-automatic",
+      "Title": "Creating preconfigured clusters with Azure Kubernetes Service Automatic",
+      "Description": "Kubernetes is great for running containerized applications in a automated scalable environment. The addition of AKS makes is even easier to running that same cluster in Azure. Running those AKS clusters became even more powerful with features like Kubernetes Event-driven Autoscaling (KEDA), Workload Identity and integrations with Azure services like Azure Key Vault and Azure Policy. The past year also added azure managed resources for Prometheus and Grafana.\r\n\r\nThese additions are great, but there is still lots of configuration to do before the cluster is production ready. What if all this configuration is done for you? Microsoft felt the same and thus created Azure Kubernetes Service Automatic. With AKS Automatic you are able to create clusters quick and complete with features you want. Do you want a cluster with monitoring and scaling prebuild? AKS Automatic will do that for you.\r\n\r\nIn this session we will have a look at the features AKS Automatic has to offer and if it is something you could use.",
+      "StartsAt": "2024-09-11T15:15:00",
+      "EndsAt": "2024-09-11T16:05:00",
+      "IsServiceSession": false,
+      "speakers": [
+        "wesley-noordam"
+      ],
+      "SessionFormat": null,
+      "Level": null,
       "Room": "The Garden"
     },
     {
-      "Id": "41ceb02e-b276-43be-a06e-9e0b7ded7be1",
+      "Id": "28aad80b-d830-4bc4-b447-1490633ad6d7",
       "Title": "Break",
       "Description": null,
       "StartsAt": "2024-09-11T16:05:00",
@@ -310,7 +310,7 @@
       "Room": "The Garden"
     },
     {
-      "Id": "23fba814-50e0-4918-a1eb-72f7d0aa771d",
+      "Id": "d1e0a77f-c813-4e42-9aaf-266a031723d0",
       "Title": "Dinner",
       "Description": null,
       "StartsAt": "2024-09-11T18:30:00",
@@ -350,21 +350,21 @@
       "Room": "Penthouse"
     },
     {
-      "Id": "creating-preconfigured-clusters-with-azure-kubernetes-service-automatic",
-      "Title": "Creating preconfigured clusters with Azure Kubernetes Service Automatic",
-      "Description": "Kubernetes is great for running containerized applications in a automated scalable environment. The addition of AKS makes is even easier to running that same cluster in Azure. Running those AKS clusters became even more powerful with features like Kubernetes Event-driven Autoscaling (KEDA), Workload Identity and integrations with Azure services like Azure Key Vault and Azure Policy. The past year also added azure managed resources for Prometheus and Grafana.\r\n\r\nThese additions are great, but there is still lots of configuration to do before the cluster is production ready. What if all this configuration is done for you? Microsoft felt the same and thus created Azure Kubernetes Service Automatic. With AKS Automatic you are able to create clusters quick and complete with features you want. Do you want a cluster with monitoring and scaling prebuild? AKS Automatic will do that for you.\r\n\r\nIn this session we will have a look at the features AKS Automatic has to offer and if it is something you could use.",
+      "Id": "better-api-governance-with-azure-api-center",
+      "Title": "Better API Governance with Azure API Center",
+      "Description": "Having an API catalog is a critical tool for every enterprise that wants to be successful with their API program. An API catalog brings together the different roles involved in an API program and, by promoting the collaboration between them, it fosters API reuse, ensured compliance and better developer productivity. \r\nIn this session we will explore what is Azure API Center and how to integrate it in your API design workflow using Azure DevOps.",
       "StartsAt": "2024-09-11T19:30:00",
       "EndsAt": "2024-09-11T20:20:00",
       "IsServiceSession": false,
       "speakers": [
-        "wesley-noordam"
+        "massimo-crippa"
       ],
       "SessionFormat": null,
       "Level": null,
       "Room": "The Garden"
     },
     {
-      "Id": "29342ee2-6d0d-4880-b789-fc915f8cd4f1",
+      "Id": "6dacfd4a-97ff-4dba-ae03-dc38906adad2",
       "Title": "Drinks",
       "Description": "Including LEGO raffle!",
       "StartsAt": "2024-09-11T20:20:00",
