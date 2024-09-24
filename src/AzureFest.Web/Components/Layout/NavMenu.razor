@@ -19,7 +19,10 @@
             </ul>
             <i class="bi bi-list mobile-nav-toggle" onclick="navMenu.toggleMobileNavigation()"></i>
         </nav><!-- .navbar -->
-        <a href="@TicketsLink" class="buy-tickets" target="_blank">Get Ticket</a>
+        @if (Settings.ShowTicketsLink)
+        {
+            <a href="@TicketsLink" class="buy-tickets" target="_blank">Get Ticket</a>
+        }
     </div>
 </header>
 

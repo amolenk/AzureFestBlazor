@@ -5,11 +5,15 @@
 
 <Hero />
 <About />
+<PhotoAlbum />
 @if (Settings.SpeakersAnnounced)
 {
     <SpeakerHighlights />
 }
 <Venue />
 <Sponsors />
-<TicketsAd />
+@if (Settings.ShowTicketsLink)
+{
+    <TicketsAd />
+}
 <Organizers />

@@ -12,7 +12,9 @@ public class WebsiteSettings
     public List<Sponsor> GoldSponsors { get; init; } = [];
     public List<Sponsor> CommunitySponsors { get; init; } = [];
     public List<Organizer> Organizers { get; init; } = [];
+    public bool ShowTicketsLink { get; init; } = false;
     
-    public bool TicketsAvailable => TicketsAvailableFromDate.HasValue 
+    public bool TicketsAvailable => ShowTicketsLink && TicketsAvailableFromDate.HasValue 
                                     && TicketsAvailableFromDate.Value <= DateOnly.FromDateTime(DateTime.UtcNow);
+
 }

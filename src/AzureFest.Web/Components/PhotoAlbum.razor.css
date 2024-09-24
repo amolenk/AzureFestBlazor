@@ -1,0 +1,13 @@
+.galleria
+{
+    width: 660px;
+    height: 440px;
+}
+
+@media (max-width: 640px) {
+    .galleria
+    {
+        width: 300px;
+        height: 200px;
+    }
+}
