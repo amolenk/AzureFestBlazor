@@ -3,6 +3,7 @@ namespace AzureFest.Web.Configuration;
 public class WebsiteSettings
 {
     public string CurrentEdition { get; init; } = string.Empty;
+    public DateOnly ConferenceDate { get; init; }
     public bool SessionsAnnounced { get; init; }
     public bool ScheduleAnnounced { get; init; }
     public bool SpeakersAnnounced { get; init; }

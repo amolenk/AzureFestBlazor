@@ -21,6 +21,7 @@
     <ItemGroup>
       <Folder Include="Data\2024\" />
       <Folder Include="wwwroot\img\2024\speakers\" />
+      <Folder Include="wwwroot\img\2025\" />
       <Folder Include="wwwroot\img\sponsors\" />
     </ItemGroup>
 
