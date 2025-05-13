@@ -2,7 +2,7 @@ using System.Net.Http.Json;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 using AzureFest.Models;
-using Bitbash.SessionizeImport.Models;
+using AzureFest.SessionizeImport.Models;
 using Unidecode.NET;
 
 namespace AzureFest.SessionizeImport;

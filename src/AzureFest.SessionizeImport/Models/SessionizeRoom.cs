@@ -1,4 +1,4 @@
-namespace Bitbash.SessionizeImport.Models;
+namespace AzureFest.SessionizeImport.Models;
 
 public class SessionizeRoom
 {

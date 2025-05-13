@@ -1,5 +1,5 @@
 ﻿using AzureFest.SessionizeImport;
-using Bitbash.SessionizeImport;
+using AzureFest.SessionizeImport;
 
 if (args.Length == 3)
 {
