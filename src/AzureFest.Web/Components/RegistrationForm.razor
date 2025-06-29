@@ -1,0 +1,120 @@
+@using AzureFest.Web.Services
+@using System.ComponentModel.DataAnnotations
+@inject IRegistrationService RegistrationService
+@inject IJSRuntime JSRuntime
+
+<div class="registration-form">
+    <h5 class="text-center mb-4">Register for Azure Fest</h5>
+    
+    @if (!string.IsNullOrEmpty(successMessage))
+    {
+        <div class="alert alert-success" role="alert">
+            @successMessage
+        </div>
+    }
+    
+    @if (!string.IsNullOrEmpty(errorMessage))
+    {
+        <div class="alert alert-danger" role="alert">
+            @errorMessage
+        </div>
+    }
+
+    <EditForm Model="registrationModel" OnValidSubmit="HandleValidSubmit">
+        <DataAnnotationsValidator />
+        
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address *</label>
+            <InputText id="email" class="form-control" @bind-Value="registrationModel.Email" />
+            <ValidationMessage For="@(() => registrationModel.Email)" />
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="firstName" class="form-label">First name *</label>
+                <InputText id="firstName" class="form-control" @bind-Value="registrationModel.FirstName" />
+                <ValidationMessage For="@(() => registrationModel.FirstName)" />
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="lastName" class="form-label">Last name *</label>
+                <InputText id="lastName" class="form-control" @bind-Value="registrationModel.LastName" />
+                <ValidationMessage For="@(() => registrationModel.LastName)" />
+            </div>
+        </div>
+        
+        <div class="mb-3">
+            <label for="companyName" class="form-label">Company name (optional)</label>
+            <InputText id="companyName" class="form-control" @bind-Value="registrationModel.CompanyName" />
+        </div>
+        
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary" disabled="@isSubmitting">
+                @if (isSubmitting)
+                {
+                    <span class="spinner-border spinner-border-sm me-2" role="status"></span>
+                    <span>Registering...</span>
+                }
+                else
+                {
+                    <span>Register Now</span>
+                }
+            </button>
+        </div>
+    </EditForm>
+</div>
+
+@code {
+    private RegistrationModel registrationModel = new();
+    private string successMessage = string.Empty;
+    private string errorMessage = string.Empty;
+    private bool isSubmitting = false;
+
+    private async Task HandleValidSubmit()
+    {
+        try
+        {
+            isSubmitting = true;
+            errorMessage = string.Empty;
+            successMessage = string.Empty;
+
+            var result = await RegistrationService.RegisterAsync(
+                registrationModel.Email,
+                registrationModel.FirstName,
+                registrationModel.LastName,
+                registrationModel.CompanyName);
+
+            if (result.Success)
+            {
+                successMessage = "Registration successful! Please check your email for a confirmation link.";
+                registrationModel = new(); // Reset form
+            }
+            else
+            {
+                errorMessage = result.ErrorMessage ?? "An unknown error occurred.";
+            }
+        }
+        catch (Exception)
+        {
+            errorMessage = "An error occurred while processing your registration. Please try again.";
+        }
+        finally
+        {
+            isSubmitting = false;
+        }
+    }
+
+    public class RegistrationModel
+    {
+        [Required(ErrorMessage = "Email is required")]
+        [EmailAddress(ErrorMessage = "Please enter a valid email address")]
+        public string Email { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "First name is required")]
+        public string FirstName { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Last name is required")]
+        public string LastName { get; set; } = string.Empty;
+
+        public string? CompanyName { get; set; }
+    }
+}
