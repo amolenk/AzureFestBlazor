@@ -89,7 +89,7 @@ public class EmailService : IEmailService
                 return;
             }
 
-            await client.ConnectAsync(smtpHost, smtpPort, SecureSocketOptions.StartTls);
+            await client.ConnectAsync(smtpHost, smtpPort, SecureSocketOptions.Auto);
             
             if (!string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(password))
             {

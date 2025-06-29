@@ -1,4 +1,5 @@
 @inject WebsiteSettings Settings
+@inject NavigationManager NavigationManager
 
 <Section Id="buy-tickets" HeaderText="Tickets" Background="true" FadeUp="true">
 
@@ -15,10 +16,11 @@
                 <hr/>
                 <div class="text-center">
                     <p>Tickets to Azure Fest are 100% free and include parking & diner.</p>
-                    <p>Register below to get your ticket with QR code via email.</p>
                 </div>
                 <hr/>
-                <RegistrationForm />
+                <div class="text-center">
+                    <a href="/tickets" class="btn btn-primary">Get ticket</a>
+                </div>
               </div>
             </div>
           </div>

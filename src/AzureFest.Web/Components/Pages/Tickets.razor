@@ -1,7 +1,42 @@
 ﻿@page "/tickets"
+@inject WebsiteSettings Settings
 
 <PageTitle>Tickets | Azure Fest</PageTitle>
 
 <HeaderSpacer />
 
-<TicketsAd />
+<Section Id="tickets" HeaderText="Tickets">
+
+    @if (Settings.TicketsAvailable)
+    {
+        <div class="row">
+            <div class="col-lg-3">
+            </div>
+            <div class="col-lg-6">
+                <div class="card mb-5 mb-lg-0">
+                    <div class="card-body">
+                        <h5 class="card-title text-muted text-uppercase text-center">General admission</h5>
+                        <h6 class="card-price text-center">FREE</h6>
+                        <hr/>
+                        <div class="text-center">
+                            <p>Tickets to Azure Fest are 100% free and include parking & diner.</p>
+                        </div>
+                        <hr/>
+                        <RegistrationForm/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="row justify-content-center">
+            <div class="col-lg-6 text-center">
+                <p>Tickets to Azure Fest are currently not available.</p>
+            </div>
+        </div>
+    }
+    
+</Section>
