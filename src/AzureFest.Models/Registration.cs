@@ -25,4 +25,8 @@ public class Registration
     public DateTime? ConfirmedAt { get; set; }
     
     public string? ConfirmationToken { get; set; }
+    
+    public bool IsCancelled { get; set; } = false;
+    
+    public DateTime? CancelledAt { get; set; }
 }

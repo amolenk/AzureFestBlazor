@@ -20,6 +20,7 @@ builder.Services.AddDbContext<TicketingDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Add services
+builder.Services.AddScoped<IHmacService, HmacService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<IQrCodeService, QrCodeService>();
 builder.Services.AddScoped<IRegistrationService, RegistrationService>();

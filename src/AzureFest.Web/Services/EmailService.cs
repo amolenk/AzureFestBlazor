@@ -6,8 +6,8 @@ namespace AzureFest.Web.Services;
 
 public interface IEmailService
 {
-    Task SendConfirmationEmailAsync(string toEmail, string firstName, string confirmationLink);
-    Task SendTicketEmailAsync(string toEmail, string firstName, string qrCodeBase64);
+    Task SendConfirmationEmailAsync(string toEmail, string firstName, string confirmationLink, string cancellationLink);
+    Task SendTicketEmailAsync(string toEmail, string firstName, string qrCodeBase64, string cancellationLink);
 }
 
 public class EmailService : IEmailService
@@ -21,7 +21,7 @@ public class EmailService : IEmailService
         _configuration = configuration;
     }
 
-    public async Task SendConfirmationEmailAsync(string toEmail, string firstName, string confirmationLink)
+    public async Task SendConfirmationEmailAsync(string toEmail, string firstName, string confirmationLink, string cancellationLink)
     {
         var message = new MimeMessage();
         message.From.Add(new MailboxAddress("Azure Fest", _configuration["Email:FromAddress"] ?? "noreply@azurefest.nl"));
@@ -37,6 +37,8 @@ public class EmailService : IEmailService
                 <p><a href=""{confirmationLink}"" style=""background-color: #E459BB; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;"">Confirm Registration</a></p>
                 <p>If you can't click the link, copy and paste this URL into your browser:</p>
                 <p>{confirmationLink}</p>
+                <hr>
+                <p><small>If you want to cancel your registration, you can do so by clicking <a href=""{cancellationLink}"">here</a>.</small></p>
                 <p>We look forward to seeing you at Azure Fest!</p>
                 <p>Best regards,<br>The Azure Fest Team</p>"
         };
@@ -46,7 +48,7 @@ public class EmailService : IEmailService
         await SendEmailAsync(message);
     }
 
-    public async Task SendTicketEmailAsync(string toEmail, string firstName, string qrCodeBase64)
+    public async Task SendTicketEmailAsync(string toEmail, string firstName, string qrCodeBase64, string cancellationLink)
     {
         var message = new MimeMessage();
         message.From.Add(new MailboxAddress("Azure Fest", _configuration["Email:FromAddress"] ?? "noreply@azurefest.nl"));
@@ -63,6 +65,8 @@ public class EmailService : IEmailService
                     <img src=""data:image/png;base64,{qrCodeBase64}"" alt=""Your QR Code Ticket"" style=""border: 1px solid #ccc; padding: 10px;"" />
                 </div>
                 <p>Please bring this QR code with you to the event. You can either print this email or show it on your mobile device.</p>
+                <hr>
+                <p><small>If you need to cancel your registration, you can do so by clicking <a href=""{cancellationLink}"">here</a>.</small></p>
                 <p>We look forward to seeing you at Azure Fest!</p>
                 <p>Best regards,<br>The Azure Fest Team</p>"
         };
