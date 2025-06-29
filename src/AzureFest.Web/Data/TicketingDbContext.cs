@@ -21,7 +21,6 @@ public class TicketingDbContext : DbContext
             entity.Property(e => e.FirstName).IsRequired().HasMaxLength(100);
             entity.Property(e => e.LastName).IsRequired().HasMaxLength(100);
             entity.Property(e => e.CompanyName).HasMaxLength(200);
-            entity.Property(e => e.ConfirmationToken).HasMaxLength(255);
         });
 
         base.OnModelCreating(modelBuilder);

@@ -4,7 +4,7 @@ namespace AzureFest.Models;
 
 public class Registration
 {
-    public Guid Id { get; set; } = Guid.NewGuid();
+    public Guid Id { get; set; }
     
     [Required]
     [EmailAddress]
@@ -23,8 +23,6 @@ public class Registration
     public bool IsConfirmed { get; set; } = false;
     
     public DateTime? ConfirmedAt { get; set; }
-    
-    public string? ConfirmationToken { get; set; }
     
     public bool IsCancelled { get; set; } = false;
     

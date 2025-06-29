@@ -1,4 +1,4 @@
-@page "/tickets/confirm/{confirmationToken}"
+@page "/tickets/confirm/{registrationId}/{signature}"
 @using AzureFest.Web.Services
 @inject IRegistrationService RegistrationService
 @inject NavigationManager Navigation
@@ -40,7 +40,8 @@
 </Section>
 
 @code {
-    [Parameter] public string ConfirmationToken { get; set; } = string.Empty;
+    [Parameter] public string RegistrationId { get; set; } = string.Empty;
+    [Parameter] public string Signature { get; set; } = string.Empty;
     
     private bool isLoading = true;
     private bool isConfirmed = false;
@@ -48,7 +49,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        if (string.IsNullOrEmpty(ConfirmationToken))
+        if (string.IsNullOrEmpty(RegistrationId) || string.IsNullOrEmpty(Signature))
         {
             errorMessage = "Invalid confirmation link.";
             isLoading = false;
@@ -57,7 +58,7 @@
 
         try
         {
-            var result = await RegistrationService.ConfirmRegistrationAsync(ConfirmationToken);
+            var result = await RegistrationService.ConfirmRegistrationAsync(RegistrationId, Signature);
             
             if (result.Success)
             {

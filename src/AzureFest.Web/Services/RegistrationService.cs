@@ -7,7 +7,7 @@ namespace AzureFest.Web.Services;
 public interface IRegistrationService
 {
     Task<(bool Success, string? ErrorMessage)> RegisterAsync(string email, string firstName, string lastName, string? companyName);
-    Task<(bool Success, string? ErrorMessage)> ConfirmRegistrationAsync(string confirmationToken);
+    Task<(bool Success, string? ErrorMessage)> ConfirmRegistrationAsync(string registrationId, string signature);
     Task<(bool Success, string? ErrorMessage)> CancelRegistrationAsync(string registrationId, string signature);
     Task<Registration?> GetRegistrationByEmailAsync(string email);
     Task<Registration?> GetRegistrationByIdAsync(string registrationId);
@@ -42,34 +42,39 @@ public class RegistrationService : IRegistrationService
     {
         try
         {
-            // Check if registration already exists
+            // Generate deterministic GUID based on email
+            var registrationId = DeterministicGuidGenerator.Generate(email);
+            
+            // Check if registration already exists (including cancelled ones)
             var existingRegistration = await _context.Registrations
-                .FirstOrDefaultAsync(r => r.Email == email && !r.IsCancelled);
+                .FirstOrDefaultAsync(r => r.Id == registrationId);
 
             if (existingRegistration != null)
             {
-                if (existingRegistration.IsConfirmed)
+                if (existingRegistration.IsConfirmed && !existingRegistration.IsCancelled)
                 {
                     return (false, "A confirmed registration already exists for this email address.");
                 }
 
-                // Update existing pending registration
+                // Update existing registration (whether pending or cancelled)
                 existingRegistration.FirstName = firstName;
                 existingRegistration.LastName = lastName;
                 existingRegistration.CompanyName = companyName;
                 existingRegistration.CreatedAt = DateTime.UtcNow;
-                existingRegistration.ConfirmationToken = Guid.NewGuid().ToString();
+                existingRegistration.IsConfirmed = false; // Reset confirmation status
+                existingRegistration.IsCancelled = false; // Reset cancellation status
+                existingRegistration.CancelledAt = null; // Clear cancellation date
             }
             else
             {
                 // Create new registration
                 existingRegistration = new Registration
                 {
+                    Id = registrationId,
                     Email = email,
                     FirstName = firstName,
                     LastName = lastName,
-                    CompanyName = companyName,
-                    ConfirmationToken = Guid.NewGuid().ToString()
+                    CompanyName = companyName
                 };
 
                 _context.Registrations.Add(existingRegistration);
@@ -77,11 +82,12 @@ public class RegistrationService : IRegistrationService
 
             await _context.SaveChangesAsync();
 
-            // Send confirmation email
+            // Send confirmation email with HMAC signature
             var baseUrl = _configuration["BaseUrl"] ?? "https://azurefest.nl";
-            var confirmationLink = $"{baseUrl}/tickets/confirm/{existingRegistration.ConfirmationToken}";
-            var cancellationSignature = _hmacService.GenerateSignature(existingRegistration.Id.ToString());
-            var cancellationLink = $"{baseUrl}/tickets/cancel/{existingRegistration.Id}/{cancellationSignature}";
+            var confirmationSignature = _hmacService.GenerateSignature(registrationId.ToString());
+            var confirmationLink = $"{baseUrl}/tickets/confirm/{registrationId}/{confirmationSignature}";
+            var cancellationSignature = _hmacService.GenerateSignature(registrationId.ToString());
+            var cancellationLink = $"{baseUrl}/tickets/cancel/{registrationId}/{cancellationSignature}";
             await _emailService.SendConfirmationEmailAsync(email, firstName, confirmationLink, cancellationLink);
 
             _logger.LogInformation("Registration created/updated for {Email}", email);
@@ -94,16 +100,32 @@ public class RegistrationService : IRegistrationService
         }
     }
 
-    public async Task<(bool Success, string? ErrorMessage)> ConfirmRegistrationAsync(string confirmationToken)
+    public async Task<(bool Success, string? ErrorMessage)> ConfirmRegistrationAsync(string registrationId, string signature)
     {
         try
         {
-            var registration = await _context.Registrations
-                .FirstOrDefaultAsync(r => r.ConfirmationToken == confirmationToken && !r.IsConfirmed && !r.IsCancelled);
+            // Validate HMAC signature
+            if (!_hmacService.ValidateSignature(registrationId, signature))
+            {
+                _logger.LogWarning("Invalid HMAC signature for confirmation attempt on registration {RegistrationId}", registrationId);
+                return (false, "Invalid confirmation link.");
+            }
 
+            // Find the registration
+            var registration = await GetRegistrationByIdAsync(registrationId);
             if (registration == null)
             {
-                return (false, "Invalid or expired confirmation token.");
+                return (false, "Registration not found.");
+            }
+
+            if (registration.IsConfirmed)
+            {
+                return (false, "Registration has already been confirmed.");
+            }
+
+            if (registration.IsCancelled)
+            {
+                return (false, "This registration has been cancelled.");
             }
 
             // Confirm the registration
@@ -127,7 +149,7 @@ public class RegistrationService : IRegistrationService
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Error confirming registration with token {Token}", confirmationToken);
+            _logger.LogError(ex, "Error confirming registration with ID {RegistrationId}", registrationId);
             return (false, "An error occurred while confirming your registration. Please try again.");
         }
     }
