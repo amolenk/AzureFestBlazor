@@ -5,9 +5,9 @@
     @if (Settings.TicketsAvailable)
     {
         <div class="row">
-          <div class="col-lg-4">
+          <div class="col-lg-3">
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-6">
             <div class="card mb-5 mb-lg-0">
               <div class="card-body">
                 <h5 class="card-title text-muted text-uppercase text-center">General admission</h5>
@@ -15,14 +15,15 @@
                 <hr/>
                 <div class="text-center">
                     <p>Tickets to Azure Fest are 100% free and include parking & diner.</p>
-                    <p>Tickets can be registered through Eventbrite.</p>
                 </div>
                 <hr/>
                 <div class="text-center">
-                  <a href="@Settings.EventbriteLink" target="_blank" class="btn btn-primary">Get ticket now</a>
+                    <a href="/tickets" class="btn btn-primary">Get ticket</a>
                 </div>
               </div>
             </div>
+          </div>
+          <div class="col-lg-3">
           </div>
         </div>
     }

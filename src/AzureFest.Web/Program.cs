@@ -1,6 +1,8 @@
 using AzureFest.Web.Components;
 using AzureFest.Web.Configuration;
 using AzureFest.Web.Services;
+using AzureFest.Web.Data;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,7 +15,24 @@ builder.Services.AddSingleton(settings);
 
 builder.Services.AddSingleton<EventDetailsProvider>();
 
+// Add database context
+builder.Services.AddDbContext<TicketingDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Add services
+builder.Services.AddScoped<IHmacService, HmacService>();
+builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddScoped<IQrCodeService, QrCodeService>();
+builder.Services.AddScoped<IRegistrationService, RegistrationService>();
+
 var app = builder.Build();
+
+// Ensure database is created
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<TicketingDbContext>();
+    context.Database.EnsureCreated();
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -22,6 +41,17 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
+app.MapGet("/api/qrcode/{registrationId:guid}/{registrationSignature}", (Guid registrationId, string registrationSignature, IHmacService hmacService, IQrCodeService qrCodeService) =>
+{
+    if (!hmacService.ValidateSignature(registrationId.ToString(), registrationSignature))
+    {
+        return Results.Unauthorized();
+    }
+
+    var qrBytes = qrCodeService.GenerateQrCode($"registrationId={registrationId}&signature={registrationSignature}");
+    return Results.File(qrBytes, "image/png");
+});
 
 // app.UseHttpsRedirection();
 

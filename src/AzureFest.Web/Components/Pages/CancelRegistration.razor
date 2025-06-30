@@ -1,0 +1,147 @@
+@page "/tickets/cancel/{registrationId}/{signature}"
+@using AzureFest.Web.Services
+@inject IRegistrationService RegistrationService
+@inject NavigationManager Navigation
+@rendermode InteractiveServer
+
+<PageTitle>Cancel Registration | Azure Fest</PageTitle>
+
+<HeaderSpacer />
+
+<Section Id="cancellation" HeaderText="Cancel Registration" Background="true" FadeUp="true">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 text-center">
+            @if (_isLoading)
+            {
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <p class="mt-3">Loading registration details...</p>
+            }
+            else if (_isCancelled)
+            {
+                <div class="alert alert-success" role="alert">
+                    <h4 class="alert-heading">Registration Cancelled</h4>
+                    <p>Your registration for Azure Fest has been successfully cancelled.</p>
+                    <hr>
+                    <p class="mb-0">If you change your mind, you can register again on our <a href="/tickets">tickets page</a>.</p>
+                </div>
+            }
+            else if (registration != null)
+            {
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">⚠️ Cancel Registration</h5>
+                        <p class="card-text">
+                            Are you sure you want to cancel your registration for Azure Fest?
+                        </p>
+                        <div class="mt-3">
+                            <p><strong>Name:</strong> @registration.FirstName @registration.LastName</p>
+                            <p><strong>Email:</strong> @registration.Email</p>
+                            @if (!string.IsNullOrEmpty(registration.CompanyName))
+                            {
+                                <p><strong>Company:</strong> @registration.CompanyName</p>
+                            }
+                        </div>
+                        <div class="mt-4">
+                            <button class="btn btn-danger me-2" @onclick="@(async () => await ConfirmCancellation())" disabled="@_isProcessing">
+                                @if (_isProcessing)
+                                {
+                                    <span class="spinner-border spinner-border-sm me-2" role="status"></span>
+                                    <span>Cancelling...</span>
+                                }
+                                else
+                                {
+                                    <span>Yes, Cancel Registration</span>
+                                }
+                            </button>
+                            @if (!_isProcessing)
+                            {
+                                <a href="/" class="btn btn-secondary" disabled="@_isProcessing">No, Keep Registration</a>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-danger" role="alert">
+                    <h4 class="alert-heading">Cancellation Failed</h4>
+                    <p>@_errorMessage</p>
+                </div>
+            }
+        </div>
+    </div>
+</Section>
+
+@code {
+    [Parameter] public string RegistrationId { get; set; } = string.Empty;
+    [Parameter] public string Signature { get; set; } = string.Empty;
+    
+    private AzureFest.Models.Registration? registration;
+    private bool _isLoading = true;
+    private bool _isCancelled = false;
+    private bool _isProcessing = false;
+    private string _errorMessage = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (string.IsNullOrEmpty(RegistrationId) || string.IsNullOrEmpty(Signature))
+        {
+            _errorMessage = "Invalid cancellation link.";
+            _isLoading = false;
+            return;
+        }
+
+        try
+        {
+            // Get registration details first to show confirmation
+            registration = await RegistrationService.GetRegistrationByIdAsync(RegistrationId);
+            
+            if (registration == null)
+            {
+                _errorMessage = "Registration not found or already cancelled.";
+            }
+        }
+        catch (Exception)
+        {
+            _errorMessage = "An error occurred while loading your registration. Please try again or contact support.";
+        }
+        finally
+        {
+            _isLoading = false;
+        }
+    }
+
+    private async Task ConfirmCancellation()
+    {
+        _isProcessing = true;
+        _errorMessage = string.Empty;
+        StateHasChanged();
+
+        try
+        {
+            await Task.Delay(3000);
+            
+            var result = await RegistrationService.CancelRegistrationAsync(RegistrationId, Signature);
+            
+            if (result.Success)
+            {
+                _isCancelled = true;
+            }
+            else
+            {
+                _errorMessage = result.ErrorMessage ?? "An unknown error occurred.";
+            }
+        }
+        catch (Exception)
+        {
+            _errorMessage = "An error occurred while cancelling your registration. Please try again or contact support.";
+        }
+        finally
+        {
+            _isProcessing = false;
+            StateHasChanged();
+        }
+    }
+}

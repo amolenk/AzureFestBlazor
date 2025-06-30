@@ -1,0 +1,139 @@
+@using AzureFest.Web.Services
+@using System.ComponentModel.DataAnnotations
+@inject IRegistrationService RegistrationService
+@inject IJSRuntime JSRuntime
+@rendermode InteractiveServer
+
+<div class="registration-form">
+    <h5 class="text-center mb-4">Register for Azure Fest</h5>
+    
+    @if (!string.IsNullOrEmpty(_successMessage))
+    {
+        <div class="alert alert-success" role="alert">
+            @_successMessage
+        </div>
+    }
+    
+    @if (!string.IsNullOrEmpty(_errorMessage))
+    {
+        <div class="alert alert-danger" role="alert">
+            @_errorMessage
+        </div>
+    }
+
+    @if (string.IsNullOrEmpty(_successMessage))
+    {
+        <EditForm Model="_registrationModel" OnValidSubmit="HandleValidSubmit" FormName="RegistrationForm">
+            <DataAnnotationsValidator />
+            
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address *</label>
+                <InputText id="email" class="form-control" @bind-Value="_registrationModel.Email" readonly="@_isSubmitting" />
+                <ValidationMessage For="@(() => _registrationModel.Email)" />
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="firstName" class="form-label">First name *</label>
+                    <InputText id="firstName" class="form-control" @bind-Value="_registrationModel.FirstName" readonly="@_isSubmitting" />
+                    <ValidationMessage For="@(() => _registrationModel.FirstName)" />
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="lastName" class="form-label">Last name *</label>
+                    <InputText id="lastName" class="form-control" @bind-Value="_registrationModel.LastName" readonly="@_isSubmitting" />
+                    <ValidationMessage For="@(() => _registrationModel.LastName)" />
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Are you employed or self-employed? *</label>
+                <InputSelect class="form-select" @bind-Value="_registrationModel.EmploymentStatus" disabled="@_isSubmitting">
+                    <option value="">-- Please select --</option>
+                    <option value="Employed">Employed</option>
+                    <option value="SelfEmployed">Self-employed</option>
+                </InputSelect>
+                <ValidationMessage For="@(() => _registrationModel.EmploymentStatus)" />
+            </div>
+            
+            <div class="mb-3">
+                <label for="companyName" class="form-label">Company name (optional)</label>
+                <InputText id="companyName" class="form-control" @bind-Value="_registrationModel.CompanyName" readonly="@_isSubmitting" />
+            </div>
+            
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary" disabled="@_isSubmitting">
+                    @if (_isSubmitting)
+                    {
+                        <span class="spinner-border spinner-border-sm me-2" role="status"></span>
+                        <span>Registering...</span>
+                    }
+                    else
+                    {
+                        <span>Register Now</span>
+                    }
+                </button>
+            </div>
+        </EditForm>
+    }
+</div>
+
+@code {
+    [SupplyParameterFromForm]
+    private RegistrationModel _registrationModel { get; set; } = new();
+    private string _successMessage = string.Empty;
+    private string _errorMessage = string.Empty;
+    private bool _isSubmitting = false;
+
+    private async Task HandleValidSubmit()
+    {
+        try
+        {
+            _isSubmitting = true;
+            _errorMessage = string.Empty;
+            _successMessage = string.Empty;
+
+            var result = await RegistrationService.RegisterAsync(
+                _registrationModel.Email,
+                _registrationModel.FirstName,
+                _registrationModel.LastName,
+                _registrationModel.EmploymentStatus,
+                _registrationModel.CompanyName);
+
+            if (result.Success)
+            {
+                _successMessage = "Please check your email and click the confirmation link to complete your registration.";
+                // Do not reset the form model here, so the fields remain hidden after success
+            }
+            else
+            {
+                _errorMessage = result.ErrorMessage ?? "An unknown error occurred.";
+            }
+        }
+        catch (Exception)
+        {
+            _errorMessage = "An error occurred while processing your registration. Please try again.";
+        }
+        finally
+        {
+            _isSubmitting = false;
+        }
+    }
+
+    public class RegistrationModel
+    {
+        [Required(ErrorMessage = "Email is required")]
+        [EmailAddress(ErrorMessage = "Please enter a valid email address")]
+        public string Email { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "First name is required")]
+        public string FirstName { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Last name is required")]
+        public string LastName { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Please select your employment status")]
+        public string EmploymentStatus { get; set; } = string.Empty;
+
+        public string? CompanyName { get; set; }
+    }
+}

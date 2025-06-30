@@ -50,3 +50,7 @@ a.anchor {
     top: -70px;
     visibility: hidden;
 }
+
+.validation-message {
+    color: #E74C3C;
+}
