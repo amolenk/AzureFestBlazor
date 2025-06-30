@@ -16,8 +16,16 @@ builder.Services.AddSingleton(settings);
 builder.Services.AddSingleton<EventDetailsProvider>();
 
 // Add database context
-builder.Services.AddDbContext<TicketingDbContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+if (builder.Environment.IsDevelopment())
+{
+    builder.Services.AddDbContext<TicketingDbContext>(options =>
+        options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+}
+else
+{
+    builder.Services.AddDbContext<TicketingDbContext>(options =>
+        options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+}
 
 // Add services
 builder.Services.AddScoped<IHmacService, HmacService>();
