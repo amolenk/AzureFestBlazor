@@ -16,6 +16,9 @@ public class Registration
     [Required]
     public string LastName { get; set; } = string.Empty;
     
+    [Required]
+    public string EmploymentStatus { get; set; } = string.Empty;
+    
     public string? CompanyName { get; set; }
     
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;

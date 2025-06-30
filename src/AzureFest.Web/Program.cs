@@ -42,6 +42,17 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+app.MapGet("/api/qrcode/{registrationId:guid}/{registrationSignature}", (Guid registrationId, string registrationSignature, IHmacService hmacService, IQrCodeService qrCodeService) =>
+{
+    if (!hmacService.ValidateSignature(registrationId.ToString(), registrationSignature))
+    {
+        return Results.Unauthorized();
+    }
+
+    var qrBytes = qrCodeService.GenerateQrCode($"registrationId={registrationId}&signature={registrationSignature}");
+    return Results.File(qrBytes, "image/png");
+});
+
 // app.UseHttpsRedirection();
 
 app.UseStaticFiles();

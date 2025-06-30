@@ -1,5 +1,21 @@
 ﻿@page "/tickets"
 @inject WebsiteSettings Settings
+@inject NavigationManager NavManager
+
+@code {
+    private bool _isVip = false;
+
+    protected override void OnInitialized()
+    {
+        var uri = NavManager.ToAbsoluteUri(NavManager.Uri);
+        var query = System.Web.HttpUtility.ParseQueryString(uri.Query);
+        var code = query.Get("code");
+        if (!string.IsNullOrEmpty(Settings.VipCode) && code == Settings.VipCode)
+        {
+            _isVip = true;
+        }
+    }
+}
 
 <PageTitle>Tickets | Azure Fest</PageTitle>
 
@@ -7,7 +23,7 @@
 
 <Section Id="tickets" HeaderText="Tickets">
 
-    @if (Settings.TicketsAvailable)
+    @if (Settings.TicketsAvailable || _isVip)
     {
         <div class="row">
             <div class="col-lg-3">
@@ -34,7 +50,8 @@
     {
         <div class="row justify-content-center">
             <div class="col-lg-6 text-center">
-                <p>Tickets to Azure Fest are currently not available.</p>
+                <p>Tickets to Azure Fest are 100% free and include parking & diner.</p>
+                <p>Available from July 8th for everybody. Members of Dutch Azure Meetup can get a ticket 1 day earlier.</p> 
             </div>
         </div>
     }

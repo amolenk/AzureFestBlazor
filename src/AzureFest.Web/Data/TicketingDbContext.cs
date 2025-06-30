@@ -20,6 +20,7 @@ public class TicketingDbContext : DbContext
             entity.Property(e => e.Email).IsRequired().HasMaxLength(255);
             entity.Property(e => e.FirstName).IsRequired().HasMaxLength(100);
             entity.Property(e => e.LastName).IsRequired().HasMaxLength(100);
+            entity.Property(e => e.EmploymentStatus).IsRequired().HasMaxLength(100);
             entity.Property(e => e.CompanyName).HasMaxLength(200);
         });
 

@@ -26,6 +26,7 @@ public class HmacService : IHmacService
         {
             using var hmac = new HMACSHA256(Encoding.UTF8.GetBytes(_secretKey));
             var hash = hmac.ComputeHash(Encoding.UTF8.GetBytes(registrationId));
+            // Ensure the signature is URL-safe
             return Convert.ToBase64String(hash).Replace("+", "-").Replace("/", "_").Replace("=", "");
         }
         catch (Exception ex)

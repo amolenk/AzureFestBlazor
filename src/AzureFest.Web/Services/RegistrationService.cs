@@ -6,7 +6,7 @@ namespace AzureFest.Web.Services;
 
 public interface IRegistrationService
 {
-    Task<(bool Success, string? ErrorMessage)> RegisterAsync(string email, string firstName, string lastName, string? companyName);
+    Task<(bool Success, string? ErrorMessage)> RegisterAsync(string email, string firstName, string lastName, string employmentStatus, string? companyName);
     Task<(bool Success, string? ErrorMessage)> ConfirmRegistrationAsync(string registrationId, string signature);
     Task<(bool Success, string? ErrorMessage)> CancelRegistrationAsync(string registrationId, string signature);
     Task<Registration?> GetRegistrationByEmailAsync(string email);
@@ -38,12 +38,16 @@ public class RegistrationService : IRegistrationService
         _configuration = configuration;
     }
 
-    public async Task<(bool Success, string? ErrorMessage)> RegisterAsync(string email, string firstName, string lastName, string? companyName)
+    public async Task<(bool Success, string? ErrorMessage)> RegisterAsync(string email, string firstName, string lastName, string employmentStatus, string? companyName)
     {
         try
         {
-            // Generate deterministic GUID based on email
-            var registrationId = DeterministicGuidGenerator.Generate(email);
+            // Generate deterministic GUID that's forward-compatible with Admitto
+            var teamId = DeterministicGuidGenerator.Generate("Dutch IT Events");
+            var ticketedEventName = "Azure Fest 2025";
+            var ticketedEventId = DeterministicGuidGenerator.Generate($"{teamId}:{ticketedEventName}");
+            var attendeeId = DeterministicGuidGenerator.Generate(email);
+            var registrationId = DeterministicGuidGenerator.Generate($"{ticketedEventId}:{attendeeId}");
             
             // Check if registration already exists (including cancelled ones)
             var existingRegistration = await _context.Registrations
@@ -51,7 +55,7 @@ public class RegistrationService : IRegistrationService
 
             if (existingRegistration != null)
             {
-                if (existingRegistration.IsConfirmed && !existingRegistration.IsCancelled)
+                if (existingRegistration is { IsConfirmed: true, IsCancelled: false })
                 {
                     return (false, "A confirmed registration already exists for this email address.");
                 }
@@ -59,6 +63,7 @@ public class RegistrationService : IRegistrationService
                 // Update existing registration (whether pending or cancelled)
                 existingRegistration.FirstName = firstName;
                 existingRegistration.LastName = lastName;
+                existingRegistration.EmploymentStatus = employmentStatus;
                 existingRegistration.CompanyName = companyName;
                 existingRegistration.CreatedAt = DateTime.UtcNow;
                 existingRegistration.IsConfirmed = false; // Reset confirmation status
@@ -74,6 +79,7 @@ public class RegistrationService : IRegistrationService
                     Email = email,
                     FirstName = firstName,
                     LastName = lastName,
+                    EmploymentStatus = employmentStatus,
                     CompanyName = companyName
                 };
 
@@ -84,11 +90,10 @@ public class RegistrationService : IRegistrationService
 
             // Send confirmation email with HMAC signature
             var baseUrl = _configuration["BaseUrl"] ?? "https://azurefest.nl";
-            var confirmationSignature = _hmacService.GenerateSignature(registrationId.ToString());
-            var confirmationLink = $"{baseUrl}/tickets/confirm/{registrationId}/{confirmationSignature}";
-            var cancellationSignature = _hmacService.GenerateSignature(registrationId.ToString());
-            var cancellationLink = $"{baseUrl}/tickets/cancel/{registrationId}/{cancellationSignature}";
-            await _emailService.SendConfirmationEmailAsync(email, firstName, confirmationLink, cancellationLink);
+            var registrationSignature = _hmacService.GenerateSignature(registrationId.ToString());
+            var confirmationLink = $"{baseUrl}/tickets/confirm/{registrationId}/{registrationSignature}";
+            var cancellationLink = $"{baseUrl}/tickets/cancel/{registrationId}/{registrationSignature}";
+            await _emailService.SendRequestForConfirmationEmailAsync(email, firstName, lastName, confirmationLink, cancellationLink);
 
             _logger.LogInformation("Registration created/updated for {Email}", email);
             return (true, null);
@@ -134,15 +139,12 @@ public class RegistrationService : IRegistrationService
             
             await _context.SaveChangesAsync();
 
-            // Generate QR code with registration ID
-            var qrCodeContent = registration.Id.ToString();
-            var qrCodeBase64 = _qrCodeService.GenerateQrCodeBase64(qrCodeContent);
-
             // Send ticket email
             var baseUrl = _configuration["BaseUrl"] ?? "https://azurefest.nl";
-            var cancellationSignature = _hmacService.GenerateSignature(registration.Id.ToString());
-            var cancellationLink = $"{baseUrl}/tickets/cancel/{registration.Id}/{cancellationSignature}";
-            await _emailService.SendTicketEmailAsync(registration.Email, registration.FirstName, qrCodeBase64, cancellationLink);
+            var registrationSignature = _hmacService.GenerateSignature(registration.Id.ToString());
+            var qrCodeLink = $"{baseUrl}/api/qrcode/{registrationId}/{registrationSignature}";
+            var cancellationLink = $"{baseUrl}/tickets/cancel/{registration.Id}/{registrationSignature}";
+            await _emailService.SendTicketEmailAsync(registration.Email, registration.FirstName, registration.LastName, qrCodeLink, cancellationLink);
 
             _logger.LogInformation("Registration confirmed for {Email}", registration.Email);
             return (true, null);
