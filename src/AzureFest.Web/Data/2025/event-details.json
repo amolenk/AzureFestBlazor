@@ -1,0 +1,303 @@
+{
+  "Speakers": [
+    {
+      "Id": "barbara-forbes",
+      "FullName": "Barbara Forbes",
+      "Bio": "Barbara Forbes is the Field CTO at OGD in the Netherlands. She is a Microsoft Azure MVP, MCT, and a GitHub Star. In her work Barbara aims to be the bridge between strategy, technology, education and development. Her focus includes the Microsoft Cloud Adoption Framework, Generative AI, Infrastructure as Code, PowerShell and GitHub.  Barbara loves teaching in an accessible manner; in person, as a teacher for LinkedIn Learning and as a regular speaker at conferences and user groups. She is actively involved in the tech community, including being part of the organization of European events ",
+      "TagLine": "Field CTO @ OGD | Azure MVP | GitHub Star",
+      "IsTopSpeaker": false,
+      "ProfilePictureUrl": "img/2025/speakers/barbara-forbes.jpg",
+      "sessions": [
+        "implementing-azure-policies-before-the-portal"
+      ]
+    },
+    {
+      "Id": "eduard-keilholz",
+      "FullName": "Eduard Keilholz",
+      "Bio": "Eduard Keilholz is a seasoned software developer and cloud architect at 4Dotnet, where he specializes in Microsoft development and cloud technologies. With a passion for helping organizations build highly performant cloud software solutions, Eduard has made significant contributions in the field of cloud architecture.\r\n\r\nHe is the author of the book Azure Infrastructure as Code, which delves into infrastructure automation using Azure, and is a frequent international conference speaker. Eduard is also the founder of the DotnetFriday meetup platform, a community initiative hosted in the Netherlands that fosters collaboration and learning among .NET professionals.\r\n\r\nIn addition to his development and community activities, Eduard created SpreaView, a platform designed to give conference organizers and speakers deeper insights into their performance by automating speaker evaluations. His contributions to the Microsoft community have earned him the prestigious title of Microsoft MVP since 2020.",
+      "TagLine": "Cloud Solution Architect @ 4Dotnet | Book Author | International Conference Speaker | Founder of https://spreaview.com",
+      "IsTopSpeaker": false,
+      "ProfilePictureUrl": "img/2025/speakers/eduard-keilholz.jpg",
+      "sessions": [
+        "glueing-net-aspire-services-with-container-apps-and-dapr"
+      ]
+    },
+    {
+      "Id": "elena-van-engelen",
+      "FullName": "Elena van Engelen",
+      "Bio": "I am an expert software engineer with over two decades of experience who is driven by passion for technology. I specialize in Kotlin and cloud-native solutions (Azure and AWS Certified) and focus on building mission critical, scalable and maintainable systems. Besides software development I also enjoy sharing my knowledge through talks, my blog, giving Kotlin training and - something I am particularly proud of - my book,  \u201CKotlin Crash Course\u201D, by BPB Publications. \r\nHobbies include spending time with my kids \u0026 family, running, cross-country skiing, ice skating, yoga and fitness",
+      "TagLine": "Independent Senior Software Engineer",
+      "IsTopSpeaker": false,
+      "ProfilePictureUrl": "img/2025/speakers/elena-van-engelen.png",
+      "sessions": [
+        "simplifying-serverless-integration-testing-wiremock-on-azure-functions"
+      ]
+    },
+    {
+      "Id": "frank-folsche",
+      "FullName": "Frank Folsche",
+      "Bio": "Frank never stays still, and he brings this drive to the teams he works with. His passion lies in technology, and he immerses himself in the latest developments in Azure and .NET (especially on mobile devices). However, he\u2019s also the first to recognize that technology alone won\u2019t suffice; it must be combined with an aversion to inefficiency. Over the past year, he has been actively implementing DevOps practices at Luminis.\r\n\r\nHis ambition extends beyond technology\u2014Frank aims to apply this drive from his role as an Architect. He enjoys helping clients enhance efficiency through the use of cloud-native solutions.\r\n\r\nBut having a good idea isn\u2019t enough; you must also convey and share it. That\u2019s why Frank enjoys speaking about his field, as evident in his blogs and conference presentations.",
+      "TagLine": "Azure Architect @Luminis",
+      "IsTopSpeaker": false,
+      "ProfilePictureUrl": "img/2025/speakers/frank-folsche.jpg",
+      "sessions": [
+        "beyond-aad-b2c-the-future-of-external-identity-in-azure"
+      ]
+    },
+    {
+      "Id": "geert-van-der-cruijsen",
+      "FullName": "Geert van der Cruijsen",
+      "Bio": "Geert van der Cruijsen is the CEO of Zure Netherlands, helping companies improve how they build software by combining strong engineering culture with modern technology. He focuses on DevOps, cloud-native development, architecture and AI, enabling teams to work more autonomously and deliver faster through smart platforms and better ways of working. Geert is a long-time Microsoft MVP and an active member of the tech community, frequently sharing knowledge through talks, content and mentorship.",
+      "TagLine": "CEO Zure Netherlands",
+      "IsTopSpeaker": false,
+      "ProfilePictureUrl": "img/2025/speakers/geert-van-der-cruijsen.jpg",
+      "sessions": [
+        "sovereign-cloud-on-azure-reducing-risk-and-staying-in-control"
+      ]
+    },
+    {
+      "Id": "michael-hompus",
+      "FullName": "Micha\u00EBl Hompus",
+      "Bio": "Micha\u00EBl Hompus is an Architect and Area Lead at Info Support.\r\n\r\nAs an architect he is part of several teams, creating new and innovative solutions.\r\nMicha\u00EBl has many years of development experience with .NET, Java, and Azure.\r\n\r\nHis passion is to share knowledge with colleagues, customers, and peers.\r\nMicrosoft has recognized his efforts for the community by awarding him a Microsoft MVP award.",
+      "TagLine": "Architect @ Info Support | Microsoft MVP",
+      "IsTopSpeaker": false,
+      "ProfilePictureUrl": "img/2025/speakers/michael-hompus.jpg",
+      "sessions": [
+        "from-vm-to-markdown-ditching-wordpress-to-save-the-planet-and-my-wallet"
+      ]
+    },
+    {
+      "Id": "michiel-hamers",
+      "FullName": "Michiel Hamers",
+      "Bio": "Hello, I\u0027m Michiel Hamers, a Solution Lead in Azure Cloud \u0026 Application Lifecycle Management, currently working at Sopra Steria. I\u0027m an IT-nerd, trainer, Microsoft Azure MVP, and passionate speaker with a relentless focus on cloud technologies.\r\n\r\n\uD83D\uDCBC Professionally, I specialize in Azure, and I\u0027m dedicated to simplifying complex cloud applications. Born to learn and share knowledge, I have spent over 20 years in the IT industry, starting as a Microsoft Certified Professional in 2002 and becoming a Microsoft Certified Trainer (MCT) in 2021. In 2023 \u0026 2024 I was honored with the prestigious title of Microsoft Most Valuable Professional (MVP).\r\n\r\n\uD83C\uDFA4 As an avid speaker, you can find me at various international events, including Dutch Cloud Meetup, Developer Week, DevConf APG, FutureTech, Codesmith Unite, DevNetNoord, PowerShell \u002B DevOps Global Summit, Azconf - Chennai India, Global Azure Munich 2023, Codesmith Unite,  Chats for Change, AzureFest, Diversity \u0026 Inclusion Day, and Azure Thursday. I\u0027ve been sharing insights and expertise across these diverse platforms, contributing to the vibrant tech community. I\u0027m particularly excited about the upcoming opportunities to connect, learn, and innovate together!\r\n\r\n\uD83D\uDE80 My mission is to empower others with Azure expertise and cost management strategies, helping businesses thrive while being financially savvy. Whether I\u0027m teaching kids the basics of code at CoderDojo or presenting at major tech conferences, my enthusiasm for the cloud and learning knows no bounds.\r\n\r\n\uD83C\uDFC3 Outside of tech, you\u0027ll find me enjoying a 5K run and spending time with my family.\r\n\r\nLet\u0027s connect, learn, and innovate together!",
+      "TagLine": "Microsoft (Azure) Cloud solution Lead \u0026 Codesmith @ Sopra Steria (Ordina) | Trainer | MCT | MVP | Speaker",
+      "IsTopSpeaker": false,
+      "ProfilePictureUrl": "img/2025/speakers/michiel-hamers.jpg",
+      "sessions": [
+        "workshop-the-azure-almanac-sports-predictions-that-would-make-doc-brown-proud"
+      ]
+    },
+    {
+      "Id": "mike-martin",
+      "FullName": "Mike Martin",
+      "Bio": "As a Microsoft Technical Evangelist, Mike is an Azure goto for ISV\u2019s (independent software vendors). He\u2019s been active in the IT industry for more than 20 years and has performed almost all types of job profiles, going from coaching and leading a team to architecting and systems design and training. Today he\u2019s primarily into the Microsoft Cloud Platform and Application Lifecycle Management. He\u2019s not a stranger to both dev and IT Pro topics, they even call him the perfect hybrid solution. \r\n\r\nIn January 2012 he became a crew member of AZUG, the Belgian Microsoft Azure User Group. As an active member he\u2019s both involved in giving presentations and organizing events (like ITProceed, Techorama and Global Azure Bootcamp aka GAB). Mike was also a Microsoft Azure MVP (awarded 5 times since 2013, received his Fifth in July 2017! ) and Microsoft Azure Advisor. \r\n\r\nHelping out in the community and introducing new \u0026 young people into the world of Microsoft and technology is also one of his passions.",
+      "TagLine": "Dad, Husband, Geek, NumberGirl, msft technical evangelist, #Azure Lover and ex MVP, wall crawler, #Batman fan, Caring Community Member ",
+      "IsTopSpeaker": false,
+      "ProfilePictureUrl": "img/2025/speakers/mike-martin.jpg",
+      "sessions": [
+        "one-does-not-simply-add-ai-to-their-apps-stop-and-think-1st"
+      ]
+    },
+    {
+      "Id": "roelant-dieben",
+      "FullName": "Roelant Dieben",
+      "Bio": "With over 20 years of experience developing software on the Microsoft stack, Roelant Dieben has a lot to share about stuff that has been obsolete for years. At Sopra Steria he is helping companies with their Azure cloud and AI challenges, he is a Microsoft Azure \u0026 AI MVP, and has a passion for machine learning \u0026 AI and application lifecycle management.",
+      "TagLine": "Cloud architect @ Sopra Steria",
+      "IsTopSpeaker": false,
+      "ProfilePictureUrl": "img/2025/speakers/roelant-dieben.jpg",
+      "sessions": [
+        "workshop-the-azure-almanac-sports-predictions-that-would-make-doc-brown-proud"
+      ]
+    },
+    {
+      "Id": "stuart-van-der-lee",
+      "FullName": "Stuart van der Lee",
+      "Bio": "As a software engineer, Stuart is interested in programming languages, cloud and AI. Besides that, he also keeps up to date in the field of DevOps and everything that comes with it.\r\n\r\nStuart closely follows F1 in his free time, likes to do several sports such as cycling, golf and throwing weights around in the gym, and he tries to keep up with the endless stream of series and movies (with varying degrees of success).",
+      "TagLine": "Software Engineer",
+      "IsTopSpeaker": false,
+      "ProfilePictureUrl": "img/2025/speakers/stuart-van-der-lee.jpg",
+      "sessions": [
+        "building-your-own-mcp-server"
+      ]
+    }
+  ],
+  "Sessions": [
+    {
+      "Id": "3da26582-bc2d-4a27-8160-ea2374fefed3",
+      "Title": "Registration",
+      "Description": null,
+      "StartsAt": "2025-09-17T13:00:00",
+      "EndsAt": "2025-09-17T13:45:00",
+      "IsServiceSession": true,
+      "speakers": [],
+      "SessionFormat": null,
+      "Level": null,
+      "Room": "Atrium"
+    },
+    {
+      "Id": "f28ab68d-e081-4056-b1df-0172c16af555",
+      "Title": "Keynote (TBD)",
+      "Description": null,
+      "StartsAt": "2025-09-17T13:45:00",
+      "EndsAt": "2025-09-17T15:00:00",
+      "IsServiceSession": true,
+      "speakers": [],
+      "SessionFormat": null,
+      "Level": null,
+      "Room": "Plaza"
+    },
+    {
+      "Id": "glueing-net-aspire-services-with-container-apps-and-dapr",
+      "Title": "Glueing .NET Aspire Services with Container Apps and Dapr",
+      "Description": "Bringing multiple .NET Aspire services to production can be challenging, especially when scaling, handling communication, and ensuring resilience between services. In this session, we\u2019ll explore how Azure Container Apps, coupled with its built-in Dapr integration, can simplify this process and elevate your microservices architecture.\r\n \r\nAttendees will learn how to containerize .NET Aspire services and deploy them to Azure Container Apps for a seamless, managed, and scalable environment. We\u2019ll cover essential Dapr components like service invocation, pub/sub, and state management, showcasing how they can enhance communication and reliability without adding complex code. By the end of this session, you\u0027ll have a roadmap for using Azure Container Apps and Dapr to streamline the deployment and operation of .NET Aspire services in production. This is a must-attend for developers and architects looking to simplify their service landscape with modern, cloud-native solutions on Azure.",
+      "StartsAt": "2025-09-17T15:15:00",
+      "EndsAt": "2025-09-17T16:05:00",
+      "IsServiceSession": false,
+      "speakers": [
+        "eduard-keilholz"
+      ],
+      "SessionFormat": null,
+      "Level": null,
+      "Room": "Plaza"
+    },
+    {
+      "Id": "beyond-aad-b2c-the-future-of-external-identity-in-azure",
+      "Title": "Beyond AAD B2C: The Future of External Identity in Azure",
+      "Description": "Azure AD B2C has long been the go-to solution for managing external identities in Azure. It is powerful and scalable, but not without trade-offs. Developers often had to choose between the simplicity of built-in user flows or the steep complexity of custom policies to unlock advanced scenarios.\r\n\r\nNow, Microsoft is making a clear shift. Azure AD B2C is being phased out and will be retired within the next five years. Its replacement, Microsoft Entra External ID, introduces a new model for managing external identities. The goal is to reduce complexity, improve the developer experience, and better support modern identity use cases. In this session, we will explore why this change is happening, what is already known about the new platform, and what it means for both new projects and existing B2C implementations that need to plan for the future.\r\n\r\nDrawing from real-world B2C implementations, we will compare both solutions, highlight what Entra External ID does differently, and show how it simplifies previously complex scenarios. Along the way, I will walk through practical examples so you can see what it looks like in action, both conceptually and in code, including how to integrate it into automated CI/CD pipelines and infrastructure workflows.",
+      "StartsAt": "2025-09-17T15:15:00",
+      "EndsAt": "2025-09-17T16:05:00",
+      "IsServiceSession": false,
+      "speakers": [
+        "frank-folsche"
+      ],
+      "SessionFormat": null,
+      "Level": null,
+      "Room": "Penthouse"
+    },
+    {
+      "Id": "workshop-the-azure-almanac-sports-predictions-that-would-make-doc-brown-proud",
+      "Title": "WORKSHOP! The Azure Almanac: Sports Predictions That Would Make Doc Brown Proud",
+      "Description": "Inspired by the ultimate cheat sheet\u2014Biff\u2019s Sports Almanac\u2014this session takes a deep dive into how AI and Azure can predict sports outcomes. Learn how to build and train models using historical data and simulate match outcomes with shockingly high accuracy (though we can\u0027t promise you\u0027ll win every party bet).  \r\n\r\n\u26A0\uFE0F Disclaimer: Betting responsibly is key\u2014Marty says even the best AI can\u2019t predict when Griff is going to show up with a bat. And remember, no DeLoreans or Gray\u2019s Sports Almanacs were used in the development of this session.",
+      "StartsAt": "2025-09-17T15:15:00",
+      "EndsAt": "2025-09-17T17:25:00",
+      "IsServiceSession": false,
+      "speakers": [
+        "roelant-dieben",
+        "michiel-hamers"
+      ],
+      "SessionFormat": null,
+      "Level": null,
+      "Room": "The Garden"
+    },
+    {
+      "Id": "71322696-ced3-4032-93f8-f4f0704eec9d",
+      "Title": "Break",
+      "Description": null,
+      "StartsAt": "2025-09-17T16:05:00",
+      "EndsAt": "2025-09-17T16:35:00",
+      "IsServiceSession": true,
+      "speakers": [],
+      "SessionFormat": null,
+      "Level": null,
+      "Room": "Atrium"
+    },
+    {
+      "Id": "building-your-own-mcp-server",
+      "Title": "Building your own MCP server",
+      "Description": "The Model Context Protocol is all the rage and rightly so. As the USB-C for AI it is an incredibly powerful tool that acts as a bridge between real-world systems and LLMs. But how do you get started with MCP and more importantly: how do you build your own MCP server?\r\n\r\nIn this session we\u0027ll get our teeth stuck in these and many more questions and we\u0027ll use Azure AI Foundry to build our own MCP server along the way.",
+      "StartsAt": "2025-09-17T16:35:00",
+      "EndsAt": "2025-09-17T17:25:00",
+      "IsServiceSession": false,
+      "speakers": [
+        "stuart-van-der-lee"
+      ],
+      "SessionFormat": null,
+      "Level": null,
+      "Room": "Plaza"
+    },
+    {
+      "Id": "implementing-azure-policies-before-the-portal",
+      "Title": "Implementing Azure Policies: Before the Portal",
+      "Description": "As your Azure environment grows, you\u0027ll need to find ways to keep everything organized. Especially with structures like the Microsoft Cloud Adoption Framework, it\u0027s important to set boundaries to manage the endless possibilities that Azure has to offer. So you create policies to help maintain control, security, and compliance in your environment.\r\n\r\nBut where do you begin? The options seem endless. Should you use all of them?\r\nIn this talk, we\u0027ll look at the starting point. Guess what; it isn\u0027t the Azure portal. We\u0027ll see how to determine the policies you need and how to simplify your Azure experience rather than complicate it.\r\nWe\u0027ll also address common challenges and mistakes in Azure policy as seen from the field. At the end, you will have a clearer understanding that will help you make the best choices and make Azure policy work for you.",
+      "StartsAt": "2025-09-17T16:35:00",
+      "EndsAt": "2025-09-17T17:25:00",
+      "IsServiceSession": false,
+      "speakers": [
+        "barbara-forbes"
+      ],
+      "SessionFormat": null,
+      "Level": null,
+      "Room": "Penthouse"
+    },
+    {
+      "Id": "simplifying-serverless-integration-testing-wiremock-on-azure-functions",
+      "Title": "Simplifying Serverless Integration Testing: WireMock on Azure Functions",
+      "Description": "In serverless architectures, integration testing becomes a key focus in the testing pyramid, as local environments cannot fully replicate the complexities of cloud deployments. External APIs, often unavailable or difficult to configure, pose a significant challenge during testing.\r\n\r\nMocking external APIs locally with tools like WireMock is common, but to truly validate serverless applications, testing must occur in the deployed environment. This talk explores how to leverage WireMock on Azure Functions to mock external APIs directly in the cloud.\r\n\r\nAttendees will learn how to set up and configure WireMock on Azure Functions, integrate it into their workflows, and ensure reliable, deployment-level testing. This approach simplifies testing, reduces dependency on external systems, and enhances confidence in serverless application behavior in real-world scenarios",
+      "StartsAt": "2025-09-17T17:40:00",
+      "EndsAt": "2025-09-17T18:30:00",
+      "IsServiceSession": false,
+      "speakers": [
+        "elena-van-engelen"
+      ],
+      "SessionFormat": null,
+      "Level": null,
+      "Room": "Plaza"
+    },
+    {
+      "Id": "sovereign-cloud-on-azure-reducing-risk-and-staying-in-control",
+      "Title": "Sovereign cloud on Azure: reducing risk and staying in control",
+      "Description": "Governments and organisations across Europe are questioning how to use hyperscalers like Azure while staying compliant and in control. What are the real risks, and how can we reduce them without giving up cloud benefits?\r\n\r\nThis session looks at legal and technical challenges of using US-based cloud providers in the EU. We will cover Azure capabilities like confidential computing, customer-managed keys and sovereign landing zones, and show how architecture choices can improve flexibility.\r\n\r\nAnd don\u2019t worry, it\u2019s not just legal talk. We will also show practical technical decisions that help you stay in control and keep risks manageable, whether you are building apps or advising on strategy.",
+      "StartsAt": "2025-09-17T17:40:00",
+      "EndsAt": "2025-09-17T18:30:00",
+      "IsServiceSession": false,
+      "speakers": [
+        "geert-van-der-cruijsen"
+      ],
+      "SessionFormat": null,
+      "Level": null,
+      "Room": "Penthouse"
+    },
+    {
+      "Id": "6b7746f4-92a8-4684-a702-8bcc50fdf119",
+      "Title": "Dinner",
+      "Description": null,
+      "StartsAt": "2025-09-17T18:30:00",
+      "EndsAt": "2025-09-17T19:30:00",
+      "IsServiceSession": true,
+      "speakers": [],
+      "SessionFormat": null,
+      "Level": null,
+      "Room": "Atrium"
+    },
+    {
+      "Id": "one-does-not-simply-add-ai-to-their-apps-stop-and-think-1st",
+      "Title": "One does not simply add AI to their apps: stop and Think 1st",
+      "Description": "Everyone wants to build AI infused applications, but if you want to do this you need to have your foundations solid first. And this is where it typically goes wrong. A lot of solutions aren\u0027t set up for this. This session will give you solid architectural design principles to make sure you can get started with AI. The principles will be demonstrated and discussed on Microsoft technology and Azure but can be adapted to any other cloud or tech.",
+      "StartsAt": "2025-09-17T19:30:00",
+      "EndsAt": "2025-09-17T20:20:00",
+      "IsServiceSession": false,
+      "speakers": [
+        "mike-martin"
+      ],
+      "SessionFormat": null,
+      "Level": null,
+      "Room": "Plaza"
+    },
+    {
+      "Id": "from-vm-to-markdown-ditching-wordpress-to-save-the-planet-and-my-wallet",
+      "Title": "From VM to Markdown: Ditching WordPress to Save the Planet (and My Wallet)",
+      "Description": "What happens when you mix Markdown, Astro, and legendary Dutch thriftiness?\r\nA blazing-fast blog on Azure Static Web Apps; and a footprint that shrank from \u20AC480 / 40 kg CO\u2082 a year to nearly zero.\r\n\r\nYou\u0027ll learn how to:\r\n\r\n* Replace WordPress with Markdown \u0026 Astro. \r\n* Re-create WordPress plugins with Rehype.\r\n* Store content in GitHub and deploy with GitHub Actions.\r\n* Host globally on Azure Static Web Apps for 0 cost.\r\n* Hit a 4\u00D7100 Lighthouse score and maintain your blog from your phone.\r\n\r\nThis isn\u0027t just about blogging, it\u0027s about rethinking the impact your cloud infrastructure can make.\r\n\r\nIdeal for developers, bloggers, and anyone who wants to save money and the planet (preferably without giving up on emojis, syntax highlighting, or Dutch sarcasm).\r\n",
+      "StartsAt": "2025-09-17T19:30:00",
+      "EndsAt": "2025-09-17T20:20:00",
+      "IsServiceSession": false,
+      "speakers": [
+        "michael-hompus"
+      ],
+      "SessionFormat": null,
+      "Level": null,
+      "Room": "Penthouse"
+    },
+    {
+      "Id": "7c8baa3a-099e-49a1-803d-e78ce5fea0ed",
+      "Title": "Drinks",
+      "Description": null,
+      "StartsAt": "2025-09-17T20:20:00",
+      "EndsAt": "2025-09-17T21:00:00",
+      "IsServiceSession": true,
+      "speakers": [],
+      "SessionFormat": null,
+      "Level": null,
+      "Room": "Atrium"
+    }
+  ]
+}
