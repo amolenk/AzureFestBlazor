@@ -74,7 +74,8 @@
       "IsTopSpeaker": false,
       "ProfilePictureUrl": "img/2025/speakers/michiel-hamers.jpg",
       "sessions": [
-        "workshop-the-azure-almanac-sports-predictions-that-would-make-doc-brown-proud"
+        "workshop-the-azure-almanac-sports-predictions-that-would-make-doc-brown-proud",
+        "workshop-the-azure-almanac-sports-predictions-that-would-make-doc-brown-proud-continued"
       ]
     },
     {
@@ -96,7 +97,8 @@
       "IsTopSpeaker": false,
       "ProfilePictureUrl": "img/2025/speakers/roelant-dieben.jpg",
       "sessions": [
-        "workshop-the-azure-almanac-sports-predictions-that-would-make-doc-brown-proud"
+        "workshop-the-azure-almanac-sports-predictions-that-would-make-doc-brown-proud",
+        "workshop-the-azure-almanac-sports-predictions-that-would-make-doc-brown-proud-continued"
       ]
     },
     {
@@ -113,7 +115,7 @@
   ],
   "Sessions": [
     {
-      "Id": "3da26582-bc2d-4a27-8160-ea2374fefed3",
+      "Id": "c6313d2d-0d80-44ff-84ce-ec0928de5caf",
       "Title": "Registration",
       "Description": null,
       "StartsAt": "2025-09-17T13:00:00",
@@ -125,7 +127,7 @@
       "Room": "Atrium"
     },
     {
-      "Id": "f28ab68d-e081-4056-b1df-0172c16af555",
+      "Id": "a2440637-5596-425d-a3f6-ce7c5a59a89a",
       "Title": "Keynote (TBD)",
       "Description": null,
       "StartsAt": "2025-09-17T13:45:00",
@@ -166,10 +168,10 @@
     },
     {
       "Id": "workshop-the-azure-almanac-sports-predictions-that-would-make-doc-brown-proud",
-      "Title": "WORKSHOP! The Azure Almanac: Sports Predictions That Would Make Doc Brown Proud",
+      "Title": "Workshop: The Azure Almanac: Sports Predictions That Would Make Doc Brown Proud",
       "Description": "Inspired by the ultimate cheat sheet\u2014Biff\u2019s Sports Almanac\u2014this session takes a deep dive into how AI and Azure can predict sports outcomes. Learn how to build and train models using historical data and simulate match outcomes with shockingly high accuracy (though we can\u0027t promise you\u0027ll win every party bet).  \r\n\r\n\u26A0\uFE0F Disclaimer: Betting responsibly is key\u2014Marty says even the best AI can\u2019t predict when Griff is going to show up with a bat. And remember, no DeLoreans or Gray\u2019s Sports Almanacs were used in the development of this session.",
       "StartsAt": "2025-09-17T15:15:00",
-      "EndsAt": "2025-09-17T17:25:00",
+      "EndsAt": "2025-09-17T16:05:00",
       "IsServiceSession": false,
       "speakers": [
         "roelant-dieben",
@@ -180,7 +182,7 @@
       "Room": "The Garden"
     },
     {
-      "Id": "71322696-ced3-4032-93f8-f4f0704eec9d",
+      "Id": "94815fca-a978-483b-9b4c-eac62f8cd92d",
       "Title": "Break",
       "Description": null,
       "StartsAt": "2025-09-17T16:05:00",
@@ -220,6 +222,21 @@
       "Room": "Penthouse"
     },
     {
+      "Id": "workshop-the-azure-almanac-sports-predictions-that-would-make-doc-brown-proud-continued",
+      "Title": "Workshop: The Azure Almanac: Sports Predictions That Would Make Doc Brown Proud (continued...)",
+      "Description": "Inspired by the ultimate cheat sheet\u2014Biff\u2019s Sports Almanac\u2014this session takes a deep dive into how AI and Azure can predict sports outcomes. Learn how to build and train models using historical data and simulate match outcomes with shockingly high accuracy (though we can\u0027t promise you\u0027ll win every party bet).  \r\n\r\n\u26A0\uFE0F Disclaimer: Betting responsibly is key\u2014Marty says even the best AI can\u2019t predict when Griff is going to show up with a bat. And remember, no DeLoreans or Gray\u2019s Sports Almanacs were used in the development of this session.",
+      "StartsAt": "2025-09-17T16:35:00",
+      "EndsAt": "2025-09-17T17:25:00",
+      "IsServiceSession": false,
+      "speakers": [
+        "roelant-dieben",
+        "michiel-hamers"
+      ],
+      "SessionFormat": null,
+      "Level": null,
+      "Room": "The Garden"
+    },
+    {
       "Id": "simplifying-serverless-integration-testing-wiremock-on-azure-functions",
       "Title": "Simplifying Serverless Integration Testing: WireMock on Azure Functions",
       "Description": "In serverless architectures, integration testing becomes a key focus in the testing pyramid, as local environments cannot fully replicate the complexities of cloud deployments. External APIs, often unavailable or difficult to configure, pose a significant challenge during testing.\r\n\r\nMocking external APIs locally with tools like WireMock is common, but to truly validate serverless applications, testing must occur in the deployed environment. This talk explores how to leverage WireMock on Azure Functions to mock external APIs directly in the cloud.\r\n\r\nAttendees will learn how to set up and configure WireMock on Azure Functions, integrate it into their workflows, and ensure reliable, deployment-level testing. This approach simplifies testing, reduces dependency on external systems, and enhances confidence in serverless application behavior in real-world scenarios",
@@ -248,7 +265,7 @@
       "Room": "Penthouse"
     },
     {
-      "Id": "6b7746f4-92a8-4684-a702-8bcc50fdf119",
+      "Id": "1442d5ea-fb37-424a-8c0c-ea8060b7c636",
       "Title": "Dinner",
       "Description": null,
       "StartsAt": "2025-09-17T18:30:00",
@@ -288,7 +305,7 @@
       "Room": "Penthouse"
     },
     {
-      "Id": "7c8baa3a-099e-49a1-803d-e78ce5fea0ed",
+      "Id": "dfef73b3-e774-4ad7-890a-b6e4f183332b",
       "Title": "Drinks",
       "Description": null,
       "StartsAt": "2025-09-17T20:20:00",
