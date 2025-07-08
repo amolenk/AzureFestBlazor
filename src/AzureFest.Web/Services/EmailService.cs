@@ -24,7 +24,8 @@ public class EmailService : IEmailService
     public async Task SendRequestForConfirmationEmailAsync(string toEmail, string firstName, string lastName, string confirmationLink, string cancellationLink)
     {
         var message = new MimeMessage();
-        message.From.Add(new MailboxAddress("Azure Fest", _configuration["Email:FromAddress"] ?? "noreply@azurefest.nl"));
+        message.From.Add(new MailboxAddress("Azure Fest", _configuration["Email:FromAddress"] ?? "noreply@mg.azurefest.nl"));
+        message.ReplyTo.Add(new MailboxAddress("Azure Fest", _configuration["Email:ReplyToAddress"] ?? "team@azurefest.nl"));
         message.To.Add(new MailboxAddress($"{firstName} {lastName}", toEmail));
         message.Subject = "Confirm your Azure Fest registration";
         
@@ -118,7 +119,8 @@ public class EmailService : IEmailService
     public async Task SendTicketEmailAsync(string toEmail, string firstName, string lastName, string qrCodeLink, string cancellationLink)
     {
         var message = new MimeMessage();
-        message.From.Add(new MailboxAddress("Azure Fest", _configuration["Email:FromAddress"] ?? "noreply@azurefest.nl"));
+        message.From.Add(new MailboxAddress("Azure Fest", _configuration["Email:FromAddress"] ?? "noreply@mg.azurefest.nl"));
+        message.ReplyTo.Add(new MailboxAddress("Azure Fest", _configuration["Email:ReplyToAddress"] ?? "team@azurefest.nl"));
         message.To.Add(new MailboxAddress($"{firstName} {lastName}", toEmail));
         message.Subject = "Your Azure Fest ticket";
 
@@ -212,8 +214,8 @@ public class EmailService : IEmailService
             
             var smtpHost = _configuration["Email:SmtpHost"];
             var smtpPort = int.Parse(_configuration["Email:SmtpPort"] ?? "587");
-            var username = _configuration["Email:Username"];
-            var password = _configuration["Email:Password"];
+            var username = _configuration["Email:SmtpUsername"];
+            var password = _configuration["Email:SmtpPassword"];
 
             if (string.IsNullOrEmpty(smtpHost))
             {
