@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureFest.Models", "AzureFe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureFest.SessionizeImport", "AzureFest.SessionizeImport\AzureFest.SessionizeImport.csproj", "{1E12B7E4-28D5-4982-AE0B-7A6DC150273E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureFest.Remind", "AzureFest.Remind\AzureFest.Remind.csproj", "{3C1AD554-E01E-419C-845C-7DD2FFD350F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{1E12B7E4-28D5-4982-AE0B-7A6DC150273E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E12B7E4-28D5-4982-AE0B-7A6DC150273E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E12B7E4-28D5-4982-AE0B-7A6DC150273E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C1AD554-E01E-419C-845C-7DD2FFD350F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C1AD554-E01E-419C-845C-7DD2FFD350F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C1AD554-E01E-419C-845C-7DD2FFD350F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C1AD554-E01E-419C-845C-7DD2FFD350F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

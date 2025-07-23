@@ -115,7 +115,7 @@
   ],
   "Sessions": [
     {
-      "Id": "c6313d2d-0d80-44ff-84ce-ec0928de5caf",
+      "Id": "2a9ca480-e624-4469-b343-e9a2114733e6",
       "Title": "Registration",
       "Description": null,
       "StartsAt": "2025-09-17T13:00:00",
@@ -127,7 +127,7 @@
       "Room": "Atrium"
     },
     {
-      "Id": "a2440637-5596-425d-a3f6-ce7c5a59a89a",
+      "Id": "628aa67e-b3a4-414e-a69c-54aad64bfbfe",
       "Title": "Keynote (TBD)",
       "Description": null,
       "StartsAt": "2025-09-17T13:45:00",
@@ -139,28 +139,28 @@
       "Room": "Plaza"
     },
     {
-      "Id": "glueing-net-aspire-services-with-container-apps-and-dapr",
-      "Title": "Glueing .NET Aspire Services with Container Apps and Dapr",
-      "Description": "Bringing multiple .NET Aspire services to production can be challenging, especially when scaling, handling communication, and ensuring resilience between services. In this session, we\u2019ll explore how Azure Container Apps, coupled with its built-in Dapr integration, can simplify this process and elevate your microservices architecture.\r\n \r\nAttendees will learn how to containerize .NET Aspire services and deploy them to Azure Container Apps for a seamless, managed, and scalable environment. We\u2019ll cover essential Dapr components like service invocation, pub/sub, and state management, showcasing how they can enhance communication and reliability without adding complex code. By the end of this session, you\u0027ll have a roadmap for using Azure Container Apps and Dapr to streamline the deployment and operation of .NET Aspire services in production. This is a must-attend for developers and architects looking to simplify their service landscape with modern, cloud-native solutions on Azure.",
+      "Id": "building-your-own-mcp-server",
+      "Title": "Building your own MCP server",
+      "Description": "The Model Context Protocol is all the rage and rightly so. As the USB-C for AI it is an incredibly powerful tool that acts as a bridge between real-world systems and LLMs. But how do you get started with MCP and more importantly: how do you build your own MCP server?\r\n\r\nIn this session we\u0027ll get our teeth stuck in these and many more questions and we\u0027ll use Azure AI Foundry to build our own MCP server along the way.",
       "StartsAt": "2025-09-17T15:15:00",
       "EndsAt": "2025-09-17T16:05:00",
       "IsServiceSession": false,
       "speakers": [
-        "eduard-keilholz"
+        "stuart-van-der-lee"
       ],
       "SessionFormat": null,
       "Level": null,
       "Room": "Plaza"
     },
     {
-      "Id": "beyond-aad-b2c-the-future-of-external-identity-in-azure",
-      "Title": "Beyond AAD B2C: The Future of External Identity in Azure",
-      "Description": "Azure AD B2C has long been the go-to solution for managing external identities in Azure. It is powerful and scalable, but not without trade-offs. Developers often had to choose between the simplicity of built-in user flows or the steep complexity of custom policies to unlock advanced scenarios.\r\n\r\nNow, Microsoft is making a clear shift. Azure AD B2C is being phased out and will be retired within the next five years. Its replacement, Microsoft Entra External ID, introduces a new model for managing external identities. The goal is to reduce complexity, improve the developer experience, and better support modern identity use cases. In this session, we will explore why this change is happening, what is already known about the new platform, and what it means for both new projects and existing B2C implementations that need to plan for the future.\r\n\r\nDrawing from real-world B2C implementations, we will compare both solutions, highlight what Entra External ID does differently, and show how it simplifies previously complex scenarios. Along the way, I will walk through practical examples so you can see what it looks like in action, both conceptually and in code, including how to integrate it into automated CI/CD pipelines and infrastructure workflows.",
+      "Id": "simplifying-serverless-integration-testing-wiremock-on-azure-functions",
+      "Title": "Simplifying Serverless Integration Testing: WireMock on Azure Functions",
+      "Description": "In serverless architectures, integration testing becomes a key focus in the testing pyramid, as local environments cannot fully replicate the complexities of cloud deployments. External APIs, often unavailable or difficult to configure, pose a significant challenge during testing.\r\n\r\nMocking external APIs locally with tools like WireMock is common, but to truly validate serverless applications, testing must occur in the deployed environment. This talk explores how to leverage WireMock on Azure Functions to mock external APIs directly in the cloud.\r\n\r\nAttendees will learn how to set up and configure WireMock on Azure Functions, integrate it into their workflows, and ensure reliable, deployment-level testing. This approach simplifies testing, reduces dependency on external systems, and enhances confidence in serverless application behavior in real-world scenarios",
       "StartsAt": "2025-09-17T15:15:00",
       "EndsAt": "2025-09-17T16:05:00",
       "IsServiceSession": false,
       "speakers": [
-        "frank-folsche"
+        "elena-van-engelen"
       ],
       "SessionFormat": null,
       "Level": null,
@@ -182,7 +182,7 @@
       "Room": "The Garden"
     },
     {
-      "Id": "94815fca-a978-483b-9b4c-eac62f8cd92d",
+      "Id": "c344e8b4-ddce-4a37-ad16-3bf2e0884206",
       "Title": "Break",
       "Description": null,
       "StartsAt": "2025-09-17T16:05:00",
@@ -194,20 +194,6 @@
       "Room": "Atrium"
     },
     {
-      "Id": "building-your-own-mcp-server",
-      "Title": "Building your own MCP server",
-      "Description": "The Model Context Protocol is all the rage and rightly so. As the USB-C for AI it is an incredibly powerful tool that acts as a bridge between real-world systems and LLMs. But how do you get started with MCP and more importantly: how do you build your own MCP server?\r\n\r\nIn this session we\u0027ll get our teeth stuck in these and many more questions and we\u0027ll use Azure AI Foundry to build our own MCP server along the way.",
-      "StartsAt": "2025-09-17T16:35:00",
-      "EndsAt": "2025-09-17T17:25:00",
-      "IsServiceSession": false,
-      "speakers": [
-        "stuart-van-der-lee"
-      ],
-      "SessionFormat": null,
-      "Level": null,
-      "Room": "Plaza"
-    },
-    {
       "Id": "implementing-azure-policies-before-the-portal",
       "Title": "Implementing Azure Policies: Before the Portal",
       "Description": "As your Azure environment grows, you\u0027ll need to find ways to keep everything organized. Especially with structures like the Microsoft Cloud Adoption Framework, it\u0027s important to set boundaries to manage the endless possibilities that Azure has to offer. So you create policies to help maintain control, security, and compliance in your environment.\r\n\r\nBut where do you begin? The options seem endless. Should you use all of them?\r\nIn this talk, we\u0027ll look at the starting point. Guess what; it isn\u0027t the Azure portal. We\u0027ll see how to determine the policies you need and how to simplify your Azure experience rather than complicate it.\r\nWe\u0027ll also address common challenges and mistakes in Azure policy as seen from the field. At the end, you will have a clearer understanding that will help you make the best choices and make Azure policy work for you.",
@@ -216,6 +202,20 @@
       "IsServiceSession": false,
       "speakers": [
         "barbara-forbes"
+      ],
+      "SessionFormat": null,
+      "Level": null,
+      "Room": "Plaza"
+    },
+    {
+      "Id": "beyond-aad-b2c-the-future-of-external-identity-in-azure",
+      "Title": "Beyond AAD B2C: The Future of External Identity in Azure",
+      "Description": "Azure AD B2C has long been the go-to solution for managing external identities in Azure. It is powerful and scalable, but not without trade-offs. Developers often had to choose between the simplicity of built-in user flows or the steep complexity of custom policies to unlock advanced scenarios.\r\n\r\nNow, Microsoft is making a clear shift. Azure AD B2C is being phased out and will be retired within the next five years. Its replacement, Microsoft Entra External ID, introduces a new model for managing external identities. The goal is to reduce complexity, improve the developer experience, and better support modern identity use cases. In this session, we will explore why this change is happening, what is already known about the new platform, and what it means for both new projects and existing B2C implementations that need to plan for the future.\r\n\r\nDrawing from real-world B2C implementations, we will compare both solutions, highlight what Entra External ID does differently, and show how it simplifies previously complex scenarios. Along the way, I will walk through practical examples so you can see what it looks like in action, both conceptually and in code, including how to integrate it into automated CI/CD pipelines and infrastructure workflows.",
+      "StartsAt": "2025-09-17T16:35:00",
+      "EndsAt": "2025-09-17T17:25:00",
+      "IsServiceSession": false,
+      "speakers": [
+        "frank-folsche"
       ],
       "SessionFormat": null,
       "Level": null,
@@ -237,14 +237,14 @@
       "Room": "The Garden"
     },
     {
-      "Id": "simplifying-serverless-integration-testing-wiremock-on-azure-functions",
-      "Title": "Simplifying Serverless Integration Testing: WireMock on Azure Functions",
-      "Description": "In serverless architectures, integration testing becomes a key focus in the testing pyramid, as local environments cannot fully replicate the complexities of cloud deployments. External APIs, often unavailable or difficult to configure, pose a significant challenge during testing.\r\n\r\nMocking external APIs locally with tools like WireMock is common, but to truly validate serverless applications, testing must occur in the deployed environment. This talk explores how to leverage WireMock on Azure Functions to mock external APIs directly in the cloud.\r\n\r\nAttendees will learn how to set up and configure WireMock on Azure Functions, integrate it into their workflows, and ensure reliable, deployment-level testing. This approach simplifies testing, reduces dependency on external systems, and enhances confidence in serverless application behavior in real-world scenarios",
+      "Id": "glueing-net-aspire-services-with-container-apps-and-dapr",
+      "Title": "Glueing .NET Aspire Services with Container Apps and Dapr",
+      "Description": "Bringing multiple .NET Aspire services to production can be challenging, especially when scaling, handling communication, and ensuring resilience between services. In this session, we\u2019ll explore how Azure Container Apps, coupled with its built-in Dapr integration, can simplify this process and elevate your microservices architecture.\r\n \r\nAttendees will learn how to containerize .NET Aspire services and deploy them to Azure Container Apps for a seamless, managed, and scalable environment. We\u2019ll cover essential Dapr components like service invocation, pub/sub, and state management, showcasing how they can enhance communication and reliability without adding complex code. By the end of this session, you\u0027ll have a roadmap for using Azure Container Apps and Dapr to streamline the deployment and operation of .NET Aspire services in production. This is a must-attend for developers and architects looking to simplify their service landscape with modern, cloud-native solutions on Azure.",
       "StartsAt": "2025-09-17T17:40:00",
       "EndsAt": "2025-09-17T18:30:00",
       "IsServiceSession": false,
       "speakers": [
-        "elena-van-engelen"
+        "eduard-keilholz"
       ],
       "SessionFormat": null,
       "Level": null,
@@ -265,7 +265,7 @@
       "Room": "Penthouse"
     },
     {
-      "Id": "1442d5ea-fb37-424a-8c0c-ea8060b7c636",
+      "Id": "bf195c4a-7cef-4805-a408-b6a3c85f872a",
       "Title": "Dinner",
       "Description": null,
       "StartsAt": "2025-09-17T18:30:00",
@@ -305,7 +305,7 @@
       "Room": "Penthouse"
     },
     {
-      "Id": "dfef73b3-e774-4ad7-890a-b6e4f183332b",
+      "Id": "85db0a67-14ba-48a7-9c1c-dda28c6d56de",
       "Title": "Drinks",
       "Description": null,
       "StartsAt": "2025-09-17T20:20:00",

@@ -1,6 +1,7 @@
 namespace AzureFest.Remind;
 
-public class EmailRecord
-{
-    
-}
+public record EmailRecord(
+    Guid Id,
+    string Email,
+    string FirstName,
+    string LastName);

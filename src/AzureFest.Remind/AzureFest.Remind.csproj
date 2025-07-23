@@ -7,4 +7,9 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="MailKit" Version="4.13.0" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.6" />
+    </ItemGroup>
+
 </Project>
