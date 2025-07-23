@@ -115,7 +115,7 @@
   ],
   "Sessions": [
     {
-      "Id": "2a9ca480-e624-4469-b343-e9a2114733e6",
+      "Id": "3764a6e3-c37e-4299-9cd9-4e6faceeed0e",
       "Title": "Registration",
       "Description": null,
       "StartsAt": "2025-09-17T13:00:00",
@@ -127,7 +127,7 @@
       "Room": "Atrium"
     },
     {
-      "Id": "628aa67e-b3a4-414e-a69c-54aad64bfbfe",
+      "Id": "02af8388-9cd3-4c24-9760-bf56277c759d",
       "Title": "Keynote (TBD)",
       "Description": null,
       "StartsAt": "2025-09-17T13:45:00",
@@ -182,7 +182,7 @@
       "Room": "The Garden"
     },
     {
-      "Id": "c344e8b4-ddce-4a37-ad16-3bf2e0884206",
+      "Id": "13618cf8-d66e-46f8-9a37-d5eb6577df28",
       "Title": "Break",
       "Description": null,
       "StartsAt": "2025-09-17T16:05:00",
@@ -194,28 +194,28 @@
       "Room": "Atrium"
     },
     {
-      "Id": "implementing-azure-policies-before-the-portal",
-      "Title": "Implementing Azure Policies: Before the Portal",
-      "Description": "As your Azure environment grows, you\u0027ll need to find ways to keep everything organized. Especially with structures like the Microsoft Cloud Adoption Framework, it\u0027s important to set boundaries to manage the endless possibilities that Azure has to offer. So you create policies to help maintain control, security, and compliance in your environment.\r\n\r\nBut where do you begin? The options seem endless. Should you use all of them?\r\nIn this talk, we\u0027ll look at the starting point. Guess what; it isn\u0027t the Azure portal. We\u0027ll see how to determine the policies you need and how to simplify your Azure experience rather than complicate it.\r\nWe\u0027ll also address common challenges and mistakes in Azure policy as seen from the field. At the end, you will have a clearer understanding that will help you make the best choices and make Azure policy work for you.",
+      "Id": "from-vm-to-markdown-ditching-wordpress-to-save-the-planet-and-my-wallet",
+      "Title": "From VM to Markdown: Ditching WordPress to Save the Planet (and My Wallet)",
+      "Description": "What happens when you mix Markdown, Astro, and legendary Dutch thriftiness?\r\nA blazing-fast blog on Azure Static Web Apps; and a footprint that shrank from \u20AC480 / 40 kg CO\u2082 a year to nearly zero.\r\n\r\nYou\u0027ll learn how to:\r\n\r\n* Replace WordPress with Markdown \u0026 Astro. \r\n* Re-create WordPress plugins with Rehype.\r\n* Store content in GitHub and deploy with GitHub Actions.\r\n* Host globally on Azure Static Web Apps for 0 cost.\r\n* Hit a 4\u00D7100 Lighthouse score and maintain your blog from your phone.\r\n\r\nThis isn\u0027t just about blogging, it\u0027s about rethinking the impact your cloud infrastructure can make.\r\n\r\nIdeal for developers, bloggers, and anyone who wants to save money and the planet (preferably without giving up on emojis, syntax highlighting, or Dutch sarcasm).\r\n",
       "StartsAt": "2025-09-17T16:35:00",
       "EndsAt": "2025-09-17T17:25:00",
       "IsServiceSession": false,
       "speakers": [
-        "barbara-forbes"
+        "michael-hompus"
       ],
       "SessionFormat": null,
       "Level": null,
       "Room": "Plaza"
     },
     {
-      "Id": "beyond-aad-b2c-the-future-of-external-identity-in-azure",
-      "Title": "Beyond AAD B2C: The Future of External Identity in Azure",
-      "Description": "Azure AD B2C has long been the go-to solution for managing external identities in Azure. It is powerful and scalable, but not without trade-offs. Developers often had to choose between the simplicity of built-in user flows or the steep complexity of custom policies to unlock advanced scenarios.\r\n\r\nNow, Microsoft is making a clear shift. Azure AD B2C is being phased out and will be retired within the next five years. Its replacement, Microsoft Entra External ID, introduces a new model for managing external identities. The goal is to reduce complexity, improve the developer experience, and better support modern identity use cases. In this session, we will explore why this change is happening, what is already known about the new platform, and what it means for both new projects and existing B2C implementations that need to plan for the future.\r\n\r\nDrawing from real-world B2C implementations, we will compare both solutions, highlight what Entra External ID does differently, and show how it simplifies previously complex scenarios. Along the way, I will walk through practical examples so you can see what it looks like in action, both conceptually and in code, including how to integrate it into automated CI/CD pipelines and infrastructure workflows.",
+      "Id": "sovereign-cloud-on-azure-reducing-risk-and-staying-in-control",
+      "Title": "Sovereign cloud on Azure: reducing risk and staying in control",
+      "Description": "Governments and organisations across Europe are questioning how to use hyperscalers like Azure while staying compliant and in control. What are the real risks, and how can we reduce them without giving up cloud benefits?\r\n\r\nThis session looks at legal and technical challenges of using US-based cloud providers in the EU. We will cover Azure capabilities like confidential computing, customer-managed keys and sovereign landing zones, and show how architecture choices can improve flexibility.\r\n\r\nAnd don\u2019t worry, it\u2019s not just legal talk. We will also show practical technical decisions that help you stay in control and keep risks manageable, whether you are building apps or advising on strategy.",
       "StartsAt": "2025-09-17T16:35:00",
       "EndsAt": "2025-09-17T17:25:00",
       "IsServiceSession": false,
       "speakers": [
-        "frank-folsche"
+        "geert-van-der-cruijsen"
       ],
       "SessionFormat": null,
       "Level": null,
@@ -251,21 +251,21 @@
       "Room": "Plaza"
     },
     {
-      "Id": "sovereign-cloud-on-azure-reducing-risk-and-staying-in-control",
-      "Title": "Sovereign cloud on Azure: reducing risk and staying in control",
-      "Description": "Governments and organisations across Europe are questioning how to use hyperscalers like Azure while staying compliant and in control. What are the real risks, and how can we reduce them without giving up cloud benefits?\r\n\r\nThis session looks at legal and technical challenges of using US-based cloud providers in the EU. We will cover Azure capabilities like confidential computing, customer-managed keys and sovereign landing zones, and show how architecture choices can improve flexibility.\r\n\r\nAnd don\u2019t worry, it\u2019s not just legal talk. We will also show practical technical decisions that help you stay in control and keep risks manageable, whether you are building apps or advising on strategy.",
+      "Id": "implementing-azure-policies-before-the-portal",
+      "Title": "Implementing Azure Policies: Before the Portal",
+      "Description": "As your Azure environment grows, you\u0027ll need to find ways to keep everything organized. Especially with structures like the Microsoft Cloud Adoption Framework, it\u0027s important to set boundaries to manage the endless possibilities that Azure has to offer. So you create policies to help maintain control, security, and compliance in your environment.\r\n\r\nBut where do you begin? The options seem endless. Should you use all of them?\r\nIn this talk, we\u0027ll look at the starting point. Guess what; it isn\u0027t the Azure portal. We\u0027ll see how to determine the policies you need and how to simplify your Azure experience rather than complicate it.\r\nWe\u0027ll also address common challenges and mistakes in Azure policy as seen from the field. At the end, you will have a clearer understanding that will help you make the best choices and make Azure policy work for you.",
       "StartsAt": "2025-09-17T17:40:00",
       "EndsAt": "2025-09-17T18:30:00",
       "IsServiceSession": false,
       "speakers": [
-        "geert-van-der-cruijsen"
+        "barbara-forbes"
       ],
       "SessionFormat": null,
       "Level": null,
       "Room": "Penthouse"
     },
     {
-      "Id": "bf195c4a-7cef-4805-a408-b6a3c85f872a",
+      "Id": "2ba1ef2f-a6ce-4917-9f5a-65d0a52b1d90",
       "Title": "Dinner",
       "Description": null,
       "StartsAt": "2025-09-17T18:30:00",
@@ -291,21 +291,21 @@
       "Room": "Plaza"
     },
     {
-      "Id": "from-vm-to-markdown-ditching-wordpress-to-save-the-planet-and-my-wallet",
-      "Title": "From VM to Markdown: Ditching WordPress to Save the Planet (and My Wallet)",
-      "Description": "What happens when you mix Markdown, Astro, and legendary Dutch thriftiness?\r\nA blazing-fast blog on Azure Static Web Apps; and a footprint that shrank from \u20AC480 / 40 kg CO\u2082 a year to nearly zero.\r\n\r\nYou\u0027ll learn how to:\r\n\r\n* Replace WordPress with Markdown \u0026 Astro. \r\n* Re-create WordPress plugins with Rehype.\r\n* Store content in GitHub and deploy with GitHub Actions.\r\n* Host globally on Azure Static Web Apps for 0 cost.\r\n* Hit a 4\u00D7100 Lighthouse score and maintain your blog from your phone.\r\n\r\nThis isn\u0027t just about blogging, it\u0027s about rethinking the impact your cloud infrastructure can make.\r\n\r\nIdeal for developers, bloggers, and anyone who wants to save money and the planet (preferably without giving up on emojis, syntax highlighting, or Dutch sarcasm).\r\n",
+      "Id": "beyond-aad-b2c-the-future-of-external-identity-in-azure",
+      "Title": "Beyond AAD B2C: The Future of External Identity in Azure",
+      "Description": "Azure AD B2C has long been the go-to solution for managing external identities in Azure. It is powerful and scalable, but not without trade-offs. Developers often had to choose between the simplicity of built-in user flows or the steep complexity of custom policies to unlock advanced scenarios.\r\n\r\nNow, Microsoft is making a clear shift. Azure AD B2C is being phased out and will be retired within the next five years. Its replacement, Microsoft Entra External ID, introduces a new model for managing external identities. The goal is to reduce complexity, improve the developer experience, and better support modern identity use cases. In this session, we will explore why this change is happening, what is already known about the new platform, and what it means for both new projects and existing B2C implementations that need to plan for the future.\r\n\r\nDrawing from real-world B2C implementations, we will compare both solutions, highlight what Entra External ID does differently, and show how it simplifies previously complex scenarios. Along the way, I will walk through practical examples so you can see what it looks like in action, both conceptually and in code, including how to integrate it into automated CI/CD pipelines and infrastructure workflows.",
       "StartsAt": "2025-09-17T19:30:00",
       "EndsAt": "2025-09-17T20:20:00",
       "IsServiceSession": false,
       "speakers": [
-        "michael-hompus"
+        "frank-folsche"
       ],
       "SessionFormat": null,
       "Level": null,
       "Room": "Penthouse"
     },
     {
-      "Id": "85db0a67-14ba-48a7-9c1c-dda28c6d56de",
+      "Id": "777547da-2565-462d-9708-9d02ed8844a7",
       "Title": "Drinks",
       "Description": null,
       "StartsAt": "2025-09-17T20:20:00",
