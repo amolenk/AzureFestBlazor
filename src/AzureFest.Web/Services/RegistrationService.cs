@@ -6,6 +6,7 @@ namespace AzureFest.Web.Services;
 
 public interface IRegistrationService
 {
+    Task<bool> HasAvailableTicketsAsync();
     Task<(bool Success, string? ErrorMessage)> RegisterAsync(string email, string firstName, string lastName, string employmentStatus, string? companyName);
     Task<(bool Success, string? ErrorMessage)> ConfirmRegistrationAsync(string registrationId, string signature);
     Task<(bool Success, string? ErrorMessage)> CancelRegistrationAsync(string registrationId, string signature);
@@ -38,10 +39,22 @@ public class RegistrationService : IRegistrationService
         _configuration = configuration;
     }
 
+    public async Task<bool> HasAvailableTicketsAsync()
+    {
+        var maxTickets = int.Parse(_configuration["AzureFest:MaxTickets"]!);
+        var currentRegistrations = await _context.Registrations.CountAsync();
+        return currentRegistrations < maxTickets;
+    }
+    
     public async Task<(bool Success, string? ErrorMessage)> RegisterAsync(string email, string firstName, string lastName, string employmentStatus, string? companyName)
     {
         try
         {
+            if (!await HasAvailableTicketsAsync())
+            {
+                return (false, "We're sorry, but the event is fully booked.");
+            }
+
             // Generate deterministic GUID that's forward-compatible with Admitto
             var teamId = DeterministicGuidGenerator.Generate("Dutch IT Events");
             var ticketedEventName = "Azure Fest 2025";
@@ -116,6 +129,11 @@ public class RegistrationService : IRegistrationService
                 return (false, "Invalid confirmation link.");
             }
 
+            if (!await HasAvailableTicketsAsync())
+            {
+                return (false, "We're sorry, but the event is fully booked.");
+            }
+            
             // Find the registration
             var registration = await GetRegistrationByIdAsync(registrationId);
             if (registration == null)
