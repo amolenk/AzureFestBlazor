@@ -56,6 +56,17 @@
       ]
     },
     {
+      "Id": "jouni-heikniemi",
+      "FullName": "Jouni Heikniemi",
+      "Bio": "Jouni Heikniemi is the Chief Service Officer at Norrin, a Finnish Microsoft stack consulting company, and also a Microsoft Regional Director. With a 30-year career in IT, his expertise spans software development, audits, web services, IT strategy, and much more\u2014on both the client and vendor sides of the table. In recent years, he has focused on helping customers with artificial intelligence and cloud technologies.",
+      "TagLine": "Head of Offering at Norrin, Microsoft Regional Director",
+      "IsTopSpeaker": false,
+      "ProfilePictureUrl": "img/2025/speakers/jouni-heikniemi.jpg",
+      "sessions": [
+        "ai-raw-material-a-tool-or-a-solution"
+      ]
+    },
+    {
       "Id": "michael-hompus",
       "FullName": "Micha\u00EBl Hompus",
       "Bio": "Micha\u00EBl Hompus is an Architect and Area Lead at Info Support.\r\n\r\nAs an architect he is part of several teams, creating new and innovative solutions.\r\nMicha\u00EBl has many years of development experience with .NET, Java, and Azure.\r\n\r\nHis passion is to share knowledge with colleagues, customers, and peers.\r\nMicrosoft has recognized his efforts for the community by awarding him a Microsoft MVP award.",
@@ -115,7 +126,7 @@
   ],
   "Sessions": [
     {
-      "Id": "3764a6e3-c37e-4299-9cd9-4e6faceeed0e",
+      "Id": "94a43f07-e618-4b94-800d-4042c585f3d4",
       "Title": "Registration",
       "Description": null,
       "StartsAt": "2025-09-17T13:00:00",
@@ -127,13 +138,15 @@
       "Room": "Atrium"
     },
     {
-      "Id": "02af8388-9cd3-4c24-9760-bf56277c759d",
-      "Title": "Keynote (TBD)",
-      "Description": null,
+      "Id": "ai-raw-material-a-tool-or-a-solution",
+      "Title": "AI: Raw material, a tool or a solution?",
+      "Description": "Everybody is talking about AI, but our practical experiences vary. From delightful Ghibli images to Copilot disappointments to horrible hallucinations\u2026 and all the way back to insane productivity-boosting agent-driven code completions.\r\n \r\nLet\u0027s take a look at the various incarnations of AI in the Microsoft ecosystem, the directions being taken, and the likely next evolutionary steps. How is it going to impact the architecture and cadence of my everyday work? Which skills and tools help me leverage it now, and prepare for tomorrow?",
       "StartsAt": "2025-09-17T13:45:00",
       "EndsAt": "2025-09-17T15:00:00",
-      "IsServiceSession": true,
-      "speakers": [],
+      "IsServiceSession": false,
+      "speakers": [
+        "jouni-heikniemi"
+      ],
       "SessionFormat": null,
       "Level": null,
       "Room": "Plaza"
@@ -182,7 +195,7 @@
       "Room": "The Garden"
     },
     {
-      "Id": "13618cf8-d66e-46f8-9a37-d5eb6577df28",
+      "Id": "eda7ba74-d833-4576-b7a9-03423fcda7ea",
       "Title": "Break",
       "Description": null,
       "StartsAt": "2025-09-17T16:05:00",
@@ -265,7 +278,7 @@
       "Room": "Penthouse"
     },
     {
-      "Id": "2ba1ef2f-a6ce-4917-9f5a-65d0a52b1d90",
+      "Id": "38ed97fe-d04d-40d5-a3f8-890965111147",
       "Title": "Dinner",
       "Description": null,
       "StartsAt": "2025-09-17T18:30:00",
@@ -305,7 +318,7 @@
       "Room": "Penthouse"
     },
     {
-      "Id": "777547da-2565-462d-9708-9d02ed8844a7",
+      "Id": "8dcdbc13-1681-47a7-8b7c-0d6a465593e8",
       "Title": "Drinks",
       "Description": null,
       "StartsAt": "2025-09-17T20:20:00",
