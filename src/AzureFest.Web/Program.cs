@@ -61,16 +61,16 @@ app.MapGet("/api/qrcode/{registrationId:guid}/{registrationSignature}", (Guid re
     return Results.File(qrBytes, "image/png");
 });
 
-// Disable caching for HTML responses
-app.Use(async (ctx, next) =>
-{
-    await next();
-    if (ctx.Response.ContentType?.StartsWith("text/html") == true)
-    {
-        ctx.Response.Headers.CacheControl = "no-store";
-        ctx.Response.Headers.Pragma = "no-cache";
-    }
-});
+// // Disable caching for HTML responses
+// app.Use(async (ctx, next) =>
+// {
+//     await next();
+//     if (ctx.Response.ContentType?.StartsWith("text/html") == true)
+//     {
+//         ctx.Response.Headers.CacheControl = "no-store";
+//         ctx.Response.Headers.Pragma = "no-cache";
+//     }
+// });
 
 // app.UseHttpsRedirection();
 
