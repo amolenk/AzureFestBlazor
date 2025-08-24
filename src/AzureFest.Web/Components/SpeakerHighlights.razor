@@ -35,8 +35,6 @@
         var allSpeakers = (await EventDetailsProvider.GetSpeakersAsync(Settings.CurrentEdition))
             .ToList();
         
-        Console.WriteLine(allSpeakers.Count);
-
         Shuffle(allSpeakers);
 
         _speakers = allSpeakers;

@@ -43,8 +43,6 @@ public class EmailService
 
             foreach (var record in records)
             {
-                Console.WriteLine(record.Email);
-                
                 try
                 {
                 

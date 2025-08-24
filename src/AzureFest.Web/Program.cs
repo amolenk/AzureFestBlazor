@@ -7,8 +7,7 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
+builder.Services.AddRazorComponents();
 
 var settings = builder.Configuration.GetRequiredSection("AzureFest").Get<WebsiteSettings>()!;
 builder.Services.AddSingleton(settings);
@@ -77,7 +76,6 @@ app.MapGet("/api/qrcode/{registrationId:guid}/{registrationSignature}", (Guid re
 app.UseStaticFiles();
 app.UseAntiforgery();
 
-app.MapRazorComponents<App>()
-    .AddInteractiveServerRenderMode();
+app.MapRazorComponents<App>();
 
 app.Run();
