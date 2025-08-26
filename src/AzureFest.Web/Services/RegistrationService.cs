@@ -42,8 +42,8 @@ public class RegistrationService : IRegistrationService
     public async Task<bool> HasAvailableTicketsAsync()
     {
         var maxTickets = int.Parse(_configuration["AzureFest:MaxTickets"]!);
-        var currentRegistrations = await _context.Registrations.CountAsync();
-        return currentRegistrations < maxTickets;
+        var activeRegistrations = await _context.Registrations.Where(r => r.IsConfirmed && !r.IsCancelled).CountAsync();
+        return activeRegistrations < maxTickets;
     }
     
     public async Task<(bool Success, string? ErrorMessage)> RegisterAsync(string email, string firstName, string lastName, string employmentStatus, string? companyName)
