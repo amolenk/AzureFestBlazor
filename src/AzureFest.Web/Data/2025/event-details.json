@@ -34,6 +34,18 @@
       ]
     },
     {
+      "Id": "emil-verwoerd",
+      "FullName": "Emil Verwoerd",
+      "Bio": "Emil Verwoerd is a seasoned developer and innovative architect who has spent years mastering the Microsoft Stack. He\u0027s now immersed in the dynamic world of Azure, tapping into its exceptional capabilities. With a fiery passion for Microservice Architectures and Kubernetes. Emil is also a certified MCT trainer with a love for imparting his knowledge. Through captivating and insightful training sessions, he is consistently molding the minds of the next generation of tech wizards.",
+      "TagLine": "Solution Architect @ Dutchworkz",
+      "IsTopSpeaker": false,
+      "ProfilePictureUrl": "img/2025/speakers/emil-verwoerd.jpg",
+      "sessions": [
+        "workshop-build-your-own-mcp-server-in-net",
+        "workshop-build-your-own-mcp-server-in-net-continued"
+      ]
+    },
+    {
       "Id": "frank-folsche",
       "FullName": "Frank Folsche",
       "Bio": "Frank never stays still, and he brings this drive to the teams he works with. His passion lies in technology, and he immerses himself in the latest developments in Azure and .NET (especially on mobile devices). However, he\u2019s also the first to recognize that technology alone won\u2019t suffice; it must be combined with an aversion to inefficiency. Over the past year, he has been actively implementing DevOps practices at Luminis.\r\n\r\nHis ambition extends beyond technology\u2014Frank aims to apply this drive from his role as an Architect. He enjoys helping clients enhance efficiency through the use of cloud-native solutions.\r\n\r\nBut having a good idea isn\u2019t enough; you must also convey and share it. That\u2019s why Frank enjoys speaking about his field, as evident in his blogs and conference presentations.",
@@ -42,6 +54,18 @@
       "ProfilePictureUrl": "img/2025/speakers/frank-folsche.jpg",
       "sessions": [
         "beyond-aad-b2c-the-future-of-external-identity-in-azure"
+      ]
+    },
+    {
+      "Id": "freek-laan",
+      "FullName": "Freek Laan",
+      "Bio": "Freek is an experienced developer focusing on the Microsoft .NET stack and the Azure Cloud. He is also a people focused developer with a background in Psychology. ",
+      "TagLine": "Software Engineer @ Dutchworkz",
+      "IsTopSpeaker": false,
+      "ProfilePictureUrl": "img/2025/speakers/freek-laan.jpg",
+      "sessions": [
+        "workshop-build-your-own-mcp-server-in-net",
+        "workshop-build-your-own-mcp-server-in-net-continued"
       ]
     },
     {
@@ -126,7 +150,7 @@
   ],
   "Sessions": [
     {
-      "Id": "94a43f07-e618-4b94-800d-4042c585f3d4",
+      "Id": "3ab239b4-68a3-4c25-9464-852fcb43ed31",
       "Title": "Registration",
       "Description": null,
       "StartsAt": "2025-09-17T13:00:00",
@@ -195,7 +219,7 @@
       "Room": "The Garden"
     },
     {
-      "Id": "eda7ba74-d833-4576-b7a9-03423fcda7ea",
+      "Id": "26f566ce-2f77-481e-bd0c-f6f5224bd840",
       "Title": "Break",
       "Description": null,
       "StartsAt": "2025-09-17T16:05:00",
@@ -278,7 +302,22 @@
       "Room": "Penthouse"
     },
     {
-      "Id": "38ed97fe-d04d-40d5-a3f8-890965111147",
+      "Id": "workshop-build-your-own-mcp-server-in-net",
+      "Title": "Workshop: Build Your Own MCP Server in .NET",
+      "Description": "In this hands-on workshop, you\u0027ll learn how to implement the Model Context Protocol (MCP) in .NET and use it with any Large Language Model, such as GPT-5 or Claude. We\u2019ll begin with a short introduction to MCP and why it\u2019s a powerful pattern for building modular AI applications. \r\n\r\nThen you\u2019ll extend a Blazor-based chat app with an MCP server that your LLM can call. Starting with a simple use case, we\u2019ll progress to more advanced examples like connecting to external systems. By the end, you\u2019ll have practical skills to apply MCP in real-world .NET projects.\r\n\r\n\uD83D\uDC49 Please come prepared with Visual Studio Professional and the .NET Aspire templates installed!",
+      "StartsAt": "2025-09-17T17:40:00",
+      "EndsAt": "2025-09-17T18:30:00",
+      "IsServiceSession": false,
+      "speakers": [
+        "emil-verwoerd",
+        "freek-laan"
+      ],
+      "SessionFormat": null,
+      "Level": null,
+      "Room": "The Garden"
+    },
+    {
+      "Id": "bb17e8f6-4113-4fba-991c-a70b8c313b69",
       "Title": "Dinner",
       "Description": null,
       "StartsAt": "2025-09-17T18:30:00",
@@ -318,7 +357,22 @@
       "Room": "Penthouse"
     },
     {
-      "Id": "8dcdbc13-1681-47a7-8b7c-0d6a465593e8",
+      "Id": "workshop-build-your-own-mcp-server-in-net-continued",
+      "Title": "Workshop: Build Your Own MCP Server in .NET (continued...)",
+      "Description": "In this hands-on workshop, you\u0027ll learn how to implement the Model Context Protocol (MCP) in .NET and use it with any Large Language Model, such as GPT-5 or Claude. We\u2019ll begin with a short introduction to MCP and why it\u2019s a powerful pattern for building modular AI applications. \r\n\r\nThen you\u2019ll extend a Blazor-based chat app with an MCP server that your LLM can call. Starting with a simple use case, we\u2019ll progress to more advanced examples like connecting to external systems. By the end, you\u2019ll have practical skills to apply MCP in real-world .NET projects.\r\n\r\n\uD83D\uDC49 Please come prepared with Visual Studio Professional and the .NET Aspire templates installed!",
+      "StartsAt": "2025-09-17T19:30:00",
+      "EndsAt": "2025-09-17T20:20:00",
+      "IsServiceSession": false,
+      "speakers": [
+        "emil-verwoerd",
+        "freek-laan"
+      ],
+      "SessionFormat": null,
+      "Level": null,
+      "Room": "The Garden"
+    },
+    {
+      "Id": "cbccd879-a8a6-4cc9-aaee-b9f1bba6e48b",
       "Title": "Drinks",
       "Description": null,
       "StartsAt": "2025-09-17T20:20:00",
