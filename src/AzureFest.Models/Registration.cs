@@ -30,4 +30,10 @@ public class Registration
     public bool IsCancelled { get; set; } = false;
     
     public DateTime? CancelledAt { get; set; }
+    
+    public bool IsReconfirmed { get; set; } = false;
+    
+    public DateTime? ReconfirmMailSentAt { get; set; }
+
+    public DateTime? ReconfirmedAt { get; set; }
 }
