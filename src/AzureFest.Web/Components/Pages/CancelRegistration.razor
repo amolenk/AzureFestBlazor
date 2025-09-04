@@ -6,6 +6,7 @@
 @inject IRegistrationService RegistrationService
 @inject NavigationManager NavigationManager
 @inject ILogger<CancelRegistration> Logger
+@inject HmacService HmacService
 
 <PageTitle>Cancel Registration | Azure Fest</PageTitle>
 
@@ -86,7 +87,9 @@
 
     protected override async Task OnInitializedAsync()
     {
-        if (string.IsNullOrEmpty(RegistrationId) || string.IsNullOrEmpty(Signature))
+        if (string.IsNullOrEmpty(RegistrationId) 
+            || string.IsNullOrEmpty(Signature)
+            || !HmacService.ValidateSignature(RegistrationId, Signature))
         {
             _errorMessage = "Invalid cancellation link.";
             return;
