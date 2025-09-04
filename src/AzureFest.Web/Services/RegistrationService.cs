@@ -83,6 +83,9 @@ public class RegistrationService : IRegistrationService
                 existingRegistration.IsConfirmed = false; // Reset confirmation status
                 existingRegistration.IsCancelled = false; // Reset cancellation status
                 existingRegistration.CancelledAt = null; // Clear cancellation date
+                existingRegistration.IsReconfirmed = false;
+                existingRegistration.ReconfirmedAt = null;
+                existingRegistration.ReconfirmMailSentAt = null;
             }
             else
             {
