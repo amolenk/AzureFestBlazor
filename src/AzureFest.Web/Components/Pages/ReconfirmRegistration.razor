@@ -1,0 +1,83 @@
+@page "/tickets/reconfirm/{registrationId}/{signature}"
+
+@using AzureFest.Web.Services
+@using System.ComponentModel.DataAnnotations
+
+@inject IRegistrationService RegistrationService
+@inject NavigationManager NavigationManager
+@inject ILogger<CancelRegistration> Logger
+
+<PageTitle>Reconfirm Registration | Azure Fest</PageTitle>
+
+<PageScript Src="./Components/Pages/ReconfirmRegistration.razor.js" />
+
+<HeaderSpacer />
+
+<Section Id="reconfirm" HeaderText="Reconfirm Registration" Background="true">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 text-center">
+            
+            @if (!string.IsNullOrWhiteSpace(_successMessage))
+            {
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text">
+                            _successMessage
+                        </p>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-danger" role="alert">
+                    <h4 class="alert-heading">Reconfirmation Failed</h4>
+                    <p>@_errorMessage</p>
+                </div>
+            }
+
+        </div>
+    </div>
+</Section>
+
+@code {
+    
+    private Registration? registration;
+
+    [Parameter]
+    public string RegistrationId { get; set; } = string.Empty;
+
+    [Parameter]
+    public string Signature { get; set; } = string.Empty;
+    
+    private string _errorMessage = string.Empty;
+    private string _successMessage = string.Empty;
+    
+    protected override async Task OnInitializedAsync()
+    {
+        if (string.IsNullOrEmpty(RegistrationId) || string.IsNullOrEmpty(Signature))
+        {
+            _errorMessage = "Invalid reconfirm link.";
+            return;
+        }
+
+        try
+        {
+            // Get registration details first to show confirmation
+            registration = await RegistrationService.GetRegistrationByIdAsync(RegistrationId);
+            
+            if (registration == null)
+            {
+                _errorMessage = "Registration not found or cancelled.";
+            }
+            else
+            {
+                // await RegistrationService.ReconfirmRegistrationAsync(RegistrationId);
+                _successMessage = "Thank you for reconfirming your registration! We look forward to seeing you at Azure Fest!";
+            }
+        }
+        catch (Exception)
+        {
+            _errorMessage = "An error occurred while loading your registration. Please try again or contact support.";
+        }
+    }
+}
