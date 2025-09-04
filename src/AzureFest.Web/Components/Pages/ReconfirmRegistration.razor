@@ -74,7 +74,8 @@
             }
             else
             {
-                // await RegistrationService.ReconfirmRegistrationAsync(RegistrationId);
+                await RegistrationService.ReconfirmRegistrationAsync(RegistrationId, Signature);
+                
                 _successMessage = "Thank you for reconfirming your registration! We look forward to seeing you at Azure Fest!";
             }
         }

@@ -10,6 +10,7 @@ public interface IRegistrationService
     Task<(bool Success, string? ErrorMessage)> RegisterAsync(string email, string firstName, string lastName, string employmentStatus, string? companyName);
     Task<(bool Success, string? ErrorMessage)> ConfirmRegistrationAsync(string registrationId, string signature);
     Task<(bool Success, string? ErrorMessage)> CancelRegistrationAsync(string registrationId, string signature);
+    Task<(bool Success, string? ErrorMessage)> ReconfirmRegistrationAsync(string registrationId, string signature);
     Task<Registration?> GetRegistrationByEmailAsync(string email);
     Task<Registration?> GetRegistrationByIdAsync(string registrationId);
 }
@@ -222,6 +223,40 @@ public class RegistrationService : IRegistrationService
         {
             _logger.LogError(ex, "Error cancelling registration {RegistrationId}", registrationId);
             return (false, "An error occurred while cancelling your registration. Please try again.");
+        }
+    }
+    
+    public async Task<(bool Success, string? ErrorMessage)> ReconfirmRegistrationAsync(string registrationId, string signature)
+    {
+        try
+        {
+            // Validate HMAC signature
+            if (!_hmacService.ValidateSignature(registrationId, signature))
+            {
+                _logger.LogWarning("Invalid HMAC signature for reconfirm attempt on registration {RegistrationId}", registrationId);
+                return (false, "Invalid reconfirm link.");
+            }
+
+            // Find the registration
+            var registration = await GetRegistrationByIdAsync(registrationId);
+            if (registration == null)
+            {
+                return (false, "Registration not found or cancelled.");
+            }
+
+            // Reconfirm the registration
+            registration.IsReconfirmed = true;
+            registration.ReconfirmedAt = DateTime.UtcNow;
+            
+            await _context.SaveChangesAsync();
+
+            _logger.LogInformation("Registration reconfirmed for {Email} (ID: {RegistrationId})", registration.Email, registrationId);
+            return (true, null);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error reconfirming registration {RegistrationId}", registrationId);
+            return (false, "An error occurred while reconfirming your registration. Please try again.");
         }
     }
 }
