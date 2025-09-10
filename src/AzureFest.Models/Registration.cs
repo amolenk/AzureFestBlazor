@@ -36,4 +36,6 @@ public class Registration
     public DateTime? ReconfirmMailSentAt { get; set; }
 
     public DateTime? ReconfirmedAt { get; set; }
+    
+    public DateTime? CheckedInAt { get; set; }
 }

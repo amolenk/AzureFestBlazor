@@ -1,0 +1,121 @@
+@page "/qrscanresult"
+@layout EmptyLayout
+@using AzureFest.Web.Data
+@using AzureFest.Web.Services
+@using Microsoft.AspNetCore.WebUtilities
+@using Microsoft.Extensions.Configuration
+@inject IConfiguration Configuration
+@inject NavigationManager Navigation
+@inject IHmacService HmacService
+@inject TicketingDbContext DbContext
+
+<div class="d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+    <div class="card shadow-lg" style="max-width: 400px; width: 100%;">
+        <div class="card-body text-center">
+            @if (!_authorized)
+            {
+                <h3 class="card-title text-danger">Access Denied</h3>
+                <p class="card-text">This page is not available.</p>
+            }
+            else if (!_success)
+            {
+                <h3 class="card-title text-danger">Check-in Failed</h3>
+                <p class="card-text">@_errorMessage</p>
+            }
+            else
+            {
+                <h3 class="card-title text-success mb-3">Check-in Succeeded</h3>
+                <div class="row mb-2 justify-content-center">
+                    <div class="col-5 text-end fw-bold">First Name:</div>
+                    <div class="col-7 text-start">@_firstName</div>
+                </div>
+                <div class="row mb-2 justify-content-center">
+                    <div class="col-5 text-end fw-bold">Last Name:</div>
+                    <div class="col-7 text-start">@_lastName</div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-5 text-end fw-bold">Registration Status:</div>
+                    <div class="col-7 text-start">@_status</div>
+                </div>
+            }
+            <div class="mt-3">
+                <a href="/qrscan?secret=@_secret" class="btn btn-primary">Scan Another</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    
+    private string? _secret;
+    private bool _authorized;
+    
+    private string _errorMessage = string.Empty;
+    private bool _success;
+    
+    private string? _firstName;
+    private string? _lastName;
+    private string? _status;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var uri = new Uri(Navigation.Uri);
+        var query = QueryHelpers.ParseQuery(uri.Query);
+        _secret = query.TryGetValue("secret", out var s) ? s.ToString() : null;
+
+        var requiredSecret = Configuration["QrScanSecret"];
+        _authorized = !string.IsNullOrEmpty(_secret) && _secret == requiredSecret;
+        
+        var payload = query.TryGetValue("payload", out var p) ? p.ToString() : null;
+        if (payload is null)
+        {
+            _errorMessage = "Missing payload, try scanning the QR code again.";
+            _success = false;
+            return;
+        }
+
+        var payloadParts = QueryHelpers.ParseQuery(payload);
+        var registrationId = payloadParts.TryGetValue("registrationId", out var rid) ? rid.ToString() : null;
+        var signature = payloadParts.TryGetValue("signature", out var sig) ? sig.ToString() : null;
+        
+        if (string.IsNullOrEmpty(registrationId)
+            || string.IsNullOrEmpty(signature)
+            || !HmacService.ValidateSignature(registrationId, signature))
+        {
+            _errorMessage = "Invalid QR code, if you're sure this is a valid code, try scanning it again.";
+            _success = false;
+            return;
+        }
+        
+        var registration = await DbContext.Registrations.FindAsync([Guid.Parse(registrationId)]);
+        if (registration == null)
+        {
+            _errorMessage = "Registration not found.";
+            _success = false;
+            return;
+        }
+
+        _success = true;
+        _firstName = registration.FirstName;
+        _lastName = registration.LastName;
+        _status = GetStatus(registration);
+
+        registration.CheckedInAt = DateTime.UtcNow;
+        await DbContext.SaveChangesAsync();
+    }
+
+    private string GetStatus(Registration registration)
+    {
+        if (registration.CheckedInAt is not null)
+        {
+            return "Already Checked In";
+        }
+        
+        if (registration.IsCancelled)
+        {
+            return "Cancelled";
+        }
+        
+        return registration.IsConfirmed ? "Confirmed" : "Did Not Complete Registration";
+    }
+}
