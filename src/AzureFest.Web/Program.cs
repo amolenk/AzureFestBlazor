@@ -66,7 +66,7 @@ app.MapGet(
     });
 
 app.MapPost(
-    "/api/qrscan/{scanResult}/{secret}",
+    "/api/qrscan",
     async (
         string scanResult,
         string secret,
