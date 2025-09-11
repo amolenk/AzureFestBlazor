@@ -1,7 +1,9 @@
+using AzureFest.Models;
 using AzureFest.Web.Components;
 using AzureFest.Web.Configuration;
 using AzureFest.Web.Services;
 using AzureFest.Web.Data;
+using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -38,7 +40,7 @@ var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<TicketingDbContext>();
-    context.Database.EnsureCreated();
+    // context.Database.EnsureCreated();
 }
 
 // Configure the HTTP request pipeline.
@@ -49,16 +51,68 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.MapGet("/api/qrcode/{registrationId:guid}/{registrationSignature}", (Guid registrationId, string registrationSignature, IHmacService hmacService, IQrCodeService qrCodeService) =>
-{
-    if (!hmacService.ValidateSignature(registrationId.ToString(), registrationSignature))
+app.MapGet(
+    "/api/qrcode/{registrationId:guid}/{registrationSignature}",
+    (Guid registrationId, string registrationSignature, IHmacService hmacService, IQrCodeService qrCodeService) =>
     {
-        return Results.Unauthorized();
-    }
+        if (!hmacService.ValidateSignature(registrationId.ToString(), registrationSignature))
+        {
+            return Results.Unauthorized();
+        }
 
-    var qrBytes = qrCodeService.GenerateQrCode($"registrationId={registrationId}&signature={registrationSignature}");
-    return Results.File(qrBytes, "image/png");
-});
+        var qrBytes =
+            qrCodeService.GenerateQrCode($"registrationId={registrationId}&signature={registrationSignature}");
+        return Results.File(qrBytes, "image/png");
+    });
+
+app.MapPost(
+    "/api/qrscan/{scanResult}/{secret}",
+    async (
+        string scanResult,
+        string secret,
+        IConfiguration configuration,
+        IHmacService hmacService,
+        TicketingDbContext dbContext) =>
+    {
+        var requiredSecret = configuration["QrScanSecret"];
+        if (string.IsNullOrWhiteSpace(secret) || secret != requiredSecret)
+        {
+            return Results.Unauthorized();
+        }
+
+        var payloadParts = QueryHelpers.ParseQuery(scanResult);
+        var registrationId = payloadParts.TryGetValue("registrationId", out var rid) ? rid.ToString() : null;
+        var signature = payloadParts.TryGetValue("signature", out var sig) ? sig.ToString() : null;
+
+        if (string.IsNullOrEmpty(registrationId)
+            || string.IsNullOrEmpty(signature)
+            || !hmacService.ValidateSignature(registrationId, signature))
+        {
+            return Results.Ok(
+                new ScanResponse(
+                    false,
+                    Error: "Invalid QR code, if you're sure this is a valid code, try scanning it again."));
+        }
+
+        var registration = await dbContext.Registrations.FindAsync([Guid.Parse(registrationId)]);
+        if (registration == null)
+        {
+            return Results.Ok(
+                new ScanResponse(
+                    false,
+                    Error: "Registration not found."));
+        }
+
+        registration.CheckedInAt = DateTime.UtcNow;
+        await dbContext.SaveChangesAsync();
+
+        return Results.Ok(
+            new ScanResponse(
+                true,
+                registration.FirstName,
+                registration.LastName,
+                GetStatus(registration)));
+    });
 
 // // Disable caching for HTML responses
 // app.Use(async (ctx, next) =>
@@ -79,3 +133,25 @@ app.UseAntiforgery();
 app.MapRazorComponents<App>();
 
 app.Run();
+
+string GetStatus(Registration registration)
+{
+    if (registration.CheckedInAt is not null)
+    {
+        return "Already Checked In";
+    }
+
+    if (registration.IsCancelled)
+    {
+        return "Cancelled";
+    }
+
+    return registration.IsConfirmed ? "Confirmed" : "Did Not Complete Registration";
+}
+
+record ScanResponse(
+    bool Success,
+    string? FirstName = null,
+    string? LastName = null,
+    string? Status = null,
+    string? Error = null);
