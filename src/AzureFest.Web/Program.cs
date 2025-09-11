@@ -103,6 +103,8 @@ app.MapPost(
                     Error: "Registration not found."));
         }
 
+        var status = GetStatus(registration);
+
         registration.CheckedInAt = DateTime.UtcNow;
         await dbContext.SaveChangesAsync();
 
@@ -111,7 +113,7 @@ app.MapPost(
                 true,
                 registration.FirstName,
                 registration.LastName,
-                GetStatus(registration)));
+                status));
     });
 
 // // Disable caching for HTML responses
@@ -140,7 +142,7 @@ string GetStatus(Registration registration)
     {
         return "Already Checked In";
     }
-
+ 
     if (registration.IsCancelled)
     {
         return "Cancelled";
