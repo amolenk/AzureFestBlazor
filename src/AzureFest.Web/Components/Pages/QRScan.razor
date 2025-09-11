@@ -101,7 +101,7 @@
 
             try {
                 // POST the exact payload you previously passed via querystring
-                const res = await fetch(`/api/qrscan?scanResult=${encodeURIComponent(decodedText)}&secret=${encodeURIComponent(secret)`, {
+                const res = await fetch(`/api/qrscan?scanResult=${encodeURIComponent(decodedText)}&secret=${encodeURIComponent(secret)}`, {
                     method: "POST",
                     headers: { "Content-Type": "application/json" }
                 });
