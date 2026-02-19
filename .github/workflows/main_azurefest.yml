@@ -34,12 +34,10 @@ jobs:
       # Create a clean deploy folder with only what the app needs at runtime
       - name: Create deploy bundle
         run: |
-          mkdir deploy
-          cp -rL src-react/.next deploy/.next
-          cp -rL src-react/public deploy/public
-          cp src-react/package.json deploy/package.json
-          cp src-react/pnpm-lock.yaml deploy/pnpm-lock.yaml
-          cp src-react/server.js deploy/server.js
+          mkdir -p deploy
+          cp -aL src-react/.next/standalone/. deploy/
+          cp -a  src-react/.next/static deploy/.next/static
+          cp -a  src-react/public deploy/public
           ls -la deploy
 
       - name: Upload build artifact
