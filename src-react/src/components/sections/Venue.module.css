@@ -1,0 +1,47 @@
+.venueMap iframe {
+    height: 100%;
+    min-height: 300px;
+    width: 100%;
+}
+
+.venueInfo {
+    background: url("/img/venue/sopra-steria.jpg") top center no-repeat;
+    background-size: cover;
+    padding-bottom: 60px;
+    padding-top: 120px;
+    position: relative;
+}
+
+.venueInfo::before {
+    background: rgba(13, 20, 41, 0.7);
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.venueInfo h3 {
+    color: #fff;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+@media (max-width: 574px) {
+    .venueInfo h3 {
+        font-size: 24px;
+    }
+}
+
+.venueInfo h4 {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+@media (max-width: 574px) {
+    .venueInfo h4 {
+        font-size: 18px;
+    }
+}

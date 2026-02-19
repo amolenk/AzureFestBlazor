@@ -1,0 +1,19 @@
+.sponsorLogo {
+    align-items: center;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid #e0e5fa;
+    display: flex;
+    height: 160px;
+    justify-content: center;
+    overflow: hidden;
+    padding: 30px;
+    text-align: center;
+}
+
+.community {
+    height: 120px;
+}
+
+.sponsorLogo:hover img {
+    transform: scale(1.2);
+}

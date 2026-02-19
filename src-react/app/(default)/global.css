@@ -1,0 +1,89 @@
+body {
+    background: #fff;
+    color: #2f3138;
+    font-family: "Open Sans", sans-serif;
+    min-height: 500px;
+}
+
+a {
+    color: #e74c3c;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: #f8234a;
+    outline: none;
+    text-decoration: none;
+}
+
+p {
+    margin: 0 0 30px 0;
+    padding: 0;
+}
+
+h1,
+h2 {
+    color: #0e1b4d;
+    font-family: "Lobster Two", sans-serif;
+    font-weight: 400;
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    color: #0e1b4d;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
+.validation-message {
+    color: #e74c3c;
+}
+
+.btn {
+    background-color: #e74c3c;
+    border: 2px solid #e74c3c;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 30px;
+    padding: 10px 40px;
+    transition: all 0.2s;
+}
+
+.btn:hover {
+    background: #000;
+    color: #fff;
+}
+
+#tickets,
+#buy-tickets {
+    padding: 60px 0;
+}
+
+#tickets .card,
+#buy-tickets .card {
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 10px 25px 0 rgba(6, 12, 34, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+#tickets .card:hover,
+#buy-tickets .card:hover {
+    box-shadow: 0 10px 35px 0 rgba(6, 12, 34, 0.2);
+}
+
+#tickets .card-price,
+#buy-tickets .card-price {
+    font-size: 48px;
+    margin: 0;
+}

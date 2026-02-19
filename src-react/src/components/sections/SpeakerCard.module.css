@@ -1,0 +1,27 @@
+.card {
+    border: 0;
+    cursor: pointer;
+    height: 288px;
+    transition: all 0.3s ease-in-out;
+    width: 288px;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card img {
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+}
+
+.speakerName {
+    background-color: rgba(44, 62, 80, 0.8);
+}
+
+@media (max-width: 991px) {
+    .card {
+        height: 200px;
+        width: 200px;
+    }
+}

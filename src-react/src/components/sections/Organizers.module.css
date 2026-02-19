@@ -1,0 +1,28 @@
+.organizerItem h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 0;
+    padding-top: 5px;
+}
+
+.organizerItem p {
+    color: #152b79;
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+.organizerPhoto {
+    border-radius: 50%;
+    float: left;
+    height: 60px;
+    margin: 0 10px 10px 0;
+    overflow: hidden;
+    width: 60px;
+}
+
+.organizerPhoto img {
+    height: 100%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    transition: all ease-in-out 0.3s;
+}
