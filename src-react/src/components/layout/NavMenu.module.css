@@ -1,0 +1,180 @@
+.header {
+    background-color: transparent;
+    height: 70px;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: height 0.5s;
+    z-index: 997;
+}
+
+.headerScrolled {
+    background-color: rgba(6, 12, 34, 0.98);
+    height: 70px;
+}
+
+.logo img {
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+
+.headerScrolled .logo img {
+    display: block;
+    height: 70px;
+}
+
+.navbar {
+    padding: 0;
+}
+
+.navbar ul {
+    align-items: center;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    position: relative;
+    white-space: nowrap;
+}
+
+.navbar > ul > li {
+    padding: 10px 0 10px 12px;
+}
+
+.navLink,
+.navLink:focus {
+    align-items: center;
+    color: rgba(202, 206, 221, 0.8);
+    display: flex;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    justify-content: space-between;
+    padding: 6px 4px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.navbar > ul > li > a.navLink:before {
+    background-color: #e74c3c;
+    bottom: -6px;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transition: all 0.3s ease-in-out 0s;
+    visibility: hidden;
+    width: 0;
+}
+
+.navLink:hover:before,
+.active:before {
+    visibility: visible;
+    width: 100%;
+}
+
+.navLink:hover,
+.active {
+    color: #fff;
+}
+
+.mobileNavToggle {
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 28px;
+    line-height: 0;
+    transition: 0.5s;
+}
+
+.ticketsButton {
+    background: #e74c3c;
+    border: 2px solid #e74c3c;
+    border-radius: 50px;
+    color: #fff;
+    font-family: "Raleway", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1;
+    margin-left: 15px;
+    padding: 10px 24px;
+    transition: 0.5s;
+}
+
+.ticketsButton:hover {
+    background: #fff;
+    color: #e74c3c;
+}
+
+@media (max-width: 991px) {
+    .mobileNavToggle {
+        display: block;
+    }
+
+    .navbar ul {
+        display: none;
+    }
+
+    .headerScrolled .logo img,
+    .logo img {
+        display: block;
+        height: 60px;
+    }
+
+    .ticketsButton {
+        display: none;
+    }
+}
+
+.navbarMobile {
+    background: rgba(0, 0, 0, 0.9);
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: 0.3s;
+    z-index: 999;
+}
+
+.navbarMobile .mobileNavToggle {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+.navbarMobile ul {
+    background-color: #fff;
+    bottom: 15px;
+    display: block;
+    left: 15px;
+    overflow-y: auto;
+    padding: 10px 0;
+    position: absolute;
+    right: 15px;
+    top: 55px;
+    transition: 0.3s;
+}
+
+.navbarMobile > ul > li {
+    padding: 0;
+}
+
+.navbarMobile .navLink,
+.navbarMobile .navLink:focus {
+    color: #060c22;
+    font-size: 22px;
+    padding: 10px 20px;
+}
+
+.navbarMobile .navLink:hover,
+.navbarMobile .active {
+    color: #e74c3c;
+}

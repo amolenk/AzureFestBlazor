@@ -1,0 +1,52 @@
+/* .otpInputs {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.otpInput {
+  width: 40px;
+  height: 70px;
+  font-size: 3rem;
+  text-align: center;
+  border: 1px solid #ccc;
+  background-color: #ddd;
+  -webkit-text-fill-color: #000;
+} */
+
+.otpWrapper {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 1rem;
+  cursor: text;
+}
+
+/* highlight all boxes when any input inside is focused */
+.otpWrapper:focus-within .otpBox {
+  border-color: #269bb9;
+  box-shadow: 0 0 0 2px rgba(0,122,255,0.3);
+}
+
+.hiddenInput {
+  /* visually hide but keep focusable */
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+  width: 0;
+}
+
+.otpBox {
+  width: 40px;
+  height: 70px;
+  font-size: 3rem;
+  text-align: center;
+  line-height: 70px;
+  border: 0;
+  background-color: #ddd;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  user-select: none;
+}

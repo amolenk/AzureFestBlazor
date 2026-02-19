@@ -1,0 +1,16 @@
+.card {
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 10px 25px 0 rgba(6, 12, 34, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 10px 35px 0 rgba(6, 12, 34, 0.2);
+}
+
+.cardPrice {
+    font-size: 48px;
+    margin: 0;
+    text-align: center;
+}

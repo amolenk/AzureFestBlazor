@@ -1,0 +1,33 @@
+.card {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 288px;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.serviceSession {
+    background-color: #e9ecef;
+    cursor: default;
+}
+
+.serviceSession:hover {
+    transform: scale(1);
+}
+
+.speakerPhoto {
+    border-radius: 50%;
+    height: 32px;
+    margin: 0 auto;
+    width: 32px;
+}
+
+.cardTitle {
+    color: black;
+}
+
+.roomLabel {
+    font-size: 1rem;
+}

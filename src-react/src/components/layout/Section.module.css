@@ -1,0 +1,40 @@
+.sectionHeader {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.sectionHeader::before {
+    background: #e74c3c;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 5px;
+    left: calc(50% - 25px);
+    position: absolute;
+    width: 60px;
+}
+
+.sectionHeader h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.sectionHeader p {
+    color: #9195a2;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.sectionHeader h4 {
+    margin-top: 23px;
+}
+
+.sectionWithBg {
+    background-color: #f6f7fd;
+}
