@@ -87,14 +87,14 @@ export const websiteSettings: WebsiteSettings = {
         mainConferenceTicketSlug: process.env.NEXT_PUBLIC_ADMITTO_MAIN_TICKET_SLUG || "conference"
     },
     currentEdition: {
-        slug: "2025",
-        description: "Azure Fest 2025",
-        conferenceDate: new Date("2025-09-17T00:00:00+02:00"),
+        slug: "2026",
+        description: "Azure Fest 2026",
+        conferenceDate: new Date("2026-09-23T00:00:00+02:00"),
         speakers: {
             announced: false
         },
         cfp: {
-            opensAt: new Date("2025-05-01T00:00:00+02:00"),
+            opensAt: new Date("2026-02-23T16:00:00+02:00"),
             closesAt: new Date("2027-06-30T23:59:59+02:00"),
             enabled: true,
             sessionizeUrl: "https://sessionize.com/azure-fest/",
@@ -109,8 +109,8 @@ export const websiteSettings: WebsiteSettings = {
             timeZone: "+02:00"
         },
         registration: {
-            opensAt: new Date("2025-07-08T00:00:00+02:00"),
-            closesAt: new Date("2027-09-16T23:59:59+02:00"),
+            opensAt: new Date("2026-07-08T00:00:00+02:00"),
+            closesAt: new Date("2026-09-22T23:59:59+02:00"),
             enabled: false,
             isOpen: function () {
                 const now = new Date();
