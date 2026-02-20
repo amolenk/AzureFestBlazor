@@ -1,0 +1,7 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/(default)/layout,_N_T_/(default)/tickets/layout,_N_T_/(default)/tickets/cancel/layout,_N_T_/(default)/tickets/cancel/confirmation/layout,_N_T_/(default)/tickets/cancel/confirmation/page,_N_T_/tickets/cancel/confirmation"
+  }
+}

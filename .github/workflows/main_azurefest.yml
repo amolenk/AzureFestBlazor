@@ -40,12 +40,16 @@ jobs:
           cp -a  src-react/public deploy/public
           ls -la deploy
 
+      - name: Create zip file
+        run: |
+          cd deploy
+          zip -r -y ../artifact.zip .
+
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
           name: node-app
-          path: deploy
-          include-hidden-files: true
+          path: artifact.zip
 
   deploy:
     runs-on: ubuntu-latest

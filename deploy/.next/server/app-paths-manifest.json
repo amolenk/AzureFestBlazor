@@ -1,0 +1,19 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/(default)/tickets/qrcode/[publicId]/[signature]/route": "app/(default)/tickets/qrcode/[publicId]/[signature]/route.js",
+  "/(default)/page": "app/(default)/page.js",
+  "/(default)/[edition]/speaker/[speakerId]/page": "app/(default)/[edition]/speaker/[speakerId]/page.js",
+  "/(default)/agenda/page": "app/(default)/agenda/page.js",
+  "/(default)/[edition]/session/[sessionId]/page": "app/(default)/[edition]/session/[sessionId]/page.js",
+  "/(default)/code-of-conduct/page": "app/(default)/code-of-conduct/page.js",
+  "/(default)/tickets/cancel/confirmation/page": "app/(default)/tickets/cancel/confirmation/page.js",
+  "/(default)/speakers/page": "app/(default)/speakers/page.js",
+  "/(default)/tickets/edit/[publicId]/[signature]/page": "app/(default)/tickets/edit/[publicId]/[signature]/page.js",
+  "/(default)/tickets/cancel/[publicId]/[signature]/page": "app/(default)/tickets/cancel/[publicId]/[signature]/page.js",
+  "/(default)/tickets/reconfirm/[publicId]/[signature]/page": "app/(default)/tickets/reconfirm/[publicId]/[signature]/page.js",
+  "/(default)/tickets/register/expired/page": "app/(default)/tickets/register/expired/page.js",
+  "/(default)/tickets/page": "app/(default)/tickets/page.js",
+  "/(default)/tickets/register/thankyou/page": "app/(default)/tickets/register/thankyou/page.js",
+  "/(default)/tickets/register/page": "app/(default)/tickets/register/page.js",
+  "/(default)/tickets/register/verify/page": "app/(default)/tickets/register/verify/page.js"
+}

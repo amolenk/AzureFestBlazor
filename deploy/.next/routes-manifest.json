@@ -1,0 +1,162 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/tickets/cancel/[publicId]/[signature]",
+      "regex": "^/tickets/cancel/([^/]+?)/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPpublicId": "nxtPpublicId",
+        "nxtPsignature": "nxtPsignature"
+      },
+      "namedRegex": "^/tickets/cancel/(?<nxtPpublicId>[^/]+?)/(?<nxtPsignature>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/tickets/edit/[publicId]/[signature]",
+      "regex": "^/tickets/edit/([^/]+?)/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPpublicId": "nxtPpublicId",
+        "nxtPsignature": "nxtPsignature"
+      },
+      "namedRegex": "^/tickets/edit/(?<nxtPpublicId>[^/]+?)/(?<nxtPsignature>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/tickets/qrcode/[publicId]/[signature]",
+      "regex": "^/tickets/qrcode/([^/]+?)/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPpublicId": "nxtPpublicId",
+        "nxtPsignature": "nxtPsignature"
+      },
+      "namedRegex": "^/tickets/qrcode/(?<nxtPpublicId>[^/]+?)/(?<nxtPsignature>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/tickets/reconfirm/[publicId]/[signature]",
+      "regex": "^/tickets/reconfirm/([^/]+?)/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPpublicId": "nxtPpublicId",
+        "nxtPsignature": "nxtPsignature"
+      },
+      "namedRegex": "^/tickets/reconfirm/(?<nxtPpublicId>[^/]+?)/(?<nxtPsignature>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/[edition]/session/[sessionId]",
+      "regex": "^/([^/]+?)/session/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPedition": "nxtPedition",
+        "nxtPsessionId": "nxtPsessionId"
+      },
+      "namedRegex": "^/(?<nxtPedition>[^/]+?)/session/(?<nxtPsessionId>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/[edition]/speaker/[speakerId]",
+      "regex": "^/([^/]+?)/speaker/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPedition": "nxtPedition",
+        "nxtPspeakerId": "nxtPspeakerId"
+      },
+      "namedRegex": "^/(?<nxtPedition>[^/]+?)/speaker/(?<nxtPspeakerId>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/agenda",
+      "regex": "^/agenda(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/agenda(?:/)?$"
+    },
+    {
+      "page": "/code-of-conduct",
+      "regex": "^/code\\-of\\-conduct(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/code\\-of\\-conduct(?:/)?$"
+    },
+    {
+      "page": "/speakers",
+      "regex": "^/speakers(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/speakers(?:/)?$"
+    },
+    {
+      "page": "/tickets",
+      "regex": "^/tickets(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tickets(?:/)?$"
+    },
+    {
+      "page": "/tickets/cancel/confirmation",
+      "regex": "^/tickets/cancel/confirmation(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tickets/cancel/confirmation(?:/)?$"
+    },
+    {
+      "page": "/tickets/register",
+      "regex": "^/tickets/register(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tickets/register(?:/)?$"
+    },
+    {
+      "page": "/tickets/register/expired",
+      "regex": "^/tickets/register/expired(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tickets/register/expired(?:/)?$"
+    },
+    {
+      "page": "/tickets/register/thankyou",
+      "regex": "^/tickets/register/thankyou(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tickets/register/thankyou(?:/)?$"
+    },
+    {
+      "page": "/tickets/register/verify",
+      "regex": "^/tickets/register/verify(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tickets/register/verify(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments"
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}
