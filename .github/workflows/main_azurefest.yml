@@ -43,14 +43,8 @@ jobs:
         run: |
           mkdir -p deploy
           cp -aL src-react/.next/standalone/. deploy/
-          cp -a  src-react/.next/static deploy/.next/static
+          cp -a  src-react/.next/static/. deploy/.next/static/
           cp -a  src-react/public deploy/public
-          ls -la deploy
-
-    #   - name: Create zip file
-    #     run: |
-    #       cd deploy
-    #       zip -r -y ../artifact.zip .
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4

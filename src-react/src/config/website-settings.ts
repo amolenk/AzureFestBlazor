@@ -94,10 +94,10 @@ export const websiteSettings: WebsiteSettings = {
             announced: false
         },
         cfp: {
-            opensAt: new Date("2026-02-23T16:00:00+02:00"),
-            closesAt: new Date("2027-06-30T23:59:59+02:00"),
+            opensAt: new Date("2026-02-23T12:00:00+02:00"),
+            closesAt: new Date("2026-06-05T23:59:59+02:00"),
             enabled: true,
-            sessionizeUrl: "https://sessionize.com/azure-fest/",
+            sessionizeUrl: "https://sessionize.com/azure-fest-2026/",
             isOpen: function () {
                 const now = new Date();
                 return this.enabled && now >= this.opensAt && now <= this.closesAt;
@@ -119,10 +119,10 @@ export const websiteSettings: WebsiteSettings = {
         },
         organizers: [
             { name: "Pascal Naber", company: "Tech Driven", imageUrl: "img/organizers/pascal.jpg" },
-            { name: "Jan de Vries", company: "Microsoft", imageUrl: "img/organizers/jan.jpg" },
+            { name: "Jan de Vries", company: "Zure", imageUrl: "img/organizers/jan.jpg" },
             { name: "Eva Munscher", company: "Sopra Steria", imageUrl: "img/organizers/eva.jpg" },
             { name: "Sander Molenkamp", company: "Info Support", imageUrl: "img/organizers/sander.jpg" },
-            { name: "Jurgen Allewijn", company: "Luminis", imageUrl: "img/organizers/jurgen.jpg" },
+            { name: "Jurgen Allewijn", company: "Yuma", imageUrl: "img/organizers/jurgen.jpg" },
             { name: "Marco Mansi", company: "SoftAware B.V.", imageUrl: "img/organizers/marco.jpg" }
         ],
         sponsors: {
