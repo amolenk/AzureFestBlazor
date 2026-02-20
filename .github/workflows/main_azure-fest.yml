@@ -1,7 +1,4 @@
-# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
-# More GitHub Actions for Azure: https://github.com/Azure/actions
-
-name: Build and deploy Node.js app to Azure Web App - azure-fest
+name: Build and deploy Node.js app to Azure Web App - azurefest
 
 on:
   push:
@@ -21,19 +18,40 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
-          node-version: '22.x'
+          node-version: '22'
 
-      - name: npm install, build, and test
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      # Ensure pnpm uses hoisted linker *in deploy only*
+      - name: Create .npmrc for hoisted node_modules
         run: |
-          npm install
-          npm run build --if-present
-          npm run test --if-present
+          cat > src-react/.npmrc <<'EOF'
+          node-linker=hoisted
+          EOF
 
-      - name: Upload artifact for deployment job
+      - name: Install and build
+        run: |
+          cd src-react
+          pnpm install --frozen-lockfile
+          pnpm build
+
+      # Create a clean deploy folder with only what the app needs at runtime
+      - name: Create deploy bundle
+        run: |
+          mkdir -p deploy
+          cp -aL src-react/.next/standalone/. deploy/
+          cp -a  src-react/.next/static/. deploy/.next/static/
+          cp -a  src-react/public deploy/public
+
+      - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
           name: node-app
-          path: .
+          path: deploy
+          include-hidden-files: true
 
   deploy:
     runs-on: ubuntu-latest
